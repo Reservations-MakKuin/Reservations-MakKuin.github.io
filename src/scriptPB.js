@@ -407,7 +407,7 @@ async function saveEvent() {
         let cateringToPush2 = [];
         Array.from(parentCatering.children).map(e => cateringToPush2.push([e.children[0].value, e.children[1].value, e.children[2].value]))
 
-        await post("/classes/ReservationDisco", {
+        await post("/classes/ReservationPB", {
             "date": clicked.trim(),
             "name": names.value.trim(),
             "age": Number(age.value.trim()),
