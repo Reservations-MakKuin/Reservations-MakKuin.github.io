@@ -363,7 +363,7 @@ hr.rounded {
 }
 
 #animator {
-     padding: 10px;
+     padding: 4px;
     width: 18%;
     box-sizing: border-box;
     margin-bottom: 25px;
@@ -397,7 +397,7 @@ hr.rounded {
 
 #cake {
      padding: 4px;
-    width: 13%;
+    width: 20%;
     box-sizing: border-box;
     margin-bottom: 25px;
     border-radius: 3px;
@@ -406,7 +406,7 @@ hr.rounded {
     box-shadow: 0px 0px 3px gray;
 }
 
-#cakeKode {
+#cakeCode {
      padding: 4px;
     width: 17%;
     box-sizing: border-box;
@@ -419,7 +419,7 @@ hr.rounded {
 
 #cakeTaste {
      padding: 4px;
-    width: 22%;
+    width: 40%;
     box-sizing: border-box;
     margin-bottom: 25px;
     border-radius: 3px;
@@ -430,7 +430,7 @@ hr.rounded {
 
 #HBDName {
      padding: 4px;
-    width: 22%;
+    width: 40%;
     box-sizing: border-box;
     margin-bottom: 25px;
     border-radius: 3px;
@@ -450,7 +450,8 @@ hr.rounded {
     box-shadow: 0px 0px 3px gray;
 }
 #ketaring,
-#ketaring2{
+#ketaring2,
+#other{
      padding: 4px;
     
     box-sizing: border-box;
@@ -464,7 +465,7 @@ hr.rounded {
 
 #kidsMenu {
      padding: 4px;
-    width: 25%;
+    width: 28%;
     box-sizing: border-box;
     margin-bottom: 25px;
     border-radius: 3px;
