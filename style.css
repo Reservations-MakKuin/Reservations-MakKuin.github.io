@@ -363,7 +363,7 @@ hr.rounded {
 }
 
 #animator {
-     padding: 4px;
+     padding: 10px;
     width: 18%;
     box-sizing: border-box;
     margin-bottom: 25px;
@@ -374,7 +374,7 @@ hr.rounded {
 }
 
 #parti {
-     padding: 4px;
+     padding: 8px;
     width: 50%;
     box-sizing: border-box;
     margin-bottom: 25px;
@@ -427,6 +427,19 @@ hr.rounded {
     border: none;
     box-shadow: 0px 0px 3px gray;
 }
+
+#cakeDescription {
+     padding: 4px;
+    
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+
 
 
 
