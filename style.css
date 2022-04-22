@@ -440,9 +440,16 @@ hr.rounded {
 }
 
 
-
-
-
+#kidsMenu {
+     padding: 4px;
+    width: 25%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
 
 
 #time {
