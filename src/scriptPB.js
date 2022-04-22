@@ -48,7 +48,7 @@ function openModal(event, date) {
 
         const currentEvent = events.results.find(e => e.time == reservationTime && e.name == Name && e.age == years);
 
-        document.getElementById('име').textContent = currentEvent.name;
+        document.getElementById('име').textContent = currentEvent.Name;
         document.getElementById('години').textContent = currentEvent.age;
         document.getElementById('час').textContent = currentEvent.time;
         document.getElementById('телефон').textContent = currentEvent.phone;
