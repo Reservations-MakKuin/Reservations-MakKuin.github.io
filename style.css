@@ -166,7 +166,6 @@ button {
 }
 
 #newEventModal,
-#blockEventModal,
 #deleteEventModal {
     display: none;
     z-index: 20;
@@ -299,9 +298,30 @@ button {
 }
 
 #closeButton,
-#closeButton2,
 #cancelButton {
     background-color: #40c02f;
+}
+
+#closeButton2 {
+    background-color: #40c02f;
+    margin: 0;
+    position: absolute;
+    right: 40%;
+}
+
+#blockEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 560px;
+    top: 270px;
+    left: calc(40% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+    
 }
 
 #deleteBtn2,
