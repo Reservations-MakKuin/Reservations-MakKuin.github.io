@@ -47,6 +47,7 @@ button {
 }
 
 #headerDC {
+    width: 115%;
     padding: 10px;
     background-color: #fece5e68;
     color: #d36c6c;
@@ -95,26 +96,34 @@ button {
 }
 
 #weekdays {
-    width: 100%;
+    width: 118%;
+    display: flex;
+    color: #247BA0;
+    text-align: center;
+}
+
+#tm {
+    width: 50%;
+    font-size: 8px;
     display: flex;
     color: #247BA0;
     text-align: center;
 }
 
 #weekdays div {
-    width: 100px;
+    width: 120px;
     padding: 10px;
 }
 
 #calendar {
-    width: 100%;
+    width: 120%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
 
 .day {
-    width: 100px;
+    width: 120px;
     padding: 10px;
     height: 100px;
     cursor: pointer;
@@ -240,7 +249,7 @@ button {
     box-shadow: 0px 0px 3px gray;
 }
 
-#kaparoNumber,
+#kaparoNomer,
 #kaparo {
     padding: 4px;
     width: 20%;
@@ -360,126 +369,6 @@ hr.rounded {
 
 #име {
     color: #d36c6c;
-}
-
-#animator {
-     padding: 4px;
-    width: 18%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-#parti {
-     padding: 4px;
-    width: 50%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-#pices {
-     padding: 4px;
-    width: 11%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-#cake {
-     padding: 4px;
-    width: 20%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-#cakeCode {
-     padding: 4px;
-    width: 17%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-#cakeTaste {
-     padding: 4px;
-    width: 60%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-#HBDName {
-    padding: 4px;
-    width: 60%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-#cakeDescription {
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-#ketaring,
-#ketaring2,
-#other{
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-
-#kidsMenu {
-     padding: 4px;
-    width: 28%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-}
-
-
-#time {
-     padding: 4px;
-    width: 12%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
 }
 
 #години {
