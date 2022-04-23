@@ -290,15 +290,26 @@ function openModal(event, date) {
                 location.reload();
             };
         };
-    } else {
-        document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
-        newEventModal.style.display = 'block';
-        deleteEventModal.style.display = 'none';
-        document.getElementById('editButton').style.display = 'none';
-        document.getElementById('saveButton').style.display = 'inline-block';
-        document.getElementById('deleteButton').style.display = 'none';
+   } else {
+          if (event.target.children.length !== 4) {
+
+            document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
+            newEventModal.style.display = 'block';
+            deleteEventModal.style.display = 'none';
+            document.getElementById('editButton').style.display = 'none';
+            document.getElementById('saveButton').style.display = 'inline-block';
+            document.getElementById('deleteButton').style.display = 'none';
+        } else {
+
+            document.querySelector('#blockEventModal h2').textContent = 'Достигнат е максимум на резервации за ден!';
+            blockEventModal.style.display = 'block';
+            deleteEventModal.style.display = 'none';
+            document.getElementById('editButton').style.display = 'inline-block';
+
+        }
     };
 };
+
 
 function load() {
     const dt = new Date();
