@@ -306,7 +306,7 @@ function openModal(event, date) {
             deleteEventModal.style.display = 'none';
             document.getElementById('editButton').style.display = 'inline-block';
 
-      
+        }
     };
 };
 
