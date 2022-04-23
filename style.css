@@ -166,6 +166,7 @@ button {
 }
 
 #newEventModal,
+#blockEventModal,
 #deleteEventModal {
     display: none;
     z-index: 20;
@@ -298,6 +299,7 @@ button {
 }
 
 #closeButton,
+#closeButton2,
 #cancelButton {
     background-color: #40c02f;
 }
