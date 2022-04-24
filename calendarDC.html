@@ -295,10 +295,26 @@
         <hr class="rounded">
 
 
-        <button id="saveButton">Запази</button>
-        <button id="editButton">ОК</button>
+        <button onclick="topFunction()" id="saveButton">Запази</button>
+        <button onclick="topFunction()" id="editButton">ОК</button>
         <button id="cancelButton">Откажи</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button id="deleteButton">Изтрий</button>
+        <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
     </div>
 
     <div id="deleteEventModal">

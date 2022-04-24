@@ -1,12 +1,6 @@
 import {get, post, put, del } from "./api/api.js";
 
 
-let time1 = undefined;
-let time2 = undefined;
-let time3 = undefined;
-let time4 = undefined;
-
-
 let nav = 0;
 let clicked = null;
 const events = await get("/classes/ReservationDisco");
@@ -39,9 +33,36 @@ let parentCatering = document.getElementById('cetaring2');
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ];
 
-function openModal(event, date) {
+function openModal(event, date, reservationsArr) {
     clicked = date;
     calendar.style.display = 'none';
+
+    if (reservationsArr.length > 0) {
+        let index = 0;
+        for (let current of [...time.children]) {
+ 
+            if (reservationsArr.includes(current.textContent)) {
+                current.style.display = "none";
+                let endIndex = index + 5;
+                let startIndex = index - 4;
+                if (startIndex < 0) {
+                    startIndex = 0;
+                };
+                if (endIndex > [...time.children].length - 1) {
+                    endIndex = [...time.children].length - 1;
+                };
+ 
+                for (let i = startIndex; i < endIndex; i++) {
+                    [...time.children][i].style.display = 'none';
+                };
+            };
+            index++;
+        };
+
+        };
+
+
+
 
     if (event.target.className == 'event') {
 
@@ -97,7 +118,27 @@ function openModal(event, date) {
         document.getElementById('друго').textContent = currentEvent.other;
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
         document.getElementById('editBtn').addEventListener('click', () => {
-
+            let editIndex = 0;
+            for (let current of [...time.children]) {
+ 
+                if (currentEvent.time == current.textContent) {
+                    current.style.display = "block";
+                    let endEditIndex = editIndex + 5;
+                    let startEditIndex = editIndex - 4;
+ 
+                    if (startEditIndex < 0) {
+                        startEditIndex = 0;
+                    };
+                    if (endEditIndex > [...time.children].length - 1) {
+                        endEditIndex = [...time.children].length - 1;
+                    };
+ 
+                    for (let j = startEditIndex; j < endEditIndex; j++) {
+                        [...time.children][j].style.display = 'block';
+                    };
+                };
+                editIndex++;
+            };
             newEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
 
@@ -209,6 +250,10 @@ function openModal(event, date) {
 
             async function editReservation() {
                 if (!time.value || !names.value || !phone.value || !age.value) {
+                    names.classList.add('error');
+                    age.classList.add('error');
+                    time.classList.add('error');
+                    phone.classList.add('error');
                     return alert('Не са попълнени всички задължителни полета!');
                 };
                 let currentKidsCatering = document.getElementById('cetaring');
@@ -299,42 +344,6 @@ function openModal(event, date) {
     } else {
           if (event.target.children.length !== 4) {
               
-              
-            if (event.target.children[0] == undefined) {
-
-                time1 = '0'
-                time2 = '0'
-                time3 = '0'
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-            } else if (event.target.children[1] == undefined) {
-
-                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
-                time2 = '0'
-                time3 = '0'
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-
-
-            } else if (event.target.children[2] == undefined) {
-
-                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
-                time2 = event.target.children[1].textContent.split(' ')[0].split('ч.')[0]
-                time3 = '0'
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-
-
-            } else if (event.target.children[3] == undefined) {
-
-                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
-                time2 = event.target.children[1].textContent.split(' ')[0].split('ч.')[0]
-                time3 = event.target.children[2].textContent.split(' ')[0].split('ч.')[0]
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-
-            }
-
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
@@ -351,7 +360,6 @@ function openModal(event, date) {
         }
     };
 };
-
 
 function load() {
     const dt = new Date();
@@ -385,6 +393,7 @@ function load() {
         daySquare.classList.add('day');
 
         const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+        let reservationsOnTheDay = [];
 
         if (i > paddingDays) {
             daySquare.innerText = i - paddingDays;
@@ -394,7 +403,8 @@ function load() {
             }
             if (events.results.length > 0) {
 
-                const eventForDay = events.results.filter(e => (e.date == dayString));
+                let eventForDay = events.results.filter(e => (e.date == dayString));
+                eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
 
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
@@ -402,10 +412,11 @@ function load() {
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         daySquare.appendChild(eventDiv);
+                        reservationsOnTheDay.push(ev.time);
                     });
                 };
             };
-            daySquare.addEventListener('click', (event) => openModal(event, dayString));
+            daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
             daySquare.classList.add('padding');
         };
@@ -444,14 +455,8 @@ function closeModal() {
 }
 
 async function saveEvent() {
-    
-    
-    if (time.value == time1 || time.value == time2 || time.value == time3 || time.value == time4) {
-        time.classList.add('error');
-
-        return alert('Вече има резервация за този час!');
-    }
-    
+        
+   
     if (names.value && time.value && age.value && phone.value) {
         names.classList.remove('error');
         time.classList.remove('error');
