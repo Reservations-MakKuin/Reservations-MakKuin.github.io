@@ -15,7 +15,7 @@
 
     <div id="container">
         <div id="headerDC">
-            <a href="http://127.0.0.1:5502/home.html">
+            <a href="https://reservations-makkuin.github.io/index.html">
                 <div class="hedarLogo"><img src="/assets/makkuin.png"></div>
             </a>
             <div id="monthDisplay"></div>
@@ -38,6 +38,14 @@
         <div id="calendar"></div>
     </div>
 
+     <div id="blockEventModal">
+        <div class="small"><img src="/assets/makkuin.png"></div>
+        <h2>dostignata maksimalna</h2>
+
+        <button id="closeButton2">Ok</button>
+    </div>
+
+    
     <div id="newEventModal">
         <div class="small"><img src="/assets/makkuin.png"></div>
         <h2>Нова Резервация</h2>
@@ -59,7 +67,7 @@
             <option value="14:00">14:00</option>
             <option value="14:30">14:30</option>
             <option value="15:00">15:00</option>
-            <option value="15:30">16:30</option>
+            <option value="15:30">15:30</option>
             <option value="16:00">16:00</option>
             <option value="16:30">16:30</option>
             <option value="17:00">17:00</option>
@@ -83,34 +91,34 @@
             <option value="" selected></option>
             <option value="Стандартен Р.Д">Стандартен Р.Д</option>
             <option value="Рожден Ден с Аниматор">Рожден Ден с Аниматор </option>
-            <option value="Парти ДЯДО ВАДИ РЯПА">Парти ДЯДО ВАДИ РЯПА</option>
-            <option value="Парти МАША И МЕЧОКА">Парти МАША И МЕЧОКА</option>
-            <option value="Парти КУКЛЕН ТЕАТАР">Парти КУКЛЕН ТЕАТАР</option>
-            <option value="Парти КАРНАВАЛ">Парти КАРНАВАЛ</option>
-            <option value="Парти МИНЬОНИ"> Парти МИНЬОНИ</option>
-            <option value="Парти ПИЖАМЕНО">Парти ПИЖАМЕНО</option>
-            <option value="Парти СТРАШНО">Парти СТРАШНО</option>
-            <option value="Парти УЙНКС">Парти УЙНКС</option>
-            <option value="Парти ЗАМРЪЗНАЛО КРАЛСТВО">Парти ЗАМРЪЗНАЛО КРАЛСТВО</option>
-            <option value="Парти КАЛИНКАТА И ЧЕРНИЯ КОТАРАК">Парти КАЛИНКАТА И ЧЕРНИЯ КОТАРАК</option>
-            <option value="Парти РАПУНЦЕЛ">Парти РАПУНЦЕЛ</option>
-            <option value="Парти БАТМАН">Парти БАТМАН</option>
-            <option value="Парти МИКИ И МИНИ МАУС">Парти МИКИ И МИНИ МАУС</option>
-            <option value="Парти КРЪСТОСЛОВИЦА">Парти КРЪСТОСЛОВИЦА</option>
-            <option value="Парти КОСТЕНУРКИТЕ НИНДЖА">Парти КОСТЕНУРКИТЕ НИНДЖА</option>
-            <option value="Парти ЕНГРИ БЪРДС">Парти ЕНГРИ БЪРДС</option>
-            <option value="Парти ФУТБОЛНО">Парти ФУТБОЛНО</option>
-            <option value="Парти ДИСКОТЕКА">Парти ДИСКОТЕКА</option>
-            <option value="Парти ПИРАТСКО">Парти ПИРАТСКО</option>
-            <option value="Парти НИНДЖАГО">Парти НИНДЖАГО</option>
-            <option value="Парти СПАЙДЪРМЕН">Парти СПАЙДЪРМЕН</option>
-            <option value="Парти СЪРВАЙВЪР">Парти СЪРВАЙВЪР</option>
-            <option value="Парти ПИНЯТА">Парти ПИНЯТА</option>
-            <option value="Парти ПИ ДЖЕЙ МАСК">Парти ПИ ДЖЕЙ МАСК</option>
-            <option value="Парти ИСКРИЦА И СИЯЙНИЦА">Парти ИСКРИЦА И СИЯЙНИЦА</option>
-            <option value="Парти КОЛИТЕ"> Парти КОЛИТЕ</option>
-            <option value="Парти ПЕС ПАТРУЛ">Парти ПЕС ПАТРУЛ</option>
-            <option value="Парти ПЕПА ПИГ">Парти ПЕПА ПИГ</option>
+            <option value="ДЯДО ВАДИ РЯПА">Парти ДЯДО ВАДИ РЯПА</option>
+            <option value="МАША И МЕЧОКА">Парти МАША И МЕЧОКА</option>
+            <option value="КУКЛЕН ТЕАТАР">Парти КУКЛЕН ТЕАТАР</option>
+            <option value="КАРНАВАЛ">Парти КАРНАВАЛ</option>
+            <option value="МИНЬОНИ"> Парти МИНЬОНИ</option>
+            <option value="ПИЖАМЕНО">Парти ПИЖАМЕНО</option>
+            <option value="СТРАШНО">Парти СТРАШНО</option>
+            <option value="УЙНКС">Парти УЙНКС</option>
+            <option value="ЗАМРЪЗНАЛО КРАЛСТВО">Парти ЗАМРЪЗНАЛО КРАЛСТВО</option>
+            <option value="КАЛИНКАТА И ЧЕРНИЯ КОТАРАК">Парти КАЛИНКАТА И ЧЕРНИЯ КОТАРАК</option>
+            <option value="РАПУНЦЕЛ">Парти РАПУНЦЕЛ</option>
+            <option value="БАТМАН">Парти БАТМАН</option>
+            <option value="МИКИ И МИНИ МАУС">Парти МИКИ И МИНИ МАУС</option>
+            <option value="КРЪСТОСЛОВИЦА">Парти КРЪСТОСЛОВИЦА</option>
+            <option value="КОСТЕНУРКИТЕ НИНДЖА">Парти КОСТЕНУРКИТЕ НИНДЖА</option>
+            <option value="ЕНГРИ БЪРДС">Парти ЕНГРИ БЪРДС</option>
+            <option value="ФУТБОЛНО">Парти ФУТБОЛНО</option>
+            <option value="ДИСКОТЕКА">Парти ДИСКОТЕКА</option>
+            <option value="ПИРАТСКО">Парти ПИРАТСКО</option>
+            <option value="НИНДЖАГО">Парти НИНДЖАГО</option>
+            <option value="СПАЙДЪРМЕН">Парти СПАЙДЪРМЕН</option>
+            <option value="СЪРВАЙВЪР">Парти СЪРВАЙВЪР</option>
+            <option value="ПИНЯТА">Парти ПИНЯТА</option>
+            <option value="ПИ ДЖЕЙ МАСК">Парти ПИ ДЖЕЙ МАСК</option>
+            <option value="ИСКРИЦА И СИЯЙНИЦА">Парти ИСКРИЦА И СИЯЙНИЦА</option>
+            <option value="КОЛИТЕ"> Парти КОЛИТЕ</option>
+            <option value="ПЕС ПАТРУЛ">Парти ПЕС ПАТРУЛ</option>
+            <option value="ПЕПА ПИГ">Парти ПЕПА ПИГ</option> &nbsp;&nbsp;
             <input type="text" id="animator" placeholder="аниматор" />
         </select>
         <br>
@@ -249,7 +257,7 @@
             <option value="Плато Мини Пици">Плато Мини Пици</option>
             <option value="Арабско Плато">Арабско Плато</option>
             <option value="Хапки Дуо Микс">Хапки Дуо Микс</option>
-            <option value="Хапки Дуо Италиано">Хапки Дуо Италиано"</option>
+            <option value="Хапки Дуо Италиано">Хапки Дуо Италиано</option>
             <option value="Хапки Трио Микс">Хапки Трио Микс</option>
             <option value="Хапки Трио Италиано">Хапки Трио Италиано</option>
             <option value="Хапки Трио Чийз">Хапки Трио Чийз</option>
