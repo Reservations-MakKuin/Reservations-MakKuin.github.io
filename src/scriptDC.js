@@ -1,10 +1,5 @@
 import {get, post, put, del } from "./api/api.js";
 
-let time1 = undefined;
-let time2 = undefined;
-let time3 = undefined;
-let time4 = undefined;
-
 let nav = 0;
 let clicked = null;
 const events = await get("/classes/ReservationDC");
@@ -37,9 +32,29 @@ let parentCatering = document.getElementById('cetaring2');
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ];
 
-function openModal(event, date) {
+function openModal(event, date, reservationsArr) {
     clicked = date;
     calendar.style.display = 'none';
+
+    if (reservationsArr.length > 0) {
+        let index = 0;
+        for (let current of [...time.children]) {
+            index++;
+            if (reservationsArr.includes(current.textContent)) {
+                let endIndex = index + 4;
+                if (endIndex > [...time.children].length - 1) {
+                    endIndex = [...time.children].length - 1;
+                };
+                for (let i = index - 1; i < endIndex; i++) {
+                    if (i == [...time.children].length - 1) {
+                        return;
+                    };
+                    [...time.children][i].style.display = 'none';
+                };
+            };
+        };
+    };
+
 
     if (event.target.className == 'event') {
 
@@ -297,42 +312,6 @@ function openModal(event, date) {
     } else {
         if (event.target.children.length !== 4) {
 
-
-            if (event.target.children[0] == undefined) {
-
-                time1 = '0'
-                time2 = '0'
-                time3 = '0'
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-            } else if (event.target.children[1] == undefined) {
-
-                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
-                time2 = '0'
-                time3 = '0'
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-
-
-            } else if (event.target.children[2] == undefined) {
-
-                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
-                time2 = event.target.children[1].textContent.split(' ')[0].split('ч.')[0]
-                time3 = '0'
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-
-
-            } else if (event.target.children[3] == undefined) {
-
-                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
-                time2 = event.target.children[1].textContent.split(' ')[0].split('ч.')[0]
-                time3 = event.target.children[2].textContent.split(' ')[0].split('ч.')[0]
-                time4 = '0'
-                console.log(time1, time2, time3, time4);
-
-            }
-
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
@@ -382,6 +361,7 @@ function load() {
         daySquare.classList.add('day');
 
         const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+        let reservationsOnTheDay = [];
 
         if (i > paddingDays) {
             daySquare.innerText = i - paddingDays;
@@ -391,7 +371,8 @@ function load() {
             }
             if (events.results.length > 0) {
 
-                const eventForDay = events.results.filter(e => (e.date == dayString));
+                let eventForDay = events.results.filter(e => (e.date == dayString));
+                eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
 
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
@@ -399,10 +380,11 @@ function load() {
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         daySquare.appendChild(eventDiv);
+                        reservationsOnTheDay.push(ev.time);
                     });
                 };
             };
-            daySquare.addEventListener('click', (event) => openModal(event, dayString));
+            daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
             daySquare.classList.add('padding');
         };
@@ -442,49 +424,6 @@ function closeModal() {
 
 async function saveEvent() {
 
-    if (time.value == time1 || time.value == time2 || time.value == time3 || time.value == time4) {
-        time.classList.add('error');
-
-        return alert('Вече има резервация за този час!');
-    }
-
-    let eventTime1 = time1.split(':')
-    let Atime1 = `${Number(eventTime1[0])}:${Number(eventTime1[1]) + 30}`
-    let Atime2 = `${Number(eventTime1[0]) + 1}:${eventTime1[1]}`
-    let upEventTime = Atime1.split(':')
-    let upEventTime2 = Atime2.split(':')
-    let Atime3 = `${Number(upEventTime[0])+1}:${Number(upEventTime[1])}`
-    let Atime4 = `${Number(upEventTime2[0]) + 1}:${upEventTime2[1]}`
-
-    let eventTime2 = time2.split(':')
-    let Btime1 = `${Number(eventTime2[0])}:${Number(eventTime2[1]) + 30}`
-    let Btime2 = `${Number(eventTime2[0]) + 1}:${eventTime2[1]}`
-    let BupEventTime = Btime1.split(':')
-    let BupEventTime2 = Btime2.split(':')
-    let Btime3 = `${Number(BupEventTime[0])+1}:${Number(BupEventTime[1])}`
-    let Btime4 = `${Number(BupEventTime2[0]) + 1}:${BupEventTime2[1]}`
-
-    let eventTime3 = time3.split(':')
-    let Ctime1 = `${Number(eventTime3[0])}:${Number(eventTime3[1]) + 30}`
-    let Ctime2 = `${Number(eventTime3[0]) + 1}:${eventTime3[1]}`
-    let CupEventTime = Ctime1.split(':')
-    let CupEventTime2 = Ctime2.split(':')
-    let Ctime3 = `${Number(CupEventTime[0])+1}:${Number(CupEventTime[1])}`
-    let Ctime4 = `${Number(CupEventTime2[0]) + 1}:${CupEventTime2[1]}`
-
-    let eventTime4 = time4.split(':')
-    let Dtime1 = `${Number(eventTime4[0])}:${Number(eventTime4[1]) + 30}`
-    let Dtime2 = `${Number(eventTime4[0]) + 1}:${eventTime4[1]}`
-    let DupEventTime = Dtime1.split(':')
-    let DupEventTime2 = Dtime2.split(':')
-    let Dtime3 = `${Number(DupEventTime[0])+1}:${Number(DupEventTime[1])}`
-    let Dtime4 = `${Number(DupEventTime2[0]) + 1}:${DupEventTime2[1]}`
-
-    if (time.value == Atime1 || time.value == Atime2 || time.value == Atime3 || time.value == Atime4 || time.value == Btime1 || time.value == Btime2 || time.value == Btime3 || time.value == Btime4 || time.value == Ctime1 || time.value == Ctime2 || time.value == Ctime3 || time.value == Ctime4 || time.value == Dtime1 || time.value == Dtime2 || time.value == Dtime3 || time.value == Dtime4) {
-        time.classList.add('error');
-
-        return alert('Неможете да направите резервация за този час!');
-    }
 
     if (names.value && time.value && age.value && phone.value) {
         names.classList.remove('error');
