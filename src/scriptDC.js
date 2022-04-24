@@ -295,10 +295,10 @@ function openModal(event, date) {
             };
         };
     } else {
-          if (event.target.children.length !== 4) {
-              
-              
-                if (event.target.children[0] == undefined) {
+        if (event.target.children.length !== 4) {
+
+
+            if (event.target.children[0] == undefined) {
 
                 time1 = '0'
                 time2 = '0'
@@ -441,13 +441,51 @@ function closeModal() {
 }
 
 async function saveEvent() {
-    
-     if (time.value == time1 || time.value == time2 || time.value == time3 || time.value == time4) {
+
+    if (time.value == time1 || time.value == time2 || time.value == time3 || time.value == time4) {
         time.classList.add('error');
 
         return alert('Вече има резервация за този час!');
     }
-    
+
+    let eventTime1 = time1.split(':')
+    let Atime1 = `${Number(eventTime1[0])}:${Number(eventTime1[1]) + 30}`
+    let Atime2 = `${Number(eventTime1[0]) + 1}:${eventTime1[1]}`
+    let upEventTime = Atime1.split(':')
+    let upEventTime2 = Atime2.split(':')
+    let Atime3 = `${Number(upEventTime[0])+1}:${Number(upEventTime[1])}`
+    let Atime4 = `${Number(upEventTime2[0]) + 1}:${upEventTime2[1]}`
+
+    let eventTime2 = time2.split(':')
+    let Btime1 = `${Number(eventTime2[0])}:${Number(eventTime2[1]) + 30}`
+    let Btime2 = `${Number(eventTime2[0]) + 1}:${eventTime2[1]}`
+    let BupEventTime = Btime1.split(':')
+    let BupEventTime2 = Btime2.split(':')
+    let Btime3 = `${Number(BupEventTime[0])+1}:${Number(BupEventTime[1])}`
+    let Btime4 = `${Number(BupEventTime2[0]) + 1}:${BupEventTime2[1]}`
+
+    let eventTime3 = time3.split(':')
+    let Ctime1 = `${Number(eventTime3[0])}:${Number(eventTime3[1]) + 30}`
+    let Ctime2 = `${Number(eventTime3[0]) + 1}:${eventTime3[1]}`
+    let CupEventTime = Ctime1.split(':')
+    let CupEventTime2 = Ctime2.split(':')
+    let Ctime3 = `${Number(CupEventTime[0])+1}:${Number(CupEventTime[1])}`
+    let Ctime4 = `${Number(CupEventTime2[0]) + 1}:${CupEventTime2[1]}`
+
+    let eventTime4 = time4.split(':')
+    let Dtime1 = `${Number(eventTime4[0])}:${Number(eventTime4[1]) + 30}`
+    let Dtime2 = `${Number(eventTime4[0]) + 1}:${eventTime4[1]}`
+    let DupEventTime = Dtime1.split(':')
+    let DupEventTime2 = Dtime2.split(':')
+    let Dtime3 = `${Number(DupEventTime[0])+1}:${Number(DupEventTime[1])}`
+    let Dtime4 = `${Number(DupEventTime2[0]) + 1}:${DupEventTime2[1]}`
+
+    if (time.value == Atime1 || time.value == Atime2 || time.value == Atime3 || time.value == Atime4 || time.value == Btime1 || time.value == Btime2 || time.value == Btime3 || time.value == Btime4 || time.value == Ctime1 || time.value == Ctime2 || time.value == Ctime3 || time.value == Ctime4 || time.value == Dtime1 || time.value == Dtime2 || time.value == Dtime3 || time.value == Dtime4) {
+        time.classList.add('error');
+
+        return alert('Неможете да направите резервация за този час!');
+    }
+
     if (names.value && time.value && age.value && phone.value) {
         names.classList.remove('error');
         time.classList.remove('error');
@@ -515,7 +553,7 @@ function initButtons() {
     document.getElementById('cancelButton').addEventListener('click', closeModal);
     document.getElementById('closeButton').addEventListener('click', closeModal);
     document.getElementById('closeButton2').addEventListener('click', closeModal);
-    
+
 }
 initButtons();
-load(); 
+load();
