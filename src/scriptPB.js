@@ -1,5 +1,10 @@
 import {get, post, put, del } from "./api/api.js";
 
+let time1 = undefined;
+let time2 = undefined;
+let time3 = undefined;
+let time4 = undefined;
+
 
 let nav = 0;
 let clicked = null;
@@ -292,6 +297,42 @@ function openModal(event, date) {
         };
     } else {
           if (event.target.children.length !== 4) {
+              
+               if (event.target.children[0] == undefined) {
+
+                time1 = '0'
+                time2 = '0'
+                time3 = '0'
+                time4 = '0'
+                console.log(time1, time2, time3, time4);
+            } else if (event.target.children[1] == undefined) {
+
+                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
+                time2 = '0'
+                time3 = '0'
+                time4 = '0'
+                console.log(time1, time2, time3, time4);
+
+
+            } else if (event.target.children[2] == undefined) {
+
+                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
+                time2 = event.target.children[1].textContent.split(' ')[0].split('ч.')[0]
+                time3 = '0'
+                time4 = '0'
+                console.log(time1, time2, time3, time4);
+
+
+            } else if (event.target.children[3] == undefined) {
+
+                time1 = event.target.children[0].textContent.split(' ')[0].split('ч.')[0]
+                time2 = event.target.children[1].textContent.split(' ')[0].split('ч.')[0]
+                time3 = event.target.children[2].textContent.split(' ')[0].split('ч.')[0]
+                time4 = '0'
+                console.log(time1, time2, time3, time4);
+
+            }
+
 
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
@@ -402,6 +443,13 @@ function closeModal() {
 }
 
 async function saveEvent() {
+    
+     if (time.value == time1 || time.value == time2 || time.value == time3 || time.value == time4) {
+        time.classList.add('error');
+
+        return alert('Вече има резервация за този час!');
+    }
+    
     if (names.value && time.value && age.value && phone.value) {
         names.classList.remove('error');
         time.classList.remove('error');
