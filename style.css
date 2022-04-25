@@ -54,6 +54,7 @@ monthDisplay
     width: 115%; 
     height: 10%;
     padding: 10px;
+    border-radius: 17px;
     background-color: #eb4e804e;
     color: #d36c6c;
     font-size: 26px;
@@ -79,6 +80,7 @@ monthDisplay
     width: 115%; 
     height: 10%;
     padding: 10px;
+    border-radius: 17px;
     background-color: #88ea576f;
     color: #d36c6c;
     font-size: 26px;
@@ -91,6 +93,7 @@ monthDisplay
     width: 115%; 
     height: 10%;
     padding: 10px;
+    border-radius: 17px;
     background-color: #57b2ea5b;
     color: #d36c6c;
     font-size: 26px;
@@ -102,6 +105,7 @@ monthDisplay
 #headerDisco {
     width: 115%; 
     height: 10%;
+    border-radius: 17px;
     padding: 10px;
     background-color: #9333f366;
     color: #d36c6c;
