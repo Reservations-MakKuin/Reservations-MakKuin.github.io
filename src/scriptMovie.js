@@ -8,6 +8,7 @@ const events = await get("/classes/ReservationMovie");
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
+const blockEventModal = document.getElementById('blockEventModal');
 const time = document.getElementById('time');
 const names = document.getElementById('names');
 const phone = document.getElementById('phone');
