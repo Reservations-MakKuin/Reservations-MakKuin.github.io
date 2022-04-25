@@ -8,6 +8,7 @@ const events = await get("/classes/ReservationDC");
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
+const blockEventModal = document.getElementById('blockEventModal')
 const time = document.getElementById('time');
 const names = document.getElementById('names');
 const phone = document.getElementById('phone');
@@ -351,11 +352,11 @@ function openModal(event, date, reservationsArr) {
             document.getElementById('saveButton').style.display = 'inline-block';
             document.getElementById('deleteButton').style.display = 'none';
         } else {
-            return alert('Достигнат Максимум на резервации за ден!');
-            // document.querySelector('#blockEventModal h2').textContent = 'Достигнат е максимум на резервации за ден!';
-            // blockEventModal.style.display = 'block';
-            // deleteEventModal.style.display = 'none';
-            // document.getElementById('editButton').style.display = 'inline-block';
+           // return alert('Достигнат Максимум на резервации за ден!');
+            document.querySelector('#blockEventModal h2').textContent = 'Достигнат е максимум на резервации за ден!';
+            blockEventModal.style.display = 'block';
+            deleteEventModal.style.display = 'none';
+            document.getElementById('editButton').style.display = 'inline-block';
 
         }
     };
