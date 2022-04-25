@@ -309,7 +309,7 @@ function openModal(event, date, reservationsArr) {
                 kidsNumber.value = '';
 
                 calendar.style.display = '';
-                location.reload();
+                location.reload()
             };
         });
 
