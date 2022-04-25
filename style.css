@@ -48,13 +48,12 @@ button {
     justify-content: space-between;
 }
 
-monthDisplay
+
 
 #headerMovie {
     width: 115%; 
-    height: 10%;
-    padding: 10px;
     border-radius: 17px;
+    padding: 10px;
     background-color: #eb4e804e;
     color: #d36c6c;
     font-size: 26px;
@@ -65,7 +64,6 @@ monthDisplay
 
 #headerDC {
     width: 115%; 
-    height: 10%;
     border-radius: 17px;
     padding: 8px;
     background-color: #fece5e68;
@@ -78,7 +76,6 @@ monthDisplay
 
 #headerPB {
     width: 115%; 
-    height: 10%;
     padding: 10px;
     border-radius: 17px;
     background-color: #88ea576f;
@@ -91,7 +88,6 @@ monthDisplay
 
 #headerPS {
     width: 115%; 
-    height: 10%;
     padding: 10px;
     border-radius: 17px;
     background-color: #57b2ea5b;
@@ -104,7 +100,6 @@ monthDisplay
 
 #headerDisco {
     width: 115%; 
-    height: 10%;
     border-radius: 17px;
     padding: 10px;
     background-color: #9333f366;
@@ -223,7 +218,7 @@ monthDisplay
     color: #d36c6c;
 }
 
-#cackeCode,
+#cakeCode,
 #age {
     padding: 4px;
     width: 20%;
@@ -254,13 +249,13 @@ monthDisplay
     width: 11%;
 }
 
-#descript2,
+/* #descript2,
 #descript {
     padding: 2px;
     width: 20%;
-}
+} */
 
-#cackeTaste,
+#cakeTaste,
 #HBDName {
     padding: 4px;
     width: 60%;
@@ -283,7 +278,7 @@ monthDisplay
     box-shadow: 0px 0px 3px gray;
 }
 
-#kaparoNomer,
+#kaparoNumber,
 #kaparo {
     padding: 4px;
     width: 20%;
