@@ -1,7 +1,7 @@
 body {
     display: flex;
     margin-top: 10px;
-    margin-right:  13%;
+    margin-right:  15%;
 
     justify-content: center;
     background-color: #FFFCFF;
@@ -54,8 +54,7 @@ button {
 
 
 #headerMovie {
-    width: 113%;
-    margin-left: 2%;
+    width: 115%; 
     border-radius: 17px;
     padding: 10px;
     background-color: #eb4e804e;
