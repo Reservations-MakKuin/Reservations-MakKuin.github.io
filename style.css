@@ -1,6 +1,8 @@
 body {
     display: flex;
     margin-top: 10px;
+    margin-right:  10%;
+
     justify-content: center;
     background-color: #FFFCFF;
 }
@@ -17,7 +19,8 @@ button {
 }
 
 #nextButton,
-#backButton {
+#backButton,
+#kalendari {
     width: 90px;
     margin: 10px auto;
     cursor: pointer;
@@ -65,7 +68,7 @@ button {
 #headerDC {
     width: 115%; 
     border-radius: 17px;
-    padding: 8px;
+    padding: 10px;
     background-color: #fece5e68;
     color: #d36c6c;
     font-size: 26px;
@@ -76,6 +79,7 @@ button {
 
 #headerPB {
     width: 115%; 
+    
     padding: 10px;
     border-radius: 17px;
     background-color: #88ea576f;
