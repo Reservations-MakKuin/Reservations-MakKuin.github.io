@@ -54,7 +54,8 @@ button {
 
 
 #headerMovie {
-    width: 115%; 
+    width: 113%;
+    margin-left: 2%;
     border-radius: 17px;
     padding: 10px;
     background-color: #eb4e804e;
@@ -79,8 +80,8 @@ button {
 }
 
 #headerPB {
-    width: 115%; 
-    
+    width: 113%;
+    margin-left: 2%;
     padding: 10px;
     border-radius: 17px;
     background-color: #88ea576f;
@@ -92,7 +93,8 @@ button {
 }
 
 #headerPS {
-    width: 115%; 
+    width: 113%;
+    margin-left: 2%;
     padding: 10px;
     border-radius: 17px;
     background-color: #57b2ea5b;
@@ -104,7 +106,8 @@ button {
 }
 
 #headerDisco {
-    width: 115%; 
+    width: 113%;
+    margin-left: 2%; 
     border-radius: 17px;
     padding: 10px;
     background-color: #9333f366;
@@ -404,7 +407,8 @@ button {
 .hedarLogo>img {
     max-width: 130px;
     max-height: 60px;
-    margin: 9px auto;
+    margin-top: 8px;
+    margin-left: 30px;
     display:block;
     
     
