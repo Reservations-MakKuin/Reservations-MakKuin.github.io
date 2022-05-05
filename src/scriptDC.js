@@ -72,7 +72,7 @@ function openModal(event, date, reservationsArr) {
         deleteEventModal.style.display = 'block';
 
         let splitted = event.target.textContent.trim().split(' ');
-        let reservationtTime = splitted.shift().slice(0, -2);
+        let reservationTime = splitted.shift().slice(0, -2);
         let years = splitted.pop().slice(0, -2);
         let name = splitted.join(' ')
                     
