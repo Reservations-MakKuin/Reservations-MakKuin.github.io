@@ -39,7 +39,18 @@ const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 function openModal(event, date, reservationsArr) {
     clicked = date;
     calendar.style.display = 'none';
-    document.getElementById('shoDate').textContent = `За Дата: ${clicked}г.`;
+   
+    let curentDate = clicked;
+    curentDate = curentDate.split('/');
+    if(curentDate[0] < 10){
+        curentDate[0] = `0${curentDate[0]}`
+    }
+    if(curentDate[1] < 10){
+     curentDate[1] = `0${curentDate[1]}`
+    }
+     let reverseDate = `${curentDate[1]}.${curentDate[0]}.${curentDate[2]}`
+         document.getElementById('shoDate').textContent = `За Дата: ${reverseDate}г.`;
+
     if (reservationsArr.length > 0) {
         let index = 0;
         for (let current of [...time.children]) {
@@ -80,7 +91,7 @@ function openModal(event, date, reservationsArr) {
         let years = splitted.pop().slice(0, -2);
         let name = splitted.join(' ')
         const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime);
-        document.getElementById('покажиДата').textContent = clicked;
+        document.getElementById('покажиДата').textContent = reverseDate;
         document.getElementById('име').textContent = currentEvent.name;
         document.getElementById('години').textContent = currentEvent.age;
         document.getElementById('час').textContent = currentEvent.time;
