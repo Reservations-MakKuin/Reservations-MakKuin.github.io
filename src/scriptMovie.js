@@ -31,12 +31,15 @@ const kidsNumber = document.getElementById('kidsNumber');
 let kidsCatering = document.getElementById('cetaring');
 let parentCatering = document.getElementById('cetaring2');
 
+let shoDate = document.createElement("h2");
+shoDate.setAttribute("id", "shoDate");
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ];
 
 function openModal(event, date, reservationsArr) {
     clicked = date;
     calendar.style.display = 'none';
+    document.getElementById('shoDate').textContent = `За Дата: ${clicked}г.`;
 
     if (reservationsArr.length > 0) {
         let index = 0;
@@ -78,7 +81,7 @@ function openModal(event, date, reservationsArr) {
         let years = splitted.pop().slice(0, -2);
         let name = splitted.join(' ')
         const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime);
-
+        document.getElementById('покажиДата').textContent = clicked;
         document.getElementById('име').textContent = currentEvent.name;
         document.getElementById('години').textContent = currentEvent.age;
         document.getElementById('час').textContent = currentEvent.time;

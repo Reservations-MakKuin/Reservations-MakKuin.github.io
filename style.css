@@ -413,6 +413,12 @@ button {
     
 }
 
+
+#shoDate {
+    color: rgb(255, 64, 0);
+    text-align: center;
+}
+
 h2 {
     color: rgb(59, 62, 228);
     text-align: center;

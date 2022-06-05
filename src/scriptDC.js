@@ -5,6 +5,9 @@ let nav = 0;
 let clicked = null;
 const events = await get("/classes/ReservationDC");
 
+let shoDate = document.createElement("h2");
+shoDate.setAttribute("id", "shoDate");
+
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
@@ -37,6 +40,7 @@ const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 function openModal(event, date, reservationsArr) {
     clicked = date;
     calendar.style.display = 'none';
+    document.getElementById('shoDate').textContent = `За Дата: ${clicked}г.`;
 
     if (reservationsArr.length > 0) {
         let index = 0;
@@ -77,7 +81,7 @@ function openModal(event, date, reservationsArr) {
         let name = splitted.join(' ')
                     
         const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime);
-
+        document.getElementById('покажиДата').textContent = clicked;
         document.getElementById('име').textContent = currentEvent.name;
         document.getElementById('години').textContent = currentEvent.age;
         document.getElementById('час').textContent = currentEvent.time;
@@ -275,7 +279,6 @@ function openModal(event, date, reservationsArr) {
             };
 
             other.value = currentEvent.other;
-
             document.getElementById('saveButton').style.display = 'none';
             document.getElementById('deleteButton').style.display = 'inline-block';
             document.querySelector('#newEventModal h2').textContent = 'Редакция на резервация';
@@ -556,7 +559,6 @@ function initButtons() {
         nav--;
         load();
     });
-
     document.getElementById('saveButton').addEventListener('click', saveEvent);
     document.getElementById('cancelButton').addEventListener('click', closeModal);
     document.getElementById('closeButton').addEventListener('click', closeModal);
