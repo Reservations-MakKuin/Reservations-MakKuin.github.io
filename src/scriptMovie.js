@@ -89,7 +89,7 @@ function openModal(event, date, reservationsArr) {
         let reservationTime = splitted.shift().slice(0, -2);
         let years = splitted.pop().slice(0, -2);
         let name = splitted.join(' ')
-        const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime);
+        const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime && clicked == e.date);
         document.getElementById('покажиДата').textContent = reverseDate;
         document.getElementById('име').textContent = currentEvent.name;
         document.getElementById('години').textContent = currentEvent.age;
