@@ -132,6 +132,7 @@ function openModal(event, date, reservationsArr) {
         };
 
         document.getElementById('друго').textContent = currentEvent.other;
+        document.getElementById('коментар').textContent = currentEvent.komentar;
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
         document.getElementById('editBtn').addEventListener('click', () => {
             let editIndex = 0;
@@ -285,6 +286,7 @@ function openModal(event, date, reservationsArr) {
             };
 
             other.value = currentEvent.other;
+            komentar.value = currentEvent.komentar;
 
             document.getElementById('saveButton').style.display = 'none';
             document.getElementById('deleteButton').style.display = 'inline-block';
@@ -335,6 +337,7 @@ function openModal(event, date, reservationsArr) {
                     "kidsCatering": cateringToPush,
                     "parentCatering": cateringToPush2,
                     "other": other.value.trim(),
+                    "komentar": komentar.value.trim(),
                 });
 
                 phone.value = '';
@@ -343,6 +346,7 @@ function openModal(event, date, reservationsArr) {
                 kaparo.value = '';
                 age.value = '';
                 other.value = '';
+                komentar.value = '';
                 // parti.value = '';
                 cake.value = '';
                 cakeCode.value = '';
@@ -380,6 +384,7 @@ function openModal(event, date, reservationsArr) {
                 pices.value = '';
                 order.checked = false;
                 other.value = '';
+                komentar.value = '';
                 HBDName.value = '';
                 kidsMenu.value = '';
                 kidsNumber.value = '';
@@ -491,6 +496,7 @@ function closeModal() {
     pices.value = '';
     order.checked = false;
     other.value = '';
+    komentar.value = '';
     HBDName.value = '';
     kidsMenu.value = '';
     kidsNumber.value = '';
@@ -543,6 +549,7 @@ async function saveEvent() {
             "kidsCatering": cateringToPush,
             "parentCatering": cateringToPush2,
             "other": other.value.trim(),
+            "komentar": komentar.value.trim(),
         });
 
         closeModal();
