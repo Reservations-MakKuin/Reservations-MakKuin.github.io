@@ -122,14 +122,19 @@ button {
 }
 
 #container {
-    width: 770px;
+   
+    width: 70%; 
+ 
+    
 }
 
 #weekdays {
-    width: 118%;
+    width: 115%;
+    margin-left: 5%;
+    float: left;
     display: flex;
     color: #247BA0;
-    text-align: center;
+    
 }
 
 #tm {
@@ -149,7 +154,8 @@ button {
 
 #calendar {
     width: 120%;
-    margin: auto;
+    margin-left: 4%;
+   
     display: flex;
     flex-wrap: wrap;
 }
