@@ -471,7 +471,7 @@ function load() {
                         reservationsOnTheDay.push(ev.time);
                     });
                 };
-                console.log(eventDiv)
+ 
             };
             daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
