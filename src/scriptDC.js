@@ -2,49 +2,6 @@ import {get, post, put, del } from "./api/api.js";
 
 
 
-
-
-var Parse = require('parse/node');
-
-//Parse.initialize(APP_ID, JAVASCRIPT_KEY);
-Parse.initialize("pS8XEGON6TU8izBxvLE1XgH2C8fmsmc8WVWPYOmZ", "NSQjr3FtKcMAszWoS4D0ILk4flqdgLaGneom902V");
-
-Parse.serverURL = 'https://parseapi.back4app.com'
-
-var GameScore = Parse.Object.extend("GameScore");
-var query = new Parse.Query(GameScore);
-    query.equalTo("playerName", "Sean Plott")
-    query.limit(1000);
-var skip = 0;
-var finalResults = [];
-
-function find () {
-    query.skip(skip);
-    return query.find().then(function (results) {
-        //console.log('START' + results);
-        finalResults = finalResults.concat(results);
-        //console.log('TRYTHIS' + finalResults);
-        skip += results.length;
-        //console.log('SKIPZSIZE: ' + skip);
-        if (results.length >= 1000) {
-           return find();
-        }
-    });
-}
-
-find()
-    .then(function () {
-        console.log('Results:');
-        console.log(finalResults);
-    },
-    function (err) {
-        console.log('Error: ' + err.stack);
-    });
-
-
-
-
-
 let nav = 0;
 let clicked = null;
 const events = await get("/classes/ReservationDC");
