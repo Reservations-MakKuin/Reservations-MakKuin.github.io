@@ -1,6 +1,7 @@
 import {get, post, put, del } from "./api/api.js";
 
 
+
 let nav = 0;
 let clicked = null;
 const events = await get("/classes/ReservationDC");
