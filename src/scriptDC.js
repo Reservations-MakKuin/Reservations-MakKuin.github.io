@@ -458,7 +458,7 @@ function load() {
                 daySquare.id = 'currentDay';
             }
             if (events.results.length > 0) {
-console.log(”ok”)
+
                 let eventForDay = events.results.filter(e => (e.date == dayString));
                 eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
 
@@ -471,6 +471,7 @@ console.log(”ok”)
                         reservationsOnTheDay.push(ev.time);
                     });
                 };
+                console.log(eventDiv)
             };
             daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
