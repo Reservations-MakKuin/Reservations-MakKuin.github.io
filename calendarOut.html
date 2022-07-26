@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="shortcut icon" href="/assets/happy-birthday.png">
+
+    <title>Календар Външни</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="headerOut">
+            <a href="https://reservations-makkuin.github.io/index.html">
+                <div class="hedarLogo"><img src="/assets/happy-birthday.png"></div>
+            </a>
+            <div id="monthDisplay"></div>
+            <div>
+                <button id="backButton">Предишен Mесец</button>
+                <button id="nextButton">Следващ Месец</button>
+            </div>
+        </div>
+
+        <div id="weekdays">
+            <div>Понеделник</div>
+            <div>Вторник</div>
+            <div>Сряда</div>
+            <div>Четвъртък</div>
+            <div>Петък</div>
+            <div>Събота</div>
+            <div>Неделя</div>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+
+    <div id="blockEventModal">
+        <div class="small"><img src="/assets/happy-birthday.png"></div>
+        <h2>dostignata maksimalna</h2>
+
+        <button id="closeButton2">Ok</button>
+    </div>
+
+
+    <div id="newEventModal">
+        <div class="small"><img src="/assets/happy-birthday.png"></div>
+        <h2>Нова Резервация</h2>
+        <h2 id="shoDate"></h2>
+        <br>
+        <h3>Външно Парти</h3>
+        <hr class="rounded">
+        <label for="times">Избери час:</label>
+        <select id="time">
+            <option   value="" selected></option>
+            <option value="10:00"style="color: black">10:00</option>
+            <option value="10:30"style="color: black;">10:30</option>
+            <option value="11:00" style="color: red;">11:00</option>
+            <option value="11:30"style="color: black;">11:30</option>
+            <option value="12:00"style="color: black;">12:00</option>
+            <option value="12:30"style="color: black;">12:30</option>
+            <option value="13:00"style="color: black;">13:00</option>
+            <option value="13:30" style="color: red;">13:30</option>
+            <option value="14:00"style="color: black;">14:00</option>
+            <option value="14:30"style="color: black;">14:30</option>
+            <option value="15:00"style="color: black;">15:00</option>
+            <option value="15:30"style="color: black;">15:30</option>
+            <option value="16:00"style="color: red;">16:00</option>
+            <option value="16:30"style="color: black;">16:30</option>
+            <option value="17:00"style="color: black;">17:00</option>
+            <option value="17:30"style="color: black;">17:30</option>
+            <option value="18:00"style="color: black;">18:00</option>
+            <option value="18:30"style="color: red;">18:30</option>
+            <option value="19:00"style="color: black;">19:00</option>
+            <option value="19:30"style="color: black;">19:30</option>
+           </select>
+        <br>
+        <br>
+        <label>Име: <input type="name" id="names" placeholder="Име" /> </label>&nbsp;&nbsp;&nbsp;
+        <label>Години: <input type="number" id="age" placeholder="Години" /> </label>
+        <br><br>
+        <label>Телефон: <input type="number" id="phone" placeholder="089......." /> </label>
+        <br><br>
+        <label>Капаро: <input type="text" id="kaparo" placeholder="50лв." /> </label>&nbsp;&nbsp;&nbsp;
+        <label>Капаро №: <input type="number" id="kaparoNumber" placeholder="0-100" /> </label>
+        <br>
+        <label>Вид парти: <input type="text" id="komentar" placeholder="..." /> </label>
+        <hr class="rounded">
+        <br>
+        <br>
+        <label for="pices">Продължителност:</label>
+        <select id="pices">
+            <option value="" selected></option>
+            <option value="60">1</option>
+            <option value="90">1:30ч.</option>
+            <option value="120">2ч.</option>
+            <option value="150">2:30ч.</option>
+            <option value="180">3</option>
+            </select>
+        <br>
+        <br>
+        <label>Цена: <input type="number" id="prise" /> </label>лв. &nbsp;&nbsp;&nbsp;
+        <label>Брой Деца: <input type="number" id="kidsNumber" /> </label>
+        <br>
+        <br>
+        <textarea placeholder="Адрес..." name="adres" id="adres" cols="73" rows="3"></textarea>
+        <br>
+        <br>
+        <hr class="rounded">
+        <br>
+        <hr class="rounded">
+        <textarea placeholder="Друго..." name="other" id="other" cols="73" rows="3"></textarea>
+        <br>
+        <br>
+        <hr class="rounded">
+        <button onclick="topFunction()" id="saveButton">Запази</button>
+        <button onclick="topFunction()" id="editButton">ОК</button>
+        <button id="cancelButton">Откажи</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="deleteButton">Изтрий</button>
+        <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {}
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+    </div>
+
+    <div id="deleteEventModal">
+
+        <div class="small"><img src="/assets/reservations.jpg"></div>
+
+        <h2>Резервация на:
+            <text id="име"></text>
+            <text style="color: #d36c6c;"><text id="години"></text> г.
+        </h2>
+        <h2>За Дата:
+            <text style="color: #d36c6c;"><text id="покажиДата"></text>г.
+        </h2>
+
+        <h3>&nbsp;&nbsp; Час: <b><text id="час"></text>ч.</b></h3>
+
+        <hr class="rounded"> Телефон: <b><text id="телефон"></text></b>&nbsp;&nbsp;&nbsp; Капаро: <b><text
+                id="капаро"></text>лв.</b>&nbsp;&nbsp;&nbsp; Капаро №:<b><text id="капароНомер"></text></b>
+                <br> Вид Парти: <b><text style="color: #d36c6c;" id="коментар"></text></b>
+               
+               <br> Продължителност <b><text id="парчета"></text></b>
+       
+        <br> Цена: <b><text id="цена"></text></b>
+        <hr class="rounded"> Брой Деца: <b><text id="бройДеца"></text></b>
+       
+        <hr class="rounded">
+        <br> Адрес: <b><text id="адрес" ></text></b>
+    <br><br>
+        <hr class="rounded">
+   
+        <br> Друго: <b><text id="друго" ></text></b>
+        <br>
+        <br>
+        <hr class="rounded">
+
+        <button id="editBtn">Редактирай</button>
+        <button id="closeButton">Откажи</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="deleteBtn">Изтрий</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="./src/scriptOut.js" type="module"></script>
+</body>
+
+</html>
