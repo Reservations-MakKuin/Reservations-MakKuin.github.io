@@ -48,7 +48,7 @@ button {
     font-size: 32px;
     text-decoration: double;
     font: bold;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: capitalize;
     text-shadow: 2px 2px #969494;
     display: flex;
