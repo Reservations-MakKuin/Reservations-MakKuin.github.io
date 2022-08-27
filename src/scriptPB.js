@@ -3,7 +3,7 @@ import {get, post, put, del } from "./api/api.js";
 
 let nav = 0;
 let clicked = null;
-const events = await get("/classes/ReservationPB");
+const events = await get("/classes/ReservationPB?limit=10000");
 
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');

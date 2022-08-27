@@ -3,7 +3,8 @@ import {get, post, put, del } from "./api/api.js";
 
 let nav = 0;
 let clicked = null;
-const events = await get("/classes/ReservationMovie");
+const events = await get("/classes/ReservationMovie?limit=10000");
+console.log(events)
 
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
@@ -454,7 +455,7 @@ function load() {
                 daySquare.id = 'currentDay';
             }
             if (events.results.length > 0) {
-
+ 
                 let eventForDay = events.results.filter(e => (e.date == dayString));
                 eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
 
