@@ -3,7 +3,10 @@ import {get, post, put, del } from "./api/api.js";
 
 let nav = 0;
 let clicked = null;
-const events = await get("/classes/ReservationMovie");
+
+const events = {};           //todo.....
+events.results = [];         //todo.....
+//const events = await get("/classes/ReservationMovie");  //todo.....
 
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
@@ -414,6 +417,13 @@ function openModal(event, date, reservationsArr) {
 };
 
 function load() {
+    
+    const backButton = document.getElementById('backButton');  //todo.......
+    const nextButton = document.getElementById('nextButton');  //todo.......
+    backButton.style.display = "none";  //todo.......
+    nextButton.style.display = "none";   //todo.......
+    events.results = []; //todoo
+    
     const dt = new Date();
 
     if (nav !== 0) {
@@ -453,12 +463,31 @@ function load() {
             if (i - paddingDays === day && nav === 0) {
                 daySquare.id = 'currentDay';
             }
+            
+             //todo....from here
+            let eventForDay = await get(`/classes/ReservationMovie?where={"date": "${dayString}"}&order=time`); //query заявка по дата и сортиране по време;
+            eventForDay = eventForDay.results;
+
+        
+            if (eventForDay.length > 0){                 //todo.......
+                events.results.push(eventForDay[0]);     //todo.....
+            };
+            
             if (events.results.length > 0) {
 
                 let eventForDay = events.results.filter(e => (e.date == dayString));
                 eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
 
-                if (eventForDay.length > 0) {
+                 //todo....to here
+//                 if (eventForDay.length > 0) {
+//                     eventForDay.map(ev => {
+//                         const eventDiv = document.createElement('div');
+//                         eventDiv.classList.add('event');
+//                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+//                         daySquare.appendChild(eventDiv);
+//                         reservationsOnTheDay.push(ev.time);
+                
+                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
                         eventDiv.classList.add('event');
@@ -467,13 +496,15 @@ function load() {
                         reservationsOnTheDay.push(ev.time);
                     });
                 };
-            };
-            daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
+            //}; todoo
+              daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
             daySquare.classList.add('padding');
         };
         calendar.appendChild(daySquare);
     };
+        backButton.style.display = ""; //todoo
+        nextButton.style.display = ""; //todoo
 };
 
 function closeModal() {
