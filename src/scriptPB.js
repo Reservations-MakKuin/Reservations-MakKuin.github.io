@@ -439,7 +439,7 @@ function load() {
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
     document.getElementById('monthDisplay').innerText =
-        `${dt.toLocaleDateString('bg-bg', { month: 'long' })} ${year}`;
+        `${dt.toLocaleDateString('bg-bg', { month: 'long' }).toUpperCase()} ${year}`;
 
     calendar.innerHTML = '';
 
