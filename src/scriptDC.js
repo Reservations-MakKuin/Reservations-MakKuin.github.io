@@ -4,7 +4,7 @@ import {get, post, put, del } from "./api/api.js";
 
 let nav = 0;
 let clicked = null;
-const events = await get("/classes/ReservationDC");
+const events = await get("/classes/ReservationDC?limit=1000");
 
 let shoDate = document.createElement("h2");
 shoDate.setAttribute("id", "shoDate");
