@@ -4,8 +4,11 @@ import {get, post, put, del } from "./api/api.js";
 let nav = 0;
 let clicked = null;
 
+
+
 const events = {};           //todo.....
 events.results = [];         //todo.....
+
 //const events = await get("/classes/ReservationMovie");  //todo.....
 
 const calendar = document.getElementById('calendar');
@@ -417,7 +420,6 @@ function openModal(event, date, reservationsArr) {
 };
 
 async function load() {
-    
     const backButton = document.getElementById('backButton');  //todo.......
     const nextButton = document.getElementById('nextButton');  //todo.......
     backButton.style.display = "none";  //todo.......
@@ -463,8 +465,8 @@ async function load() {
             if (i - paddingDays === day && nav === 0) {
                 daySquare.id = 'currentDay';
             }
-            
-             //todo....from here
+
+            //todo....from here
             let eventForDay = await get(`/classes/ReservationMovie?where={"date": "${dayString}"}&order=time`); //query заявка по дата и сортиране по време;
             eventForDay = eventForDay.results;
 
@@ -472,22 +474,15 @@ async function load() {
             if (eventForDay.length > 0){                 //todo.......
                 events.results.push(eventForDay[0]);     //todo.....
             };
-            
-            if (events.results.length > 0) {
+             //todo....to here
+    
+            // if (events.results.length > 0) {
+                // let eventForDay = events.results.filter(e => (e.date == dayString));
+                // eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
+               // let eventForDay =  await get(`/classes/ReservationMovie?where={"date": "${dayString}"}&order=time`); //query заявка по дата и сортиране по време;
+                //eventForDay = eventForDay.results;
 
-                let eventForDay = events.results.filter(e => (e.date == dayString));
-                eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
-
-                 //todo....to here
-//                 if (eventForDay.length > 0) {
-//                     eventForDay.map(ev => {
-//                         const eventDiv = document.createElement('div');
-//                         eventDiv.classList.add('event');
-//                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-//                         daySquare.appendChild(eventDiv);
-//                         reservationsOnTheDay.push(ev.time);
-                
-                 if (eventForDay.length > 0) {
+                if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
                         eventDiv.classList.add('event');
@@ -497,14 +492,15 @@ async function load() {
                     });
                 };
             //}; todoo
-              daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
+            daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
             daySquare.classList.add('padding');
         };
         calendar.appendChild(daySquare);
     };
-        backButton.style.display = ""; //todoo
-        nextButton.style.display = ""; //todoo
+    
+    backButton.style.display = ""; //todoo
+    nextButton.style.display = ""; //todoo
 };
 
 function closeModal() {
