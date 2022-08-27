@@ -416,7 +416,7 @@ function openModal(event, date, reservationsArr) {
     };
 };
 
-function load() {
+async function load() {
     
     const backButton = document.getElementById('backButton');  //todo.......
     const nextButton = document.getElementById('nextButton');  //todo.......
