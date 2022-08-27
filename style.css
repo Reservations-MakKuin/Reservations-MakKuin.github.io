@@ -41,23 +41,26 @@ button {
 }
 
 #monthDisplay {
-    padding: 18px;
-    color: #242acc;
+    padding: 0px;
+    color: #f7f7fb;
+    margin-right:  0%;
+    margin-top: 4%;
     font-size: 32px;
     text-decoration: double;
     font: bold;
-    font-family: sans-serif;
+    font-family: cursive;
+    text-transform: capitalize;
+    text-shadow: 2px 2px #969494;
     display: flex;
     justify-content: space-between;
 }
-
 
 
 #headerMovie {
     width: 115%; 
     border-radius: 17px;
     padding: 10px;
-    background-color: #eb4e804e;
+    background: url("/assets/Movie-baner.jpg") center;
     color: #d36c6c;
     font-size: 26px;
     font-family: sans-serif;
@@ -70,6 +73,7 @@ button {
     margin-left: 2%;
     border-radius: 17px;
     padding: 10px;
+    background: url("/assets/DC-baner.jpg") center;
     background-color: #fece5e68;
     color: #d36c6c;
     font-size: 26px;
@@ -83,6 +87,8 @@ button {
     margin-left: 2%;
     padding: 10px;
     border-radius: 17px;
+    background: url("/assets/paintball-baner.jpg") center;
+
     background-color: #88ea576f;
     color: #d36c6c;
     font-size: 26px;
@@ -96,6 +102,7 @@ button {
     margin-left: 2%;
     padding: 10px;
     border-radius: 17px;
+    background: url("/assets/puzzle-baner.jpg") center;
     background-color: #57b2ea5b;
     color: #d36c6c;
     font-size: 26px;
@@ -109,6 +116,7 @@ button {
     margin-left: 2%; 
     border-radius: 17px;
     padding: 10px;
+    background: url("/assets/disco-baner.jpg") center;
     background-color: #9333f366;
     color: #d36c6c;
     font-size: 26px;
