@@ -148,7 +148,8 @@ button {
 
 #weekdays {
     width: 118%;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     color: #247BA0;
     text-align: center;
 }
