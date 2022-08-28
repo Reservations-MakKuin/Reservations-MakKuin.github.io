@@ -442,7 +442,7 @@ function load() {
     calendar.innerHTML = '';
 
     for (let i = 1; i <= paddingDays + daysInMonth; i++) {
-        const daySquare = document.createElement('div');
+        const daySquare = document.createElement('li');
         daySquare.classList.add('day');
 
         const dayString = `${month + 1}/${i - paddingDays}/${year}`;
