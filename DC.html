@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="shortcut icon" href="/assets/makkuin.png">
+
+    <title>Календар Детски Център</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="headerDC">
+            <a href="https://reservations-makkuin.github.io/index.html">
+                <div class="hedarLogo"><img src="/assets/makkuin.png"></div>
+            </a>
+            <div id="monthDisplay"></div>
+            <div>
+                <button id="backButton">Предишен Mесец</button>
+                <button id="nextButton">Следващ Месец</button>
+            </div>
+        </div>
+
+        <div id="weekdays">
+            <div>Понеделник</div>
+            <div>Вторник</div>
+            <div>Сряда</div>
+            <div>Четвъртък</div>
+            <div>Петък</div>
+            <div>Събота</div>
+            <div>Неделя</div>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+
+    <script src="./src/DC.js" type="module"></script>
+</body>
+
+</html>
