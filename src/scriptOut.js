@@ -93,6 +93,7 @@ function openModal(event, date, reservationsArr) {
         document.getElementById('друго').textContent = currentEvent.other;
         document.getElementById('коментар').textContent = currentEvent.komentar;
         document.getElementById('адрес').textContent = currentEvent.adres;
+        document.getElementById('капароТиме').textContent = currentEvent.kaparoTime;
 
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
         document.getElementById('editBtn').addEventListener('click', () => {
