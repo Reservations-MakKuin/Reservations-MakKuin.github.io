@@ -22,6 +22,8 @@ const age = document.getElementById('age');
 const pices = document.getElementById('pices');
 const price = document.getElementById('prise');
 const kidsNumber = document.getElementById('kidsNumber');
+const kaparoTime = document.getElementById('kaparoTime');
+
 
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ];
@@ -183,6 +185,7 @@ function openModal(event, date, reservationsArr) {
                     age.classList.add('error');
                     time.classList.add('error');
                     phone.classList.add('error');
+                    kaparoTime.classList.add('error');
                     return alert('Не са попълнени всички задължителни полета!');
                 };
               
