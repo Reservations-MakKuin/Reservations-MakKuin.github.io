@@ -364,7 +364,7 @@ async function saveEvent() {
         time.classList.remove('error');
         age.classList.remove('error');
         phone.classList.remove('error');
-        kaparoTime.classList.add('error');
+        kaparoTime.classList.add('error'); 
 
              
         await post("/classes/ReservationOut", {
