@@ -180,7 +180,7 @@ function openModal(event, date, reservationsArr) {
 
 
             async function editReservation() {
-                if (!time.value || !names.value || !phone.value || !age.value) {
+                if (!time.value || !names.value || !phone.value || !age.value || !kaparoTime.value) {
                     names.classList.add('error');
                     age.classList.add('error');
                     time.classList.add('error');
@@ -203,6 +203,8 @@ function openModal(event, date, reservationsArr) {
                     "adres": adres.value.trim(),
                     "kidsNumber": kidsNumber.value.trim(),
                     "komentar": komentar.value.trim(),
+                    "kaparoTime": kaparoTime.value.trim(),
+                    
 
                 });
 
@@ -217,7 +219,8 @@ function openModal(event, date, reservationsArr) {
                 price.value = '';
                 pices.value = '';
                 kidsNumber.value = '';
-               
+                kaparoTime.value = '';
+                               
                 calendar.style.display = '';
                 location.reload()
             };
@@ -240,6 +243,7 @@ function openModal(event, date, reservationsArr) {
                 price.value = '';
                 pices.value = '';
                 kidsNumber.value = '';
+                kaparoTime.value = '';
              
                 calendar.style.display = '';
                 location.reload();
@@ -344,7 +348,8 @@ function closeModal() {
     price.value = '';
     pices.value = '';
     kidsNumber.value = '';
-   
+    kaparoTime.value = '';
+       
     clicked = null;
 
     calendar.style.display = '';
@@ -354,11 +359,12 @@ function closeModal() {
 async function saveEvent() {
 
 
-    if (names.value && time.value && age.value && phone.value) {
+    if (names.value && time.value && age.value && phone.value &&  kaparoTime.value) {
         names.classList.remove('error');
         time.classList.remove('error');
         age.classList.remove('error');
         phone.classList.remove('error');
+        kaparoTime.classList.add('error');
 
              
         await post("/classes/ReservationOut", {
@@ -375,6 +381,7 @@ async function saveEvent() {
             "other": other.value.trim(),
             "adres": adres.value.trim(),
             "komentar": komentar.value.trim(),
+            "kaparoTime": kaparoTime.value.trim();
 
         });
 
@@ -384,6 +391,8 @@ async function saveEvent() {
         age.classList.add('error');
         time.classList.add('error');
         phone.classList.add('error');
+        kaparoTime.classList.add('error');
+        
 
         return alert('Не са попълнени всички задължителни полета!');
     };
