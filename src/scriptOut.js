@@ -381,7 +381,7 @@ async function saveEvent() {
             "other": other.value.trim(),
             "adres": adres.value.trim(),
             "komentar": komentar.value.trim(),
-            "kaparoTime": kaparoTime.value.trim();
+            "kaparoTime": kaparoTime.value.trim()
 
         });
 
