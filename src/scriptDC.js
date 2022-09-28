@@ -307,7 +307,7 @@ function openModal(event, date, reservationsArr) {
 
 
             async function editReservation() {
-                if (!time.value || !names.value || !phone.value || !age.value) {
+                if (!time.value || !names.value || !phone.value || !age.value || !kaparoTime.value) {
                     names.classList.add('error');
                     age.classList.add('error');
                     time.classList.add('error');
@@ -526,7 +526,7 @@ function closeModal() {
 async function saveEvent() {
 
 
-    if (names.value && time.value && age.value && phone.value) {
+    if (names.value && time.value && age.value && phone.value &&  kaparoTime.value) {
         names.classList.remove('error');
         time.classList.remove('error');
         age.classList.remove('error');
