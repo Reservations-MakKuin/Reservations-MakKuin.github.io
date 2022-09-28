@@ -95,10 +95,6 @@ function openModal(event, date, reservationsArr) {
         document.getElementById('адрес').textContent = currentEvent.adres;
         document.getElementById('капароТиме').textContent = currentEvent.kaparoTime;
 
-        let currentEventDate = currentEvent.createdAt.split('-')
-        let currentEventDate2 = currentEventDate[2].split('T')
-        document.getElementById('създаденаРезервация').textContent = currentEventDate2[0] + '/' + currentEventDate[1] + '/' + currentEventDate[0];
-
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
         document.getElementById('editBtn').addEventListener('click', () => {
           
@@ -168,7 +164,6 @@ function openModal(event, date, reservationsArr) {
             pices.value = currentEvent.pices;
             price.value = currentEvent.cakePrice;
             kidsNumber.value = currentEvent.kidsNumber;
-            kaparoTime.value = currentEvent.kaparoTime;
 
             
             other.value = currentEvent.other;
@@ -363,9 +358,9 @@ function closeModal() {
 }
 
 async function saveEvent() {
+console.log(phone.value.length);
 
-
-    if (names.value && time.value && age.value && phone.value &&  kaparoTime.value) {
+    if (names.value && time.value && age.value && (phone.value.length >= 10 && phone.value.length <= 10  )  &&  kaparoTime.value) {
         names.classList.remove('error');
         time.classList.remove('error');
         age.classList.remove('error');
@@ -400,7 +395,7 @@ async function saveEvent() {
         kaparoTime.classList.add('error');
         
 
-        return alert('Не са попълнени всички задължителни полета!');
+        return alert(' Не са попълнени всички задължителни полета!\n ЧАС! \n ИМЕ! \n ГОДИНИ! \n Телефонният номер трябва да е 10 цифри! \n Информацията за КАПАРОТО!');
     };
 }
 

@@ -533,7 +533,7 @@ function closeModal() {
 async function saveEvent() {
         
    
-    if (names.value && time.value && age.value && phone.value && kaparoTime.value) {
+    if (names.value && time.value && age.value && (phone.value.length >= 10 && phone.value.length <= 10  ) && kaparoTime.value) {
         names.classList.remove('error');
         time.classList.remove('error');
         age.classList.remove('error');
@@ -588,7 +588,7 @@ async function saveEvent() {
         kaparoTime.classList.add('error'); 
 
 
-        return alert('Не са попълнени всички задължителни полета!');
+        return alert(' Не са попълнени всички задължителни полета!\n ЧАС! \n ИМЕ! \n ГОДИНИ! \n Телефонният номер трябва да е 10 цифри! \n Информацията за КАПАРОТО!');
     };
 }
 
