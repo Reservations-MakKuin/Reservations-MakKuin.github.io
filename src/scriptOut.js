@@ -168,6 +168,7 @@ function openModal(event, date, reservationsArr) {
             pices.value = currentEvent.pices;
             price.value = currentEvent.cakePrice;
             kidsNumber.value = currentEvent.kidsNumber;
+            kaparoTime.value = currentEvent.kaparoTime;
 
             
             other.value = currentEvent.other;

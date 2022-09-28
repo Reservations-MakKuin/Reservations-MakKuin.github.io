@@ -217,6 +217,8 @@ function openModal(event, date, reservationsArr) {
             HBDName.value = currentEvent.cakeLabel;
             kidsMenu.value = currentEvent.kidsMenu;
             kidsNumber.value = currentEvent.kidsNumber;
+            kaparoTime.value = currentEvent.kaparoTime;
+
 
             if (currentEvent.kidsCatering.length > 0) {
                 currentEvent.kidsCatering.forEach((e) => {
