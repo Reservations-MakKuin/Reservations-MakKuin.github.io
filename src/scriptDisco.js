@@ -27,6 +27,7 @@ const price = document.getElementById('prise');
 const order = document.getElementById('order');
 const kidsMenu = document.getElementById('kidsMenu');
 const kidsNumber = document.getElementById('kidsNumber');
+const kaparoTime = document.getElementById('kaparoTime');
 
 let kidsCatering = document.getElementById('cetaring');
 let parentCatering = document.getElementById('cetaring2');
@@ -108,6 +109,11 @@ function openModal(event, date, reservationsArr) {
         document.getElementById('цена').textContent = currentEvent.cakePrice;
         document.getElementById('детскоМеню').textContent = currentEvent.kidsMenu;
         document.getElementById('бройДеца').textContent = currentEvent.kidsNumber;
+        document.getElementById('капароТиме').textContent = currentEvent.kaparoTime;
+        
+        let currentEventDate = currentEvent.createdAt.split('-')
+        let currentEventDate2 = currentEventDate[2].split('T')
+        document.getElementById('създаденаРезервация').textContent = currentEventDate2[0] + '/' + currentEventDate[1] + '/' + currentEventDate[0];
 
         let kidsCateringDiv = document.getElementById('кетарингДеца');
         console.log(currentEvent.kidsCatering);
@@ -303,6 +309,7 @@ function openModal(event, date, reservationsArr) {
                     age.classList.add('error');
                     time.classList.add('error');
                     phone.classList.add('error');
+                    kaparoTime.classList.add('error');
                     return alert('Не са попълнени всички задължителни полета!');
                 };
                 let currentKidsCatering = document.getElementById('cetaring');
@@ -338,6 +345,7 @@ function openModal(event, date, reservationsArr) {
                     "parentCatering": cateringToPush2,
                     "other": other.value.trim(),
                     "komentar": komentar.value.trim(),
+                    "kaparoTime": kaparoTime.value.trim(),
                 });
 
                 phone.value = '';
@@ -358,6 +366,7 @@ function openModal(event, date, reservationsArr) {
                 HBDName.value = '';
                 kidsMenu.value = '';
                 kidsNumber.value = '';
+                kaparoTime.value = '';
 
                 calendar.style.display = '';
                 location.reload();
@@ -388,6 +397,7 @@ function openModal(event, date, reservationsArr) {
                 HBDName.value = '';
                 kidsMenu.value = '';
                 kidsNumber.value = '';
+                kaparoTime.value = '';
 
                 calendar.style.display = '';
                 location.reload();
@@ -500,6 +510,7 @@ function closeModal() {
     HBDName.value = '';
     kidsMenu.value = '';
     kidsNumber.value = '';
+    kaparoTime.value = '';
 
     clicked = null;
 
@@ -515,6 +526,7 @@ async function saveEvent() {
         time.classList.remove('error');
         age.classList.remove('error');
         phone.classList.remove('error');
+        kaparoTime.classList.add('error'); 
 
         kidsCatering = document.getElementById('cetaring');
         parentCatering = document.getElementById('cetaring2');
@@ -550,6 +562,7 @@ async function saveEvent() {
             "parentCatering": cateringToPush2,
             "other": other.value.trim(),
             "komentar": komentar.value.trim(),
+            "kaparoTime": kaparoTime.value.trim(),
         });
 
         closeModal();
@@ -558,6 +571,7 @@ async function saveEvent() {
         age.classList.add('error');
         time.classList.add('error');
         phone.classList.add('error');
+        kaparoTime.classList.add('error'); 
 
         return alert('Не са попълнени всички задължителни полета!');
     };

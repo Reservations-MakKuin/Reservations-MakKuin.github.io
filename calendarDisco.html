@@ -88,6 +88,21 @@
         <label>Капаро: <input type="text" id="kaparo" placeholder="50лв." /> </label>&nbsp;&nbsp;&nbsp;
         <label>Капаро №: <input type="number" id="kaparoNumber" placeholder="0-100" /> </label>
         <br>
+        <label for="times">Кога ще оставят КАПАРО:</label>
+        <select id="kaparoTime">
+            <option   value="" selected></option>
+            <option value="Оставено"style="color: red">Оставено е</option>
+            <option value="До 3 дни от датата на резервацията" style="color: black;">До 3 дни</option>
+            <option value="До 5 дни от датата на резервацията" style="color: black;">До 5 дни</option>
+            <option value="До 7 дни от датата на резервацията" style="color: black;">До 7 дни </option>
+            <option value="До 10 дни от датата на резервацията" style="color: black;">До 10 дни </option>
+            <option value="До 14 дни от датата на резервацията" style="color: black;">До 14 Дни </option>
+            <option value="До Месец от датата на резервацията" style="color: black;">До Месец</option>
+            <option value="Без капаро"style="color: red;">Без Капаро</option>
+            <option value="Грабо Ваучер"style="color: green">Грабо Ваучер</option>
+         </select>
+        <br>
+        <br>
         <label>Коментар: <input type="text" id="komentar" placeholder="..." /> </label>
         <hr class="rounded">
         <br>
@@ -374,9 +389,15 @@
 
         <h3>&nbsp;&nbsp; Час: <b><text id="час"></text>ч.</b></h3>
 
-        <hr class="rounded"> Телефон: <b><text id="телефон"></text></b>&nbsp;&nbsp;&nbsp; Капаро: <b><text
-                id="капаро"></text>лв.</b>&nbsp;&nbsp;&nbsp; Капаро №:<b><text id="капароНомер"></text></b>
-                <br> Коментар: <b><text style="color: #d36c6c;" id="коментар" ></text></b>
+        <hr class="rounded"> 
+            Телефон: <b><text id="телефон"></text></b>&nbsp;&nbsp;&nbsp; 
+            Капаро: <b><text id="капаро"></text>лв.</b>&nbsp;&nbsp;&nbsp; 
+            Капаро №:<b><text id="капароНомер"></text></b>&nbsp;&nbsp;&nbsp;
+            От: <text id="създаденаРезервация" style="opacity: 0.5;"></text></b>
+        <hr class="rounded">
+            <b> Информация за капарото:&nbsp;&nbsp;&nbsp;<text id="капароТиме" style="color:#d36c6c"></text>
+        <hr class="rounded">
+            Коментар: <b><text style="color: #d36c6c;" id="коментар" ></text></b>
         <!-- <hr class="rounded"> Парти: <b><text id="парти"></text></b>&nbsp;&nbsp;&nbsp; Аниматор: <b><text
                 id="аниматор"></text></b> -->
         <hr class="rounded"> Сладкарница: <b><text id="торта"></text></b>
