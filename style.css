@@ -526,3 +526,7 @@ hr.rounded {
     margin-bottom: 16px;
     cursor: pointer;
 }
+
+#kaparoData {
+    display :none
+}

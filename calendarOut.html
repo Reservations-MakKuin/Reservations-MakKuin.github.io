@@ -83,10 +83,13 @@
         <label for="times">Кога ще оставят КАПАРО</label>
         <select id="kaparoTime">
             <option   value="" selected></option>
-            <option value="Оставено е"style="color: red">Оставено е</option>
-            <option value="До 3 дни"style="color: black;">До 3 дни</option>
-            <option value="До 5 дни" style="color: black;">До 5 дни</option>
-            <option value="До 7 дни" style="color: black;">До 7 дни </option>
+            <option value="Оставено"style="color: red">Оставено е</option>
+            <option value="До 3 дни от датата на резервацията" style="color: black;">До 3 дни</option>
+            <option value="До 5 дни от датата на резервацията" style="color: black;">До 5 дни</option>
+            <option value="До 7 дни от датата на резервацията" style="color: black;">До 7 дни </option>
+            <option value="До 10 дни от датата на резервацията" style="color: black;">До 10 дни </option>
+            <option value="До 14 дни от датата на резервацията" style="color: black;">До 14 Дни </option>
+            <option value="До Месец от датата на резервацията" style="color: black;">До Месец</option>
             <option value="Без капаро"style="color: red;">Без Капаро</option>
          </select>
          <br>
@@ -146,34 +149,35 @@
 
         <div class="small"><img src="/assets/partyOut.png"></div>
 
-        <h2>Резервация на:
-            <text id="име"></text>
-            <text style="color: #d36c6c;"><text id="години"></text> г.
+        <h2>
+            Резервация на: <text id="име"></text> <text style="color: #d36c6c;"><text id="години"></text> г.
         </h2>
-        <h2>За Дата:
-            <text style="color: #d36c6c;"><text id="покажиДата"></text>г.
+        <h2>
+            За Дата: <text style="color: #d36c6c;"><text id="покажиДата"></text>г.
         </h2>
-
-        <h3>&nbsp;&nbsp; Час: <b><text id="час"></text>ч.</b></h3>
-
-        <hr class="rounded"> Телефон: <b><text id="телефон"></text></b>&nbsp;&nbsp;&nbsp; Капаро: <b><text
-                id="капаро"></text>лв.</b>&nbsp;&nbsp;&nbsp; Капаро №:<b><text id="капароНомер"></text></b>
-               <b> Капарото е:<text id="капароТиме"></text></b>
-                <br> Вид Парти: <b><text style="color: #d36c6c;" id="коментар"></text></b>
-               
-               <br> Продължителност <b><text id="парчета"></text></b>
-       
-        <br> Цена: <b><text id="цена"></text></b>
-        <hr class="rounded"> Брой Деца: <b><text id="бройДеца"></text></b>
-       
+        <h3>
+            &nbsp;&nbsp; Час: <b><text id="час"></text>ч.</b>
+        </h3>
         <hr class="rounded">
-        <br> Адрес: <b><text id="адрес" ></text></b>
-    <br><br>
+            Телефон: <b><text id="телефон"></text></b> &nbsp;&nbsp;&nbsp; 
+            Капаро: <b><text id="капаро"></text>лв.</b>&nbsp;&nbsp;&nbsp; 
+            Капаро №:<b><text id="капароНомер"></text> &nbsp;&nbsp;&nbsp;
+            От: <text id="създаденаРезервация" style="opacity: 0.5;"></text></b>
         <hr class="rounded">
-   
-        <br> Друго: <b><text id="друго" ></text></b>
-        <br>
-        <br>
+            <b> Информация за капарото:&nbsp;&nbsp;&nbsp;<text id="капароТиме" style="color:#d36c6c"></text>
+        <hr class="rounded">
+            <br> Вид Парти: <b><text style="color: #d36c6c;" id="коментар"></text></b>
+            <br> Продължителност <b><text id="парчета"></text></b>
+            <br> Цена: <b><text id="цена"></text></b>
+        <hr class="rounded"> 
+            Брой Деца: <b><text id="бройДеца"></text></b>
+        <hr class="rounded">
+            <br> Адрес: <b><text id="адрес" ></text></b>
+            <br><br>
+        <hr class="rounded">
+            <br> Друго: <b><text id="друго" ></text></b>
+            <br>
+            <br>
         <hr class="rounded">
 
         <button id="editBtn">Редактирай</button>
