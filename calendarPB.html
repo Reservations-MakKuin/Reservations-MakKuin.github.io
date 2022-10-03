@@ -343,8 +343,18 @@
             <input type="text" id="descript2" placeholder=""/>
             <button type="button" id="deleteBtn2" onclick="removeSection2(this)">Изтрий</button>
             </select><br>`
+            let button = document.createElement('button');
+                button.id = 'deleteBtn';
+                button.textContent = 'Изтрий';
+                button.addEventListener('click', removeSection)
                 let table = document.querySelector('#cetaring2');
+                newMenu.appendChild(button);
                 table.appendChild(newMenu);
+
+                function removeSection(e) {
+                    console.log(e.target.parentElement);
+                    e.target.parentElement.remove();
+                };
             };
         </script>
 
