@@ -138,6 +138,20 @@ button {
     justify-content: space-between;
 }
 
+#headerOut {
+    width: 113%;
+    margin-left: 2%; 
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/test.jpg") center;
+    background-color: #9333f366;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
 #header button {
     background-color: #efeff3a2;
 }
