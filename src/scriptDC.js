@@ -20,7 +20,7 @@ const kaparo = document.getElementById('kaparo');
 const kaparoNumber = document.getElementById('kaparoNumber');
 const age = document.getElementById('age');
 const parti = document.getElementById('parti');
-const animator = document.getElementById('animator');
+//const = document.getElementById('animator');
 const cake = document.getElementById('cake');
 const pices = document.getElementById('pices');
 const cakeCode = document.getElementById('cakeCode');
@@ -99,7 +99,7 @@ function openModal(event, date, reservationsArr) {
         document.getElementById('телефон').textContent = currentEvent.phone;
         document.getElementById('капаро').textContent = currentEvent.kaparo;
         document.getElementById('капароНомер').textContent = currentEvent.kaparoNumber;
-        document.getElementById('аниматор').textContent = currentEvent.animator;
+        //document.getElementById('аниматор').textContent = currentEvent.animator;
         document.getElementById('парти').textContent = currentEvent.party;
         document.getElementById('торта').textContent = currentEvent.cake;
         document.getElementById('парчета').textContent = currentEvent.pices;
@@ -206,7 +206,7 @@ function openModal(event, date, reservationsArr) {
             kaparoNumber.value = currentEvent.kaparoNumber;
             age.value = currentEvent.age;
             parti.value = currentEvent.party;
-            animator.value = currentEvent.animator;
+            //animator.value = currentEvent.animator;
             cake.value = currentEvent.cake;
             pices.value = currentEvent.pices;
             price.value = currentEvent.cakePrice;
@@ -335,7 +335,7 @@ function openModal(event, date, reservationsArr) {
                     "kaparoNumber": Number(kaparoNumber.value.trim()),
                     "time": time.value.trim(),
                     "party": parti.value.trim(),
-                    "animator": animator.value.trim(),
+                   // "animator": animator.value.trim(),
                     "cake": cake.value.trim(),
                     "pices": pices.value.trim(),
                     "cakeCode": cakeCode.value.trim(),
@@ -504,7 +504,7 @@ function closeModal() {
     kaparoNumber.value = "";
     age.value = '';
     parti.value = '';
-    animator.value = '';
+   // animator.value = '';
     cake.value = '';
     cakeCode.value = '';
     cakeDescription.value = '';
@@ -554,7 +554,7 @@ async function saveEvent() {
             "kaparoNumber": Number(kaparoNumber.value.trim()),
             "time": time.value.trim(),
             "party": parti.value.trim(),
-            "animator": animator.value.trim(),
+          //  "animator": animator.value.trim(),
             "cake": cake.value.trim(),
             "pices": pices.value.trim(),
             "cakeCode": cakeCode.value.trim(),
