@@ -305,12 +305,14 @@ function openModal(event, date, reservationsArr) {
 
 
             async function editReservation() {
-                if (!time.value || !names.value || !phone.value || !age.value ||  !kaparoTime.value) {
+                if (!time.value || !names.value || !phone.value || !age.value ||  !kaparoTime.value || !parti.value) {
                     names.classList.add('error');
                     age.classList.add('error');
                     time.classList.add('error');
                     phone.classList.add('error');
                     kaparoTime.classList.add('error');
+                    parti.classList.add('error');
+                    
                     return alert('Не са попълнени всички задължителни полета!');
                 };
                 let currentKidsCatering = document.getElementById('cetaring');
@@ -522,13 +524,14 @@ function closeModal() {
 async function saveEvent() {
         
    
-    if (names.value && time.value && age.value && (phone.value.length >= 10 && phone.value.length <= 10) &&  kaparoTime.value) {
+    if (names.value && time.value && age.value && (phone.value.length >= 10 && phone.value.length <= 10) &&  kaparoTime.value && parti.value) {
         names.classList.remove('error');
         time.classList.remove('error');
         age.classList.remove('error');
         phone.classList.remove('error');
-        kaparoTime.classList.add('error'); 
-
+        kaparoTime.classList.add('error');
+        parti.classList.add('error'); 
+        
         kidsCatering = document.getElementById('cetaring');
         parentCatering = document.getElementById('cetaring2');
 
@@ -573,8 +576,9 @@ async function saveEvent() {
         time.classList.add('error');
         phone.classList.add('error');
         kaparoTime.classList.add('error'); 
-
-        return alert(' Не са попълнени всички задължителни полета!\n ЧАС! \n ИМЕ! \n ГОДИНИ! \n Телефонният номер трябва да е 10 цифри! \n Информацията за КАПАРОТО!');
+        parti.classList.add('error'); 
+        
+        return alert(' Не са попълнени всички задължителни полета!\n ЧАС! \n ИМЕ! \n ГОДИНИ! \n Телефонният номер трябва да е 10 цифри! \n Информацията за КАПАРОТО! и вид ПАРТИ');
     };
 }
 
