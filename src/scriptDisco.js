@@ -15,7 +15,7 @@ const phone = document.getElementById('phone');
 const kaparo = document.getElementById('kaparo');
 const kaparoNumber = document.getElementById('kaparoNumber');
 const age = document.getElementById('age');
-//const parti = document.getElementById('parti');
+const parti = document.getElementById('parti');
 //const animator = document.getElementById('animator');
 const cake = document.getElementById('cake');
 const pices = document.getElementById('pices');
@@ -99,7 +99,7 @@ function openModal(event, date, reservationsArr) {
         document.getElementById('капаро').textContent = currentEvent.kaparo;
         document.getElementById('капароНомер').textContent = currentEvent.kaparoNumber;
         //  document.getElementById('аниматор').textContent = currentEvent.animator;
-        // document.getElementById('парти').textContent = currentEvent.party;
+        document.getElementById('парти').textContent = currentEvent.party;
         document.getElementById('торта').textContent = currentEvent.cake;
         document.getElementById('парчета').textContent = currentEvent.pices;
         document.getElementById('тортаКод').textContent = currentEvent.cakeCode;
@@ -202,7 +202,7 @@ function openModal(event, date, reservationsArr) {
             kaparo.value = currentEvent.kaparo;
             kaparoNumber.value = currentEvent.kaparoNumber;
             age.value = currentEvent.age;
-            // parti.value = currentEvent.party;
+            parti.value = currentEvent.party;
             //animator.value = currentEvent.animator;
             cake.value = currentEvent.cake;
             pices.value = currentEvent.pices;
@@ -330,7 +330,7 @@ function openModal(event, date, reservationsArr) {
                     "kaparo": Number(kaparo.value.trim()),
                     "kaparoNumber": Number(kaparoNumber.value.trim()),
                     "time": time.value.trim(),
-                    // "party": parti.value.trim(),
+                    "party": parti.value.trim(),
                     // "animator": animator.value.trim(),
                     "cake": cake.value.trim(),
                     "pices": pices.value.trim(),
@@ -356,7 +356,7 @@ function openModal(event, date, reservationsArr) {
                 age.value = '';
                 other.value = '';
                 komentar.value = '';
-                // parti.value = '';
+                parti.value = '';
                 cake.value = '';
                 cakeCode.value = '';
                 cakeDescription.value = '';
@@ -385,7 +385,7 @@ function openModal(event, date, reservationsArr) {
                 time.value = '';
                 kaparo.value = '';
                 age.value = '';
-                //parti.value = '';
+                parti.value = '';
                 cake.value = '';
                 cakeCode.value = '';
                 cakeDescription.value = '';
@@ -497,7 +497,7 @@ function closeModal() {
     kaparo.value = '';
     kaparoNumber.value = "";
     age.value = '';
-    //parti.value = '';
+    parti.value = '';
     //animator.value = '';
     cake.value = '';
     cakeCode.value = '';
@@ -547,7 +547,7 @@ async function saveEvent() {
             "kaparo": Number(kaparo.value.trim()),
             "kaparoNumber": Number(kaparoNumber.value.trim()),
             "time": time.value.trim(),
-            // "party": parti.value.trim(),
+            "party": parti.value.trim(),
             // "animator": animator.value.trim(),
             "cake": cake.value.trim(),
             "pices": pices.value.trim(),
