@@ -37,22 +37,7 @@ function openModal(event, date, reservationsArr) {
    
     // if(localStorage.userData == undefined){
         
-       
-       alert("Не сте Логнати!")
-       window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
-    }
-
-
-
-    
-   if(localStorage.getItem('1') != null){
-     //   login('Miro', '123456')
-
-    }else{
-   
-    // if(localStorage.userData == undefined){
-        
-       
+           
        alert("Не сте Логнати!")
        window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
     }
