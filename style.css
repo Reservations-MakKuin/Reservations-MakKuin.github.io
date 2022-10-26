@@ -129,7 +129,7 @@ button {
     margin-left: 2%; 
     border-radius: 17px;
     padding: 10px;
-    background: url("/assets/disco-baner.jpg") center;
+    background: url("/assets/disco-puzzle-baner.jpg") center;
     background-color: #9333f366;
     color: #d36c6c;
     font-size: 26px;
@@ -363,6 +363,10 @@ button {
 }
 
 #age.error {
+    border: 2px solid red;
+}
+
+#parti.error {
     border: 2px solid red;
 }
 

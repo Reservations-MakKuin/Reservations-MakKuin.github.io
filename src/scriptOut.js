@@ -1,5 +1,5 @@
 import {get, post, put, del } from "./api/api.js";
-
+//import { login } from "./api/api.js";
 
 
 let nav = 0;
@@ -44,6 +44,20 @@ function openModal(event, date, reservationsArr) {
 
 
 
+    
+   if(localStorage.getItem('1') != null){
+     //   login('Miro', '123456')
+
+    }else{
+   
+    // if(localStorage.userData == undefined){
+        
+       
+       alert("Не сте Логнати!")
+       window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
+    }
+    
+    
     clicked = date;
     calendar.style.display = 'none';
     let curentDate = clicked;

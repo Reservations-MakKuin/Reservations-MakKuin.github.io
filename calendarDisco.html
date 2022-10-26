@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/disco.png">
-    <title>Календар Дискотека</title>
+    <link rel="shortcut icon" href="/assets/disco-puzzle.png">
+    <title>Календар Дискотека с Пъзел</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,7 @@
 
         <div id="headerDisco">
             <a href="https://reservations-makkuin.github.io/index.html">
-                <div class="hedarLogo"><img src="/assets/disco.png"></div>
+                <div class="hedarLogo"><img src="/assets/disco-puzzle.png"></div>
             </a>
             <div id="monthDisplay"></div>
             <div>
@@ -39,14 +39,14 @@
     </div>
 
     <div id="blockEventModal">
-        <div class="small"><img src="/assets/disco.png"></div>
+        <div class="small"><img src="/assets/disco-puzzle.png"></div>
         <h2>dostignata maksimalna</h2>
 
         <button id="closeButton2">Ok</button>
     </div>
 
     <div id="newEventModal">
-        <div class="small"><img src="/assets/disco.png"></div>
+        <div class="small"><img src="/assets/disco-puzzle.png"></div>
         <h2>Нова Резервация</h2>
         <h2 id="shoDate"></h2>
 
@@ -106,43 +106,16 @@
         <label>Коментар: <input type="text" id="komentar" placeholder="..." /> </label>
         <hr class="rounded">
         <br>
-        <!-- <label for="parties">Избери Парти:</label>
+        <label for="parties">Избери Парти:</label>
         <select id="parti">
-            <option value="Стандартен Р.Д">Стандартен Р.Д</option>
-            <option value="Рожден Ден с Аниматор">Рожден Ден с Аниматор </option>
-            <option value="Парти ДЯДО ВАДИ РЯПА">Парти ДЯДО ВАДИ РЯПА</option>
-            <option value="Парти МАША И МЕЧОКА">Парти МАША И МЕЧОКА</option>
-            <option value="Парти КУКЛЕН ТЕАТАР">Парти КУКЛЕН ТЕАТАР</option>
-            <option value="Парти КАРНАВАЛ">Парти КАРНАВАЛ</option>
-            <option value="Парти МИНЬОНИ"> Парти МИНЬОНИ</option>
-            <option value="Парти ПИЖАМЕНО">Парти ПИЖАМЕНО</option>
-            <option value="Парти СТРАШНО">Парти СТРАШНО</option>
-            <option value="Парти УЙНКС">Парти УЙНКС</option>
-            <option value="Парти ЗАМРЪЗНАЛО КРАЛСТВО">Парти ЗАМРЪЗНАЛО КРАЛСТВО</option>
-            <option value="Парти КАЛИНКАТА И ЧЕРНИЯ КОТАРАК">Парти КАЛИНКАТА И ЧЕРНИЯ КОТАРАК</option>
-            <option value="Парти РАПУНЦЕЛ">Парти РАПУНЦЕЛ</option>
-            <option value="Парти БАТМАН">Парти БАТМАН</option>
-            <option value="Парти МИКИ И МИНИ МАУС">Парти МИКИ И МИНИ МАУС</option>
-            <option value="Парти КРЪСТОСЛОВИЦА">Парти КРЪСТОСЛОВИЦА</option>
-            <option value="Парти КОСТЕНУРКИТЕ НИНДЖА">Парти КОСТЕНУРКИТЕ НИНДЖА</option>
-            <option value="Парти ЕНГРИ БЪРДС">Парти ЕНГРИ БЪРДС</option>
-            <option value="Парти ФУТБОЛНО">Парти ФУТБОЛНО</option>
-            <option value="Парти ДИСКОТЕКА">Парти ДИСКОТЕКА</option>
-            <option value="Парти ПИРАТСКО">Парти ПИРАТСКО</option>
-            <option value="Парти НИНДЖАГО">Парти НИНДЖАГО</option>
-            <option value="Парти СПАЙДЪРМЕН">Парти СПАЙДЪРМЕН</option>
-            <option value="Парти СЪРВАЙВЪР">Парти СЪРВАЙВЪР</option>
-            <option value="Парти ПИНЯТА">Парти ПИНЯТА</option>
-            <option value="Парти ПИ ДЖЕЙ МАСК">Парти ПИ ДЖЕЙ МАСК</option>
-            <option value="Парти ИСКРИЦА И СИЯЙНИЦА">Парти ИСКРИЦА И СИЯЙНИЦА</option>
-            <option value="Парти КОЛИТЕ"> Парти КОЛИТЕ</option>
-            <option value="Парти ПЕС ПАТРУЛ">Парти ПЕС ПАТРУЛ</option>
-            <option value="Парти ПЕПА ПИГ">Парти ПЕПА ПИГ</option>
-            <input type="text" id="animator" placeholder="аниматор" />
+            <option value="" selected></option>
+            <option value="ДСКОТЕКА">ДСКОТЕКА</option>
+            <option value="ПЪЗЕЛ СТАЯ">ПЪЗЕЛ СТАЯ</option>
+            <option value="ДИСКОТЕКА С ПЪЗЕЛ СТАЯ">ДИСКОТЕКА С ПЪЗЕЛ СТАЯ</option>
         </select>
         <br>
         <br>
-        <hr class="rounded"> -->
+        <hr class="rounded">
         <label for="cakes">Избери Сладкарница:</label>
         <select id="cake">
             <option value="" selected></option>
@@ -380,7 +353,7 @@
 
     <div id="deleteEventModal">
 
-        <div class="small"><img src="/assets/disco.png"></div>
+        <div class="small"><img src="/assets/disco-puzzle.png"></div>
 
         <h2>Резервация на:
             <text id="име"></text>
@@ -401,8 +374,7 @@
             <b> Информация за капарото:&nbsp;&nbsp;&nbsp;<text id="капароТиме" style="color:#d36c6c"></text>
         <hr class="rounded">
             Коментар: <b><text style="color: #d36c6c;" id="коментар" ></text></b>
-        <!-- <hr class="rounded"> Парти: <b><text id="парти"></text></b>&nbsp;&nbsp;&nbsp; Аниматор: <b><text
-                id="аниматор"></text></b> -->
+        <hr class="rounded"> Парти: <b><text style="color: #d36c6c;"  id="парти"></text></b>
         <hr class="rounded"> Сладкарница: <b><text id="торта"></text></b>
         <br> Брой Парчета: <b><text id="парчета"></text></b>
         <br> Код на тортата: <b><text id="тортаКод"></text></b>
