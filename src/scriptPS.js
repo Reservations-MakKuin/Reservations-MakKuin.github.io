@@ -441,7 +441,7 @@ function openModal(event, date, reservationsArr) {
             blockEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
             document.getElementById('editButton').style.display = 'inline-block';
-            window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
+            window.location.href = 'https://reservations-makkuin.github.io/loginPS.html';
 
         }else{
             document.querySelector('#blockEventModal h2').textContent = 'Достигнат е максимум на резервации за ден!';
