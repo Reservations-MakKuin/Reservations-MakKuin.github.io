@@ -95,7 +95,7 @@ function openModal(event, date, reservationsArr) {
     };
 
 
-    if (event.target.className == 'event') {
+    if (event.target.className == 'event' && localStorage.getItem('1') != null) {
 
         newEventModal.style.display = 'none';
         deleteEventModal.style.display = 'block';
