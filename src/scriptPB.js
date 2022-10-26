@@ -49,7 +49,7 @@ function openModal(event, date, reservationsArr) {
          
         
         alert("Не сте Логнати!")
-        window.location.href = '/loginOut.html';
+        window.location.href = 'https://reservations-makkuin.github.io/loginPB.html';
      }
 
     clicked = date;
