@@ -29,6 +29,20 @@ const kaparoTime = document.getElementById('kaparoTime');
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ];
 
 function openModal(event, date, reservationsArr) {
+    
+    if(localStorage.length > 0){
+        login('Miro', '123456')
+
+    }else{
+   
+    // if(localStorage.userData == undefined){
+        
+       
+       alert("Не сте Логнати!")
+       window.location.href = '/login.html';
+    }
+    
+    
     clicked = date;
     calendar.style.display = 'none';
     let curentDate = clicked;
