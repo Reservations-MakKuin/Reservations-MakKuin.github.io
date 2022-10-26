@@ -41,6 +41,19 @@ let parentCatering = document.getElementById('cetaring2');
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ];
 
 function openModal(event, date, reservationsArr) {
+
+    if(localStorage.getItem('1') != null){
+        // login('Miro', '123456')
+ 
+     }else{
+    
+     // if(localStorage.userData == undefined){
+         
+        
+        alert("Не сте Логнати!")
+        window.location.href = '/loginOut.html';
+     }
+
     clicked = date;
     calendar.style.display = 'none';
     let curentDate = clicked;
