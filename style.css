@@ -219,7 +219,7 @@ button {
     font-size: 10px;
     padding: 3px;
     background-color: #58bae4;
-    color: white;
+    color: rgb(254, 252, 252);
     border-radius: 3px;
     max-height: 55px;
     overflow: hidden;

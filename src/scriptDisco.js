@@ -71,7 +71,7 @@ function openModal(event, date, reservationsArr) {
                 // current.style.display = "none";
                 current.disabled = true;
  
-                let endIndex = index + 4;
+                let endIndex = index + 3;  
                 let startIndex = index - 4
  
                 if (startIndex < 0) {
@@ -494,8 +494,14 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
+                    if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }else{
+                        eventDiv.classList.add('event');
+                        eventDiv.style="background-color:red;"
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
                     });

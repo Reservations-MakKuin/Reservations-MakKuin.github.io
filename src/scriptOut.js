@@ -110,7 +110,12 @@ function openModal(event, date, reservationsArr) {
 
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
         document.getElementById('editBtn').addEventListener('click', () => {
-          
+        
+           
+        let currentEventDate = currentEvent.createdAt.split('-')
+        let currentEventDate2 = currentEventDate[2].split('T')
+        document.getElementById('reservTime').textContent = currentEventDate2[0] + '/' + currentEventDate[1] + '/' + currentEventDate[0];    
+
             let editIndex = 0;
             for (let current of [...time.children]) {
          
@@ -263,6 +268,7 @@ function openModal(event, date, reservationsArr) {
                 location.reload();
             };
         };
+        
     } else {
         if (event.target.children.length !== 4 && localStorage.getItem('1') != null) {
 
@@ -288,6 +294,7 @@ function openModal(event, date, reservationsArr) {
 
         }
     };
+    
 };
 
 function load() {
@@ -338,13 +345,19 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
+                    if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }else{
+                        eventDiv.classList.add('event');
+                        eventDiv.style="background-color:red;"
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
                     });
                 };
- 
+            
             };
             daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
@@ -378,7 +391,7 @@ function closeModal() {
 }
 
 async function saveEvent() {
-console.log(phone.value.length);
+
 
     if (names.value && time.value && age.value && (phone.value.length >= 10 && phone.value.length <= 10  )  &&  kaparoTime.value) {
         names.classList.remove('error');

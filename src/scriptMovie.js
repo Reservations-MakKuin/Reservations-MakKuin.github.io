@@ -496,8 +496,14 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
+                    if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }else{
+                        eventDiv.classList.add('event');
+                        eventDiv.style="background-color:red;"
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
                     });
