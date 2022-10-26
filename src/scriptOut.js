@@ -30,7 +30,7 @@ const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 
 function openModal(event, date, reservationsArr) {
     
-    if(localStorage.length > 0){
+   if(localStorage.getItem('1') != null){
      //   login('Miro', '123456')
 
     }else{
