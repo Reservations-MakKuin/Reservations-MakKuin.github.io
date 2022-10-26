@@ -34,11 +34,14 @@ function openModal(event, date, reservationsArr) {
        // login('Miro', '123456')
 
     }else{
-   
+        document.querySelector('#blockEventModal h2').textContent = 'Не сте се ЛОГНАЛИ!';
+        blockEventModal.style.display = 'block';
+        deleteEventModal.style.display = 'none';
+        document.getElementById('editButton').style.display = 'inline-block';
     // if(localStorage.userData == undefined){
         
            
-       alert("Не сте Логнати!")
+      // alert("Не сте Логнати!")
        window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
     }
     
