@@ -30,16 +30,16 @@ const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 
 function openModal(event, date, reservationsArr) {
 
-    if(localStorage.getItem('1') != null){
-       // login('Miro', '123456')
+    // if(localStorage.getItem('1') != null){
+    //    // login('Miro', '123456')
 
-    }else{
-    // if(localStorage.userData == undefined){
+    // }else{
+    // // if(localStorage.userData == undefined){
         
            
-      // alert("Не сте Логнати!")
-      // window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
-    }
+    //   // alert("Не сте Логнати!")
+    //   // window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
+    // }
     
     
     clicked = date;

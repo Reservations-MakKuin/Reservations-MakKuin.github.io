@@ -423,7 +423,7 @@ function openModal(event, date, reservationsArr) {
             };
         };
     } else {
-        if (event.target.children.length !== 4) {
+        if (event.target.children.length !== 4 && localStorage.getItem('1') != null) {
 
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
@@ -431,8 +431,15 @@ function openModal(event, date, reservationsArr) {
             document.getElementById('editButton').style.display = 'none';
             document.getElementById('saveButton').style.display = 'inline-block';
             document.getElementById('deleteButton').style.display = 'none';
-        } else {
+        } else if (event.target.children.length !== 4 && localStorage.getItem('1') == null){
            // return alert('Достигнат Максимум на резервации за ден!');
+            document.querySelector('#blockEventModal h2').textContent = 'Не сте логнати!';
+            blockEventModal.style.display = 'block';
+            deleteEventModal.style.display = 'none';
+            document.getElementById('editButton').style.display = 'inline-block';
+            window.location.href = 'https://reservations-makkuin.github.io/loginOut.html';
+
+        }else{
             document.querySelector('#blockEventModal h2').textContent = 'Достигнат е максимум на резервации за ден!';
             blockEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
