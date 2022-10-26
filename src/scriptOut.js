@@ -1,5 +1,5 @@
 import {get, post, put, del } from "./api/api.js";
-import { login } from "./api/api.js";
+//import { login } from "./api/api.js";
 
 
 let nav = 0;
@@ -31,7 +31,7 @@ const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 function openModal(event, date, reservationsArr) {
     
     if(localStorage.length > 0){
-        login('Miro', '123456')
+     //   login('Miro', '123456')
 
     }else{
    
