@@ -98,6 +98,7 @@ function initButtons() {
           }else{
             dt.setMonth(++month);
           }
+          dt.setMonth(month)
           load();
         });
  
@@ -110,6 +111,7 @@ function initButtons() {
           }else{
             dt.setMonth(--month);
           }
+          dt.setMonth(month)
           load();
         });
       }

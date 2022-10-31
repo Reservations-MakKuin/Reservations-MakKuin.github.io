@@ -42,12 +42,12 @@ function load() {
     });
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
    
-    const monthName = dt.toLocaleString('bg-BG', {month: 'long'});
-    document.getElementById("monthDisplay").innerText =
-    monthName.toUpperCase() +
-    " " +
-    year;
+    const monthName = dt.toLocaleDateString('bg-BG', {month: 'long'});
+   
 
+    document.getElementById("monthDisplay").innerText =
+    `${monthName.toUpperCase()} ${year}`
+   
     // document.getElementById('monthDisplay').innerText =
     //     `${dt.toLocaleDateString('bg-BG', { month: 'long' }).toUpperCase()} ${year}`;
 
@@ -98,7 +98,10 @@ function initButtons() {
             year++;
           }else{
             dt.setMonth(++month);
-          }
+        }
+         
+          dt.setMonth(month)
+          
           load();
         });
  
@@ -111,6 +114,7 @@ function initButtons() {
           }else{
             dt.setMonth(--month);
           }
+          dt.setMonth(month)
           load();
         });
       }

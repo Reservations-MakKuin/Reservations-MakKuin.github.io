@@ -2,7 +2,7 @@ import {get, post, put, del } from "./api/api.js";
 
 
 
-let nav = 0;
+//let nav = 0;
 let clicked = null;
 const events = await get("/classes/ReservationDC?limit=10000");
 
@@ -448,17 +448,17 @@ function openModal(event, date, reservationsArr) {
         }
     };
 };
+let dt = new Date();
+let day = dt.getDate();
+let month = dt.getMonth();
+let year = dt.getYear() + 1900;
 
 function load() {
-    const dt = new Date();
 
-    if (nav !== 0) {
-        dt.setMonth(new Date().getMonth() + nav);
-    };
+    // if (nav !== 0) {
+    //     dt.setMonth(new Date().getMonth() + nav);
+    // };
 
-    const day = dt.getDate();
-    const month = dt.getMonth();
-    const year = dt.getFullYear();
 
     const firstDayOfMonth = new Date(year, month, 1);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -471,8 +471,12 @@ function load() {
     });
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
-    document.getElementById('monthDisplay').innerText =
-        `${dt.toLocaleDateString('bg-BG', { month: 'long' }).toUpperCase()} ${year}`;
+    const monthName = dt.toLocaleDateString('bg-BG', {month: 'long'});
+    console.log(dt);
+    document.getElementById("monthDisplay").innerText =
+    `${monthName.toUpperCase()} ${year}`
+    // document.getElementById('monthDisplay').innerText =
+    //     `${dt.toLocaleDateString('bg-BG', { month: 'long' }).toUpperCase()} ${year}`;
 
     calendar.innerHTML = '';
 
@@ -486,7 +490,7 @@ function load() {
         if (i > paddingDays) {
             daySquare.innerText = i - paddingDays;
 
-            if (i - paddingDays === day && nav === 0) {
+            if (i - paddingDays === day ) {
                 daySquare.id = 'currentDay';
             }
             if (events.results.length > 0) {
@@ -613,12 +617,26 @@ async function saveEvent() {
 
 function initButtons() {
     document.getElementById('nextButton').addEventListener('click', () => {
-        nav++;
+        //nav++;
+        if(month == 11){
+            dt.setMonth(month = 0);
+            year++;
+          }else{
+            dt.setMonth(++month);
+          }
+          dt.setMonth(month)
         load();
     });
 
     document.getElementById('backButton').addEventListener('click', () => {
-        nav--;
+        //nav--;
+        if(month == 0){
+            dt.setMonth(month = 11);
+            year--;
+          }else{
+            dt.setMonth(--month);
+          }
+          dt.setMonth(month)
         load();
     });
     document.getElementById('saveButton').addEventListener('click', saveEvent);
