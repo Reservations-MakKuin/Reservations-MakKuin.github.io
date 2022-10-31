@@ -10,16 +10,26 @@ const calendar = document.getElementById('calendar');
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', ];
 
+
+let dt = new Date();
+let day = dt.getDate();
+let month = dt.getMonth();
+let year = dt.getYear() + 1900;
+
+
+
 function load() {
-    const dt = new Date();
+// const dt = new Date();
+// console.log(dt);
+// console.log(nav);
+//     if (nav !== 0) {
+//         dt.setMonth(new Date().getMonth() + nav);
+//         console.log(dt);
+//     };
 
-    if (nav !== 0) {
-        dt.setMonth(new Date().getMonth() + nav);
-    };
-
-    const day = dt.getDate();
-    const month = dt.getMonth();
-    const year = dt.getFullYear();
+//     const day = dt.getDate();
+//     const month = dt.getMonth();
+//     const year = dt.getFullYear();
 
     const firstDayOfMonth = new Date(year, month, 1);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -31,9 +41,15 @@ function load() {
         day: 'numeric',
     });
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
+   
+    const monthName = dt.toLocaleString('bg-BG', {month: 'long'});
+    document.getElementById("monthDisplay").innerText =
+    monthName.toUpperCase() +
+    " " +
+    year;
 
-    document.getElementById('monthDisplay').innerText =
-        `${dt.toLocaleDateString('bg-BG', { month: 'long' }).toUpperCase()} ${year}`;
+    // document.getElementById('monthDisplay').innerText =
+    //     `${dt.toLocaleDateString('bg-BG', { month: 'long' }).toUpperCase()} ${year}`;
 
     calendar.innerHTML = '';
 
@@ -76,15 +92,28 @@ function load() {
 
 function initButtons() {
     document.getElementById('nextButton').addEventListener('click', () => {
-        nav++;
-        load();
-    });
+        //nav++;
+        if(month == 11){
+            dt.setMonth(month = 0);
+            year++;
+          }else{
+            dt.setMonth(++month);
+          }
+          load();
+        });
+ 
 
     document.getElementById('backButton').addEventListener('click', () => {
-        nav--;
-        load();
-    });
-     
-}
+        //nav--;
+        if(month == 0){
+            dt.setMonth(month = 11);
+            year--;
+          }else{
+            dt.setMonth(--month);
+          }
+          load();
+        });
+      }
+
 initButtons();
 load();
