@@ -226,11 +226,11 @@ button {
     margin: 1px;
 }
 .event2 {
-    font-size: 11px;
-    text-align:center;
+    font-size: 9px;
+    
     padding: 3px;
-    background-color: #f719197e;
-    color: rgb(8, 0, 0);
+    background-color:  #58bae4;
+    color: rgb(254, 252, 252);
     border-radius: 3px;
     max-height: 55px;
     overflow: hidden;
