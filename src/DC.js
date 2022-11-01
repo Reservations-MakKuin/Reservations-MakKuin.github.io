@@ -81,7 +81,7 @@ function load() {
                         p1.classList.add('p1')
                         p2.classList.add('p2')
                         span.classList.add('tooltiptext')
-                        eventDiv.classList.add('event');
+                        eventDiv.classList.add('event2');
                      // eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         p1.innerHTML = `Рожден Ден на ${ev.name} ${ev.age}г.` 
                         p2.innerHTML = `<b>${ev.time}ч.<br>____________</b>`
