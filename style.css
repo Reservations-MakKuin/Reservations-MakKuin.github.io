@@ -461,22 +461,30 @@ button {
 }
 
 .small>img {
-    max-width: 130px;
-    max-height: 70px;
-    margin: 16px auto;
+    max-width: 150px;
+    max-height: 90px;
+    margin: 3px auto;
     display: block;
 }
 
 .hedarLogo>img {
-    max-width: 130px;
-    max-height: 60px;
+    max-width: 150px;
+    max-height: 80px;
     margin-top: 8px;
     margin-left: 30px;
     display:block;
     
     
 }
-
+.hedarLogo2>img {
+    max-width: 170px;
+    max-height: 100px;
+    margin-top: 8px;
+    margin-left: 15px;
+    display:block;
+    
+    
+}
 
 #shoDate {
     color: rgb(255, 64, 0);
