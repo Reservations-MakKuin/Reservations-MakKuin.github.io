@@ -72,11 +72,23 @@ function load() {
                 eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
 
                 if (eventForDay.length > 0) {
+                    const span = document.createElement('span');
+                    const eventDiv = document.createElement('div');
+                    eventDiv.innerText = "ПРАЗНУВАМЕ РОЖДЕН ДЕН НА:"
                     eventForDay.map(ev => {
-                        const eventDiv = document.createElement('div');
+                        const p1 = document.createElement('p')
+                        const p2 = document.createElement('p')
+                        p1.classList.add('p1')
+                        p2.classList.add('p2')
+                        span.classList.add('tooltiptext')
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                     // eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        p1.innerHTML = `Рожден Ден на ${ev.name} ${ev.age}г.` 
+                        p2.innerHTML = `<b>${ev.time}ч.<br>____________</b>`
+                        span.appendChild(p1)
+                        span.appendChild(p2)
                         daySquare.appendChild(eventDiv);
+                        daySquare.appendChild(span);
                         reservationsOnTheDay.push(ev.time);
                     });
                 };
