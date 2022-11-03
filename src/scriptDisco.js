@@ -513,7 +513,7 @@ function load() {
                           p1.classList.add('p1')
                           p2.classList.add('p2')
                           span.classList.add('tooltiptext')
-                          eventDiv.classList.add('event');
+                          eventDiv.classList.add('event2');
                           eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                           p0.innerHTML = `${ev.party}` 
                           p1.innerHTML = `Рожден Ден на ${ev.name} ${ev.age}г.` 
@@ -529,10 +529,10 @@ function load() {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
-                        eventDiv.classList.add('event');
+                        eventDiv.classList.add('event2');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }else{
-                        eventDiv.classList.add('event');
+                        eventDiv.classList.add('event2');
                         eventDiv.style="background-color:red;"
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
@@ -541,7 +541,7 @@ function load() {
                     });
                 };
             };
-            daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
+            daySquare.addEventListener('click', (event2) => openModal(event2, dayString, reservationsOnTheDay));
         } else {
             daySquare.classList.add('padding');
         };

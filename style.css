@@ -217,7 +217,7 @@ button {
 
 .event {
     font-size: 10px;
-    padding: 3px;
+    padding: 1px;
     background-color: #58bae4;
     color: rgb(254, 252, 252);
     border-radius: 3px;
@@ -226,9 +226,8 @@ button {
     margin: 1px;
 }
 .event2 {
-    font-size: 9px;
-    
-    padding: 3px;
+    font-size: 10px;
+    padding: 0px;
     background-color:  #58bae4;
     color: rgb(254, 252, 252);
     border-radius: 3px;
