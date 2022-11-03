@@ -309,7 +309,7 @@ button {
 #quantity2,
 #quantity {
     padding: 2px;
-    width: 11%;
+    width: 10%;
 }
 
 /* #descript2,
@@ -567,12 +567,11 @@ hr.rounded {
     display :none
 }
 
+.p0 {color:#059614;}
+.p1 {color:#ff0000;}
+.p2 {color:gray;}
 
-    
-    .p1 {color:#ff0000;}
-    .p2 {color:gray;}
-  
-  .day .tooltiptext {
+.day .tooltiptext {
     visibility: hidden;
     width: 120px;
     height: auto;
@@ -585,7 +584,27 @@ hr.rounded {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
     z-index: 1;
+    margin-left: 90px;
+  }
+
+  .day .tooltiptext2 {
+    visibility: hidden;
+    width: 120px;
+    height: auto;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    z-index: 1;
+  
   }
   .day:hover .tooltiptext {
+    visibility: visible;
+  }
+  .day:hover .tooltiptext2 {
     visibility: visible;
   }

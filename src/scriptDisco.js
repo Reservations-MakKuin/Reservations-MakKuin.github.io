@@ -72,7 +72,7 @@ function openModal(event, date, reservationsArr) {
                 current.disabled = true;
  
                 let endIndex = index + 3;  
-                let startIndex = index - 4
+                let startIndex = index - 2
  
                 if (startIndex < 0) {
                     startIndex = 0;
@@ -420,7 +420,7 @@ function openModal(event, date, reservationsArr) {
             };
         };
     } else {
-        if (event.target.children.length !== 4 && localStorage.getItem('1') != null) {
+        if (event.target.children.length !== 6 && localStorage.getItem('1') != null) {
 
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
@@ -500,6 +500,30 @@ function load() {
 
                 let eventForDay = events.results.filter(e => (e.date == dayString));
                 eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
+
+                if (eventForDay.length > 0) {
+                    
+                     const span = document.createElement('span');
+                     eventForDay.map(ev => {
+                         const eventDiv = document.createElement('div');
+                         const p0 = document.createElement('p')
+                          const p1 = document.createElement('p')
+                          const p2 = document.createElement('p')
+                          p0.classList.add('p0')
+                          p1.classList.add('p1')
+                          p2.classList.add('p2')
+                          span.classList.add('tooltiptext')
+                          eventDiv.classList.add('event');
+                          eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                          p0.innerHTML = `${ev.party}` 
+                          p1.innerHTML = `Рожден Ден на ${ev.name} ${ev.age}г.` 
+                          p2.innerHTML = `<b>${ev.time}ч.<br>____________</b>`
+                          span.appendChild(p0)
+                          span.appendChild(p1)
+                          span.appendChild(p2)
+                          daySquare.appendChild(span);
+                    });
+                };
 
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {

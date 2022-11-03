@@ -79,7 +79,7 @@ function load() {
                         const p2 = document.createElement('p')
                         p1.classList.add('p1')
                         p2.classList.add('p2')
-                        span.classList.add('tooltiptext')
+                        span.classList.add('tooltiptext2')
                         eventDiv.classList.add('event2');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         p1.innerHTML = `Рожден Ден на ${ev.name} ${ev.age}г.` 
