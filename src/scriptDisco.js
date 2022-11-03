@@ -521,7 +521,8 @@ function load() {
                           span.appendChild(p0)
                           span.appendChild(p1)
                           span.appendChild(p2)
-                          daySquare.appendChild(span);
+                          eventDiv.appendChild(span)
+                          //daySquare.appendChild(span);
                     });
                 };
 
