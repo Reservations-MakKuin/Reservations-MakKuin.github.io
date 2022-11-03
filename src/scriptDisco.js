@@ -420,7 +420,7 @@ function openModal(event, date, reservationsArr) {
             };
         };
     } else {
-        if (event.target.children.length !== 6 && localStorage.getItem('1') != null) {
+        if (event.target.children.length !== 7 && localStorage.getItem('1') != null) {
 
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
