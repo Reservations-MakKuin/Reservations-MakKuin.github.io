@@ -93,7 +93,7 @@ function openModal(event, date, reservationsArr) {
 
 
 
-    if (event.target.className == 'event' && localStorage.getItem('1') != null) {
+    if (event.target.className == 'event2' && localStorage.getItem('1') != null) {
 
         newEventModal.style.display = 'none';
         deleteEventModal.style.display = 'block';
@@ -513,7 +513,7 @@ function load() {
                           p1.classList.add('p1')
                           p2.classList.add('p2')
                           span.classList.add('tooltiptext')
-                          eventDiv.classList.add('event');
+                          eventDiv.classList.add('event2');
                           eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                           p0.innerHTML = `${ev.party}` 
                           p1.innerHTML = `Рожден Ден на ${ev.name} ${ev.age}г.` 
@@ -521,8 +521,8 @@ function load() {
                           span.appendChild(p0)
                           span.appendChild(p1)
                           span.appendChild(p2)
-                          eventDiv.appendChild(span)
-                          //daySquare.appendChild(span);
+                          //eventDiv.appendChild(span)
+                          daySquare.appendChild(span);
                     });
                 };
 
@@ -530,7 +530,7 @@ function load() {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
-                        eventDiv.classList.add('event');
+                        eventDiv.classList.add('event2');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }else{
                         eventDiv.classList.add('event2');
@@ -542,7 +542,7 @@ function load() {
                     });
                 };
             };
-            daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
+            daySquare.addEventListener('click', (event2) => openModal(event2, dayString, reservationsOnTheDay));
         } else {
             daySquare.classList.add('padding');
         };
