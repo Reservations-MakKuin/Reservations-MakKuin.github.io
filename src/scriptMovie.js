@@ -73,8 +73,8 @@ function openModal(event, date, reservationsArr) {
                 // current.style.display = "none";
                 current.disabled = true;
  
-                let endIndex = index + 5;
-                let startIndex = index - 4;
+                let endIndex = index + 2;
+                let startIndex = index - 2;
  
                 if (startIndex < 0) {
                     startIndex = 0;
@@ -162,8 +162,8 @@ function openModal(event, date, reservationsArr) {
                     // current.style.display = "block";
                     current.disabled = false;
          
-                    let endEditIndex = editIndex + 5;
-                    let startEditIndex = editIndex - 4;
+                    let endEditIndex = editIndex + 2;
+                    let startEditIndex = editIndex - 2;
          
                     if (startEditIndex < 0) {
                         startEditIndex = 0;
@@ -189,8 +189,8 @@ function openModal(event, date, reservationsArr) {
                         // current.style.display = "none";
                         current.disabled = true;
          
-                        let endIndex = index + 5;
-                        let startIndex = index - 4;
+                        let endIndex = index + 2;
+                        let startIndex = index - 2;
          
                         if (startIndex < 0) {
                             startIndex = 0;
