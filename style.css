@@ -619,4 +619,17 @@ hr.rounded {
   .day:hover .tooltiptext2 {
     visibility: visible;
   }
+  #legend {
+    position:absolute;
+    left: 400px;
+    top: 750px;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 16px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+  }
   
