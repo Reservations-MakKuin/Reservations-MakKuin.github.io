@@ -621,7 +621,7 @@ hr.rounded {
   }
   #legend {
     position:absolute;
-    left: 300px;
+    left: 100px;
     top: 750px;
     background-color: white;
     color: red;
