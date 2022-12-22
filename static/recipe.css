@@ -145,7 +145,7 @@
         float: left;
         display: block;
         width: 250px;
-        margin: 10px;
+        margin: 80px;
         
         
         
@@ -214,11 +214,11 @@
     }
     
     .recent-title4 {
-        padding: 8px 16px;
+        padding: 9.5px 16px;
         background-color: rgba(109, 9, 240, 0.473);
         border-radius: 0 0 16px 16px;
         text-align: center;
-        font-size: 0.875em;
+        font-size: 0.930em;
     }
     
     .recent-title5 {
