@@ -8,6 +8,37 @@
     <title>Календар Пъзел Стая</title>
 
     <link rel="stylesheet" href="style.css">
+   <style> 
+   .weekdays {
+  margin: 0;
+  padding: 30px 30;
+  background-color: #ddd;
+  
+ 
+}
+
+.weekdays li {
+  display: inline-block;
+  
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+  
+}
+
+   @media screen and (max-width:720px) {
+        .weekdays div, .days li {width: 13.1%;}
+      }
+      
+      @media screen and (max-width: 420px) {
+        .weekdays li, .days li {width: 12.5%;}
+        .days li .active {padding: 2px;}
+      }
+      
+      @media screen and (max-width: 290px) {
+        .weekdays li, .days li {width: 12.2%;}
+      }
+    </style>
 </head>
 
 <body>
@@ -24,16 +55,16 @@
                 <button id="nextButton">Следващ Месец</button>
             </div>
         </div>
-
-        <div id="weekdays">
-            <div>Понеделник</div>
-            <div>Вторник</div>
-            <div>Сряда</div>
-            <div>Четвъртък</div>
-            <div>Петък</div>
-            <div>Събота</div>
-            <div>Неделя</div>
-        </div>
+        <ul class="weekdays">
+            <li>Понеделник</li>
+            <li>Вторник</li>
+            <li>Сряда</li>
+            <li>Четвъртък</li>
+            <li>Петък</li>
+            <li>Събота</li>
+            <li>Неделя</li>
+          </ul>
+   
 
         <div id="calendar"></div>
     </div>
