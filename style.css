@@ -634,7 +634,7 @@ hr.rounded {
   }
 #legend2 {
     position:absolute;
-    left: 150px;
+    left: 350px;
     top: 850px;
     background-color: white;
     text-align: center;
@@ -646,7 +646,7 @@ hr.rounded {
   }
 #legend3 {
     position:absolute;
-    left: 450px;
+    left: 650px;
     top: 850px;
     background-color: white;
     text-align: center;
