@@ -121,10 +121,10 @@ function openModal(event, date, reservationsArr) {
          
                 if (currentEvent.time == current.textContent) {
                     // current.style.display = "block";
-                    current.disabled = false;
+                  //  current.disabled = false;
          
                     let endEditIndex = editIndex + 5;
-                    let startEditIndex = editIndex - 8;
+                    let startEditIndex = editIndex - 4;
          
                     if (startEditIndex < 0) {
                         startEditIndex = 0; 
@@ -135,7 +135,7 @@ function openModal(event, date, reservationsArr) {
          
                     for (let j = startEditIndex; j < endEditIndex; j++) {
                         // [...time.children][j].style.display = 'block';
-                        [...time.children][j].disabled = false;
+                       // [...time.children][j].disabled = false;
                     };
                 };
                 editIndex++;
@@ -148,10 +148,10 @@ function openModal(event, date, reservationsArr) {
          
                     if (reservationsArr.includes(current.textContent)) {
                         // current.style.display = "none";
-                        current.disabled = true;
+                     //   current.disabled = true;
          
                         let endIndex = index + 5;
-                        let startIndex = index - 8;
+                        let startIndex = index - 4;
          
                         if (startIndex < 0) {
                             startIndex = 0;
@@ -162,7 +162,7 @@ function openModal(event, date, reservationsArr) {
          
                         for (let i = startIndex; i < endIndex; i++) {
                             // [...time.children][i].style.display = 'none';
-                            [...time.children][i].disabled = true;
+                           // [...time.children][i].disabled = true;
                         };
                     };
                     index++;
