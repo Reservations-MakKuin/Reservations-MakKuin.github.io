@@ -124,7 +124,7 @@ function openModal(event, date, reservationsArr) {
                     current.disabled = false;
          
                     let endEditIndex = editIndex + 5;
-                    let startEditIndex = editIndex - 4;
+                    let startEditIndex = editIndex - 8;
          
                     if (startEditIndex < 0) {
                         startEditIndex = 0; 
