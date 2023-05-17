@@ -151,7 +151,7 @@ function openModal(event, date, reservationsArr) {
                         current.disabled = true;
          
                         let endIndex = index + 5;
-                        let startIndex = index - 4;
+                        let startIndex = index - 8;
          
                         if (startIndex < 0) {
                             startIndex = 0;
