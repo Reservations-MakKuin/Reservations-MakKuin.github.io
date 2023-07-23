@@ -366,7 +366,7 @@ function load() {
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "z.";
                     }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
