@@ -356,7 +356,7 @@ function load() {
                         const eventDiv = document.createElement('div');
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + "test";
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
