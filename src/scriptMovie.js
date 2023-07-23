@@ -522,7 +522,7 @@ function load() {
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                        console.log(cakeOrder);
+                        console.log(ev.cakeOrder);
 
                     }
                         daySquare.appendChild(eventDiv);
