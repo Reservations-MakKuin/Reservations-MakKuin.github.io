@@ -5,7 +5,7 @@ let nav = 0;
 let clicked = null;
 const events = await get("/classes/ReservationMovie?limit=10000");
 console.log(events)
-
+let check = "0"
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
@@ -523,7 +523,7 @@ function load() {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
                         if(ev.cakeChek = true){
-                            let check = "+"
+                            check = "+"
                         
                         }else{
                             check = "-"
