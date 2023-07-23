@@ -357,13 +357,12 @@ function load() {
                        
 
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
-                       console.log(eventDiv);
+                       
                         eventDiv.classList.add('event');
-                        console.log(eventDiv);
+                       
 
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                        console.log(eventDiv);
-                        console.log(eventForDay);
+                        console.log(reservationsOnTheDay);
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
