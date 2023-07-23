@@ -354,15 +354,19 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
+                        const eventDiv2 = document.createElement('div');
+                        eventDiv2.innerText = "test"
+
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = "ч." + " " + ev.name + " " + ev.age + "г.";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
                         daySquare.appendChild(eventDiv);
+                        daySquare.appendChild(eventDiv2)
                         reservationsOnTheDay.push(ev.time);
                     });
                 };
