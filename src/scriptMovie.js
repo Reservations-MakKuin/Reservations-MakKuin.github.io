@@ -516,16 +516,16 @@ function load() {
                        }
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + " " + ev.cakeOrder;
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         console.log(ev.cakeOrder);
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г."  + " " + ev.cakeOrder;
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         console.log(ev.cakeOrder);
 
                     }
-                        daySquare.appendChild(eventDiv);
+                        daySquare.appendChild(eventDiv + "test");
                         reservationsOnTheDay.push(ev.time);
                     });
                 };
