@@ -508,12 +508,12 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
-                        // if(ev.cakeOrder = true){
-                        //     check = "+"
+                        if(ev.cakeOrder == true){
+                            check = "+"
                         
-                        // }else{
-                        //     check = "-"
-                       // }
+                        }else{
+                            check = "-"
+                       }
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
