@@ -516,7 +516,7 @@ function load() {
                        }
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + " " + ev.order;
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + "d";
                         
                     }else{
                         eventDiv.classList.add('event');
