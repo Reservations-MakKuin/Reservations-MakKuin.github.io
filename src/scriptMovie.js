@@ -522,13 +522,19 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
+                        if(ev.cakeChek = true){
+                            let check = "+"
+                        
+                        }else{
+                            check = "-"
+                        }
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + ev.cakeChek;
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + check;
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + ev.cakeChek;
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + check;
                     }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
