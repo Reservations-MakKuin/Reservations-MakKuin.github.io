@@ -361,7 +361,7 @@ function load() {
                         eventDiv.classList.add('event');
                        
 
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + "ТЕСТ";
                         console.log(reservationsOnTheDay);
                     }else{
                         eventDiv.classList.add('event');
