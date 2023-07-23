@@ -32,7 +32,7 @@ const kidsMenu = document.getElementById('kidsMenu');
 const kidsNumber = document.getElementById('kidsNumber');
 const kaparoTime = document.getElementById('kaparoTime');
 
-const cakeChek = document.getElementById('deliveri');
+
 
 
 let kidsCatering = document.getElementById('cetaring');
