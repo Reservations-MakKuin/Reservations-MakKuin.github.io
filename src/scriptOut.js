@@ -93,6 +93,8 @@ function openModal(event, date, reservationsArr) {
         let reservationTime = splitted.shift().slice(0, -2);
         let years = splitted.pop().slice(0, -2);
         let name = splitted.join(' ')
+      //  let test = splitted.join(' ')
+
         const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime && clicked == e.date);
         document.getElementById('покажиДата').textContent = reverseDate;
         document.getElementById('име').textContent = currentEvent.name;
@@ -362,7 +364,7 @@ function load() {
                         eventDiv.classList.add('event');
                        
 
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + "test";
                         console.log(reservationsOnTheDay);
                     }else{
                         eventDiv.classList.add('event');
