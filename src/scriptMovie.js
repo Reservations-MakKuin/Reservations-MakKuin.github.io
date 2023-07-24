@@ -558,9 +558,9 @@ function load() {
                          eventDiv.style="background-color: #f19407;"
                          eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
-                    else if(ev.cakeDelivery == false && (ev.kaparoTime!== 'Оставено' || ev.kaparoTime !== "Грабо Ваучер")){
+                    if((ev.kaparoTime!== 'Оставено' || ev.kaparoTime !== "Грабо Ваучер") && ev.cakeDelivery == false ){
                         eventDiv.classList.add('event');
-                        eventDiv.style="background-color: #da06cc;"
+                        eventDiv.style="background-color: green;"
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
                         daySquare.appendChild(eventDiv);
