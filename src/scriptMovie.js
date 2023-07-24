@@ -105,7 +105,9 @@ function openModal(event, date, reservationsArr) {
 
        let splitted = event.target.textContent.trim().split(' ');
         let reservationTime = splitted.shift().slice(0, -2);
-        let years = splitted.pop().slice(0, -2);
+        let years = splitted.pop().slice(0, -3);
+    //  let years = splitted.pop().slice(0, -2);
+
         let name = splitted.join(' ')
         let test = splitted.join(' ')
         const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime && clicked == e.date);
@@ -517,12 +519,12 @@ function load() {
                        }
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + check;
                         
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + check;
                         
 
                     }
