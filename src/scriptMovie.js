@@ -109,7 +109,7 @@ function openModal(event, date, reservationsArr) {
 
        let splitted = event.target.textContent.trim().split(' ');
         let reservationTime = splitted.shift().slice(0, -2);
-        let years = splitted.pop().slice(0, -3);
+        let years = splitted.pop().slice(0, -2);
     //  let years = splitted.pop().slice(0, -2);
 
         let name = splitted.join(' ')
@@ -534,19 +534,24 @@ function load() {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
                         if(ev.cakeDelivery == true){
-                            check = "+"
-                        
+                           // check = "+"
+                           eventDiv.classList.add('event');
+                          // eventDiv.style="background-color:green;"
+                           eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         }else{
-                            check = "-"
+                          //  check = "-"
+                           eventDiv.classList.add('event');
+                           eventDiv.style="background-color:green;"
+                           eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                        }
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + " " + check;
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + check;
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         
 
                     }
