@@ -25,6 +25,8 @@ const HBDName = document.getElementById('HBDName');
 const cakeDescription = document.getElementById('cakeDescription');
 const price = document.getElementById('prise');
 const order = document.getElementById('order');
+const delivery = document.getElementById('delivery');
+
 const kidsMenu = document.getElementById('kidsMenu');
 const kidsNumber = document.getElementById('kidsNumber');
 const kaparoTime = document.getElementById('kaparoTime');
@@ -150,6 +152,12 @@ function openModal(event, date, reservationsArr) {
             document.getElementById('поръчана').textContent = 'НЕ';
         };
 
+        if (currentEvent.cakeDelivery == true) {
+            document.getElementById('доставена').textContent = "ДА";
+        } else {
+            document.getElementById('доставена').textContent = 'НЕ';
+        };
+
         document.getElementById('друго').textContent = currentEvent.other;
         document.getElementById('коментар').textContent = currentEvent.komentar;
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
@@ -223,6 +231,7 @@ function openModal(event, date, reservationsArr) {
             cakeTaste.value = currentEvent.cakeFilling;
             cakeDescription.value = currentEvent.cakeDescription;
             order.checked = currentEvent.cakeOrder;
+            delivery.checked = currentEvent.cakeDelivery;
             HBDName.value = currentEvent.cakeLabel;
             kidsMenu.value = currentEvent.kidsMenu;
             kidsNumber.value = currentEvent.kidsNumber;
@@ -354,6 +363,7 @@ function openModal(event, date, reservationsArr) {
                     "cakeDescription": cakeDescription.value.trim(),
                     "cakePrice": Number(price.value.trim()),
                     "cakeOrder": order.checked,
+                    "cakeDelivery": delivery.checked,
                     "kidsNumber": Number(kidsNumber.value.trim()),
                     "kidsMenu": kidsMenu.value.trim(),
                     "kidsCatering": cateringToPush,
@@ -378,6 +388,7 @@ function openModal(event, date, reservationsArr) {
                 price.value = '';
                 pices.value = '';
                 order.checked = false;
+                delivery.checked = false;
                 HBDName.value = '';
                 kidsMenu.value = '';
                 kidsNumber.value = '';
@@ -407,6 +418,7 @@ function openModal(event, date, reservationsArr) {
                 price.value = '';
                 pices.value = '';
                 order.checked = false;
+                delivery.checked = false;
                 other.value = '';
                 komentar.value = '';
                 HBDName.value = '';
@@ -528,14 +540,20 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
-                    if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
-                        eventDiv.classList.add('event2');
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                    }else{
-                        eventDiv.classList.add('event2');
-                        eventDiv.style="background-color:red;"
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                    }
+                        if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
+                            eventDiv.classList.add('event');
+                            eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        }else{
+                            eventDiv.classList.add('event');
+                            eventDiv.style="background-color:red;"
+                            eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        }
+                        if(ev.cakeDelivery == false){
+                            //  check = "-"
+                             eventDiv.classList.add('event');
+                             eventDiv.style="background-color: #f19407;"
+                             eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
                     });
@@ -568,6 +586,7 @@ function closeModal() {
     price.value = '';
     pices.value = '';
     order.checked = false;
+    delivery.checked = false;
     other.value = '';
     komentar.value = '';
     HBDName.value = '';
@@ -620,6 +639,7 @@ async function saveEvent() {
             "cakeDescription": cakeDescription.value.trim(),
             "cakePrice": Number(price.value.trim()),
             "cakeOrder": order.checked,
+            "cakeDelivery": delivery.checked,
             "kidsNumber": Number(kidsNumber.value.trim()),
             "kidsMenu": kidsMenu.value.trim(),
             "kidsCatering": cateringToPush,
