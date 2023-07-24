@@ -533,21 +533,25 @@ function load() {
                 if (eventForDay.length > 0) {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
-                        if(ev.cakeDelivery == true){
-                           // check = "+"
-                           eventDiv.classList.add('event');
-                          // eventDiv.style="background-color:green;"
-                           eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                        }else{
-                          //  check = "-"
-                           eventDiv.classList.add('event');
-                           eventDiv.style="background-color:green;"
-                           eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                       }
+                    //     if(ev.cakeDelivery == true){
+                    //        // check = "+"
+                    //        eventDiv.classList.add('event');
+                    //       // eventDiv.style="background-color:green;"
+                    //        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    //     }else{
+                    //       //  check = "-"
+                    //        eventDiv.classList.add('event');
+                    //        eventDiv.style="background-color:green;"
+                    //        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    //    }
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                        
+                    }else if(ev.cakeDelivery == true){
+                        //  check = "-"
+                         eventDiv.classList.add('event');
+                         eventDiv.style="background-color:green;"
+                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }else{
                         eventDiv.classList.add('event');
                         eventDiv.style="background-color:red;"
