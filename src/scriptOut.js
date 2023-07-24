@@ -91,9 +91,15 @@ function openModal(event, date, reservationsArr) {
         let splitted = event.target.textContent.trim().split(' ');
         console.log(splitted);
         let reservationTime = splitted.shift().slice(0, -2);
+        console.log(reservationTime);
+
         let years = splitted.pop().slice(0, -2);
+        console.log(years);
+
         let name = splitted.join(' ')
-      //  let test = splitted.join(' ')
+        console.log(name);
+
+        //  let test = splitted.join(' ')
 
         const currentEvent = events.results.find(e => e.name == name && e.age == years && e.time == reservationTime && clicked == e.date);
         document.getElementById('покажиДата').textContent = reverseDate;
