@@ -558,11 +558,11 @@ function load() {
                          eventDiv.style="background-color: #f19407;"
                          eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
-                    if((ev.kaparoTime == 'Оставено' || ev.kaparoTime == "Грабо Ваучер") && ev.cakeDelivery == false ){
+                    if((ev.kaparoTime != 'Оставено' || ev.kaparoTime == "Грабо Ваучер") && ev.cakeDelivery == false ){
                         console.log(ev.kaparoTime);
                         console.log(ev.cakeDelivery);
                         eventDiv.classList.add('event');
-                        eventDiv.style="background-color: green;"
+                        eventDiv.style="background-color: #cb21ead6;"
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
                         daySquare.appendChild(eventDiv);
