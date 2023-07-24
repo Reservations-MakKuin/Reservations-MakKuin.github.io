@@ -558,7 +558,7 @@ function load() {
                          eventDiv.style="background-color: #f19407;"
                          eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
-                    if(ev.kaparoTime == 'До 3 дни от датата на резервацията' || ev.kaparoTime == "До 5 дни от датата на резервацията" && ev.cakeDelivery == false ){
+                    if(ev.kaparoTime == 'До 3 дни от датата на резервацията' || ev.kaparoTime == "До Месец от датата на резервацията" || ev.kaparoTime == "До 5 дни от датата на резервацията" || ev.kaparoTime == "До 7 дни от датата на резервацията" || ev.kaparoTime == "До 10 дни от датата на резервацията" || ev.kaparoTime == "До 14 дни от датата на резервацията" || ev.kaparoTime == "Без капаро" && ev.cakeDelivery == false ){
                         console.log(ev.kaparoTime);
                         console.log(ev.cakeDelivery);
                         eventDiv.classList.add('event');
