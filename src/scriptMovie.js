@@ -547,7 +547,7 @@ function load() {
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                    }else if(ev.cakeDelivery == true){
+                    }else if(ev.cakeDelivery == false){
                         //  check = "-"
                          eventDiv.classList.add('event');
                          eventDiv.style="background-color:green;"
