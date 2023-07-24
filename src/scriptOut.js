@@ -93,7 +93,7 @@ function openModal(event, date, reservationsArr) {
         let reservationTime = splitted.shift().slice(0, -2);
         console.log(reservationTime);
 
-        let years = splitted.pop().slice(0, -2);
+        let years = splitted.pop().slice(0, -6);
         console.log(years);
 
         let name = splitted.join(' ')
