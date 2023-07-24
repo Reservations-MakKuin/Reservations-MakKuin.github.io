@@ -89,6 +89,7 @@ function openModal(event, date, reservationsArr) {
         deleteEventModal.style.display = 'block';
 
         let splitted = event.target.textContent.trim().split(' ');
+        console.log(splitted);
         let reservationTime = splitted.shift().slice(0, -2);
         let years = splitted.pop().slice(0, -2);
         let name = splitted.join(' ')
@@ -361,7 +362,7 @@ function load() {
                         eventDiv.classList.add('event');
                        
 
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г." + "ТЕСТ";
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         console.log(reservationsOnTheDay);
                     }else{
                         eventDiv.classList.add('event');
