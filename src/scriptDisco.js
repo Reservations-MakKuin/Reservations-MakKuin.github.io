@@ -541,16 +541,16 @@ function load() {
                     eventForDay.map(ev => {
                         const eventDiv = document.createElement('div');
                         if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
-                            eventDiv.classList.add('event');
+                            eventDiv.classList.add('event2');
                             eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         }else{
-                            eventDiv.classList.add('event');
+                            eventDiv.classList.add('event2');
                             eventDiv.style="background-color:red;"
                             eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         }
                         if(ev.cakeDelivery == false){
                             //  check = "-"
-                             eventDiv.classList.add('event');
+                             eventDiv.classList.add('event2');
                              eventDiv.style="background-color: #f19407;"
                              eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         }
