@@ -555,7 +555,7 @@ function load() {
                     if(ev.cakeDelivery == false){
                         //  check = "-"
                          eventDiv.classList.add('event');
-                         eventDiv.style="background-color:green;"
+                         eventDiv.style="background-color: #f19407;"
                          eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
                         daySquare.appendChild(eventDiv);
