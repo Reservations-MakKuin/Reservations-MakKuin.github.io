@@ -554,6 +554,11 @@ function load() {
                              eventDiv.style="background-color: #f19407;"
                              eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                         }
+                        if(ev.cakeDelivery == false && (ev.kaparoTime!== 'Оставено' || ev.kaparoTime !== "Грабо Ваучер")){
+                            eventDiv.classList.add('event');
+                            eventDiv.style="background-color: #da06cc;"
+                            eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                        }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
                     });

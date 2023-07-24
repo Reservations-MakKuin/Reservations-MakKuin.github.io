@@ -560,7 +560,7 @@ function load() {
                     }
                     if(ev.cakeDelivery == false && (ev.kaparoTime!== 'Оставено' || ev.kaparoTime !== "Грабо Ваучер")){
                         eventDiv.classList.add('event');
-                        eventDiv.style="background-color: green;"
+                        eventDiv.style="background-color: #da06cc;"
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
                         daySquare.appendChild(eventDiv);
