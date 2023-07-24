@@ -547,18 +547,16 @@ function load() {
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }else{
+                        eventDiv.classList.add('event');
+                        eventDiv.style="background-color:red;"
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
                     if(ev.cakeDelivery == false){
                         //  check = "-"
                          eventDiv.classList.add('event');
                          eventDiv.style="background-color:green;"
                          eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                    }else{
-                        eventDiv.classList.add('event');
-                        eventDiv.style="background-color:red;"
-                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
-                        
-
                     }
                         daySquare.appendChild(eventDiv);
                         reservationsOnTheDay.push(ev.time);
