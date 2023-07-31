@@ -25,6 +25,8 @@ const HBDName = document.getElementById('HBDName');
 const cakeDescription = document.getElementById('cakeDescription');
 const price = document.getElementById('prise');
 const order = document.getElementById('order');
+const delivery = document.getElementById('delivery');
+
 const kidsMenu = document.getElementById('kidsMenu');
 const kidsNumber = document.getElementById('kidsNumber');
 const kaparoTime = document.getElementById('kaparoTime');
@@ -153,6 +155,13 @@ function openModal(event, date, reservationsArr) {
             document.getElementById('поръчана').textContent = 'НЕ';
         };
 
+        if (currentEvent.cakeDelivery == true) {
+            document.getElementById('доставена').textContent = "ДА";
+        } else {
+            document.getElementById('доставена').textContent = 'НЕ';
+        };
+
+
         document.getElementById('друго').textContent = currentEvent.other;
         document.getElementById('коментар').textContent = currentEvent.komentar;
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
@@ -229,6 +238,7 @@ function openModal(event, date, reservationsArr) {
             cakeTaste.value = currentEvent.cakeFilling;
             cakeDescription.value = currentEvent.cakeDescription;
             order.checked = currentEvent.cakeOrder;
+            delivery.checked = currentEvent.cakeDelivery;
             HBDName.value = currentEvent.cakeLabel;
             kidsMenu.value = currentEvent.kidsMenu;
             kidsNumber.value = currentEvent.kidsNumber;
@@ -359,6 +369,7 @@ function openModal(event, date, reservationsArr) {
                     "cakeDescription": cakeDescription.value.trim(),
                     "cakePrice": Number(price.value.trim()),
                     "cakeOrder": order.checked,
+                    "cakeDelivery": delivery.checked,
                     "kidsNumber": Number(kidsNumber.value.trim()),
                     "kidsMenu": kidsMenu.value.trim(),
                     "kidsCatering": cateringToPush,
@@ -384,6 +395,8 @@ function openModal(event, date, reservationsArr) {
                 price.value = '';
                 pices.value = '';
                 order.checked = false;
+                delivery.checked = false;
+
                 HBDName.value = '';
                 kidsMenu.value = '';
                 kidsNumber.value = '';
@@ -414,6 +427,8 @@ function openModal(event, date, reservationsArr) {
                 price.value = '';
                 pices.value = '';
                 order.checked = false;
+                delivery.checked = false;
+
                 other.value = '';
                 komentar.value = '';
                 HBDName.value = '';
@@ -507,9 +522,25 @@ function load() {
                 let eventForDay = events.results.filter(e => (e.date == dayString));
                 eventForDay = eventForDay.sort((a, b) => a.time.localeCompare(b.time));
 
-                if (eventForDay.length > 0) {
-                    eventForDay.map(ev => {
-                        const eventDiv = document.createElement('div');
+            //     if (eventForDay.length > 0) {
+            //         eventForDay.map(ev => {
+            //             const eventDiv = document.createElement('div');
+            //         if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
+            //             eventDiv.classList.add('event');
+            //             eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+            //         }else{
+            //             eventDiv.classList.add('event');
+            //             eventDiv.style="background-color:red;"
+            //             eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+            //         }
+            //             daySquare.appendChild(eventDiv);
+            //             reservationsOnTheDay.push(ev.time);
+            //         });
+            //     };
+            // };
+            if (eventForDay.length > 0) {
+                eventForDay.map(ev => {
+                    const eventDiv = document.createElement('div');
                     if(ev.kaparoTime == 'Оставено' || ev.kaparoTime == 'Грабо Ваучер' ){
                         eventDiv.classList.add('event');
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
@@ -518,11 +549,24 @@ function load() {
                         eventDiv.style="background-color:red;"
                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
                     }
-                        daySquare.appendChild(eventDiv);
-                        reservationsOnTheDay.push(ev.time);
-                    });
-                };
+                    if(ev.cakeDelivery == false){
+                        //  check = "-"
+                         eventDiv.classList.add('event');
+                         eventDiv.style="background-color: #f19407;"
+                         eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }
+                    if(ev.kaparoTime == 'До 3 дни от датата на резервацията' || ev.kaparoTime == "До Месец от датата на резервацията" || ev.kaparoTime == "До 5 дни от датата на резервацията" || ev.kaparoTime == "До 7 дни от датата на резервацията" || ev.kaparoTime == "До 10 дни от датата на резервацията" || ev.kaparoTime == "До 14 дни от датата на резервацията" || ev.kaparoTime == "Без капаро" && ev.cakeDelivery == false ){
+                        console.log(ev.kaparoTime);
+                        console.log(ev.cakeDelivery);
+                        eventDiv.classList.add('event');
+                        eventDiv.style="background-color: #cb21ead6;"
+                        eventDiv.innerText = ev.time + "ч." + " " + ev.name + " " + ev.age + "г.";
+                    }
+                    daySquare.appendChild(eventDiv);
+                    reservationsOnTheDay.push(ev.time);
+                });
             };
+        };
             daySquare.addEventListener('click', (event) => openModal(event, dayString, reservationsOnTheDay));
         } else {
             daySquare.classList.add('padding');
@@ -550,6 +594,8 @@ function closeModal() {
     price.value = '';
     pices.value = '';
     order.checked = false;
+    delivery.checked = false;
+
     other.value = '';
     komentar.value = '';
     HBDName.value = '';
@@ -603,6 +649,8 @@ async function saveEvent() {
             "cakeDescription": cakeDescription.value.trim(),
             "cakePrice": Number(price.value.trim()),
             "cakeOrder": order.checked,
+            "cakeDelivery": delivery.checked,
+
             "kidsNumber": Number(kidsNumber.value.trim()),
             "kidsMenu": kidsMenu.value.trim(),
             "kidsCatering": cateringToPush,
