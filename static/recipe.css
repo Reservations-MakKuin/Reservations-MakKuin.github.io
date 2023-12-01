@@ -145,8 +145,16 @@
         float: left;
         display: block;
         width: 250px;
-        margin: 80px;
+        margin: 40px;
+        position:relative; left:80px; 
+    }
+    .recent4 {
         
+        float: left;
+        display: block;
+        width: 250px;
+        margin: 40px;
+        position:relative; left:80px; 
         
         
     }
