@@ -80,7 +80,7 @@ function openModal(event, date, reservationsArr) {
                 // current.style.display = "none";
                 current.disabled = true;
  
-                let endIndex = index + 2;
+                let endIndex = index + 8;
                 let startIndex = index - 2;
  
                 if (startIndex < 0) {
