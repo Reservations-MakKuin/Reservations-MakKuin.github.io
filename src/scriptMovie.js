@@ -194,7 +194,7 @@ function openModal(event, date, reservationsArr) {
        //                 [...time.children][j].disabled = false;
       //              };
       //          };
-                editIndex++;
+          //      editIndex++;
       //      };
          
       //      let filteredReservationArr = reservationsArr.filter(x => x != currentEvent.time);
