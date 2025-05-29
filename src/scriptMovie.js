@@ -72,32 +72,32 @@ function openModal(event, date, reservationsArr) {
      let reverseDate = `${curentDate[1]}.${curentDate[0]}.${curentDate[2]}`
          document.getElementById('shoDate').textContent = `За Дата: ${reverseDate}г.`;
 
-    if (reservationsArr.length > 0) {
-        let index = 0;
-        for (let current of [...time.children]) {
+//    if (reservationsArr.length > 0) {
+  //      let index = 0;
+ //       for (let current of [...time.children]) {
  
-            if (reservationsArr.includes(current.textContent)) {
+   //         if (reservationsArr.includes(current.textContent)) {
                 // current.style.display = "none";
               //  current.disabled = true;
  
-                let endIndex = index + 0;
-                let startIndex = index - 0;
+    //            let endIndex = index + 0;
+    //            let startIndex = index - 0;
  
-                if (startIndex < 0) {
-                    startIndex = 0;
-                };
-                if (endIndex > [...time.children].length) {
-                    endIndex = [...time.children].length;
-                };
+   //             if (startIndex < 0) {
+    //                startIndex = 0;
+    //            };
+    //            if (endIndex > [...time.children].length) {
+   //                 endIndex = [...time.children].length;
+    //            };
  
-               for (let i = startIndex; i < endIndex; i++) {
+  //             for (let i = startIndex; i < endIndex; i++) {
                     // [...time.children][i].style.display = 'none';
-                    [...time.children][i].disabled = true;
-                };
-            };
-            index++;
-        };
-    };
+   //                 [...time.children][i].disabled = true;
+  //              };
+  //          };
+   //         index++;
+   //     };
+ //   };
 
 
 
