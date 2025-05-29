@@ -183,7 +183,7 @@ function openModal(event, date, reservationsArr) {
         //            let startEditIndex = editIndex - 2;
          
         //            if (startEditIndex < 0) {
-                        startEditIndex = 0;
+          //              startEditIndex = 0;
        //             };
       //              if (endEditIndex > [...time.children].length) {
       //                  endEditIndex = [...time.children].length;
