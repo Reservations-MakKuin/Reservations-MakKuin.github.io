@@ -72,32 +72,32 @@ function openModal(event, date, reservationsArr) {
      let reverseDate = `${curentDate[1]}.${curentDate[0]}.${curentDate[2]}`
          document.getElementById('shoDate').textContent = `За Дата: ${reverseDate}г.`;
 
-   // if (reservationsArr.length > 0) {
-   //     let index = 0;
-   //     for (let current of [...time.children]) {
+    if (reservationsArr.length > 0) {
+        let index = 0;
+        for (let current of [...time.children]) {
  
-    //        if (reservationsArr.includes(current.textContent)) {
+            if (reservationsArr.includes(current.textContent)) {
                 // current.style.display = "none";
-      //          current.disabled = true;
+                current.disabled = true;
  
-     //           let endIndex = index + 2;
-      //          let startIndex = index - 2;
+                let endIndex = index + 2;
+                let startIndex = index - 2;
  
-     //           if (startIndex < 0) {
-    //                startIndex = 0;
-     //           };
-      //          if (endIndex > [...time.children].length) {
-     //               endIndex = [...time.children].length;
-      //          };
+                if (startIndex < 0) {
+                    startIndex = 0;
+                };
+                if (endIndex > [...time.children].length) {
+                    endIndex = [...time.children].length;
+                };
  
-     //           for (let i = startIndex; i < endIndex; i++) {
+               for (let i = startIndex; i < endIndex; i++) {
                     // [...time.children][i].style.display = 'none';
-     //               [...time.children][i].disabled = true;
-     //           };
-     //       };
-     //       index++;
-    //    };
-  //  };
+                    [...time.children][i].disabled = true;
+                };
+            };
+            index++;
+        };
+    };
 
 
 
@@ -173,57 +173,57 @@ function openModal(event, date, reservationsArr) {
         document.getElementById('deleteBtn').addEventListener('click', deleteReservation)
         document.getElementById('editBtn').addEventListener('click', () => {
             let editIndex = 0;
-       //     for (let current of [...time.children]) {
+            for (let current of [...time.children]) {
          
-        //        if (currentEvent.time == current.textContent) {
+                if (currentEvent.time == current.textContent) {
                     // current.style.display = "block";
-         //           current.disabled = false;
+                    current.disabled = false;
          
-        //            let endEditIndex = editIndex + 2;
-        //            let startEditIndex = editIndex - 2;
+                    let endEditIndex = editIndex + 2;
+                    let startEditIndex = editIndex - 2;
          
-        //            if (startEditIndex < 0) {
-          //              startEditIndex = 0;
-       //             };
-      //              if (endEditIndex > [...time.children].length) {
-      //                  endEditIndex = [...time.children].length;
-      //              };
+                    if (startEditIndex < 0) {
+                        startEditIndex = 0;
+                    };
+                    if (endEditIndex > [...time.children].length) {
+                        endEditIndex = [...time.children].length;
+                    };
          
-      //              for (let j = startEditIndex; j < endEditIndex; j++) {
+                   for (let j = startEditIndex; j < endEditIndex; j++) {
                         // [...time.children][j].style.display = 'block';
-       //                 [...time.children][j].disabled = false;
-      //              };
-      //          };
-          //      editIndex++;
-      //      };
+                        [...time.children][j].disabled = false;
+                    };
+                };
+                editIndex++;
+            };
          
-      //      let filteredReservationArr = reservationsArr.filter(x => x != currentEvent.time);
-      //      if (filteredReservationArr.length > 0) {
-     //           let index = 0;
-     //           for (let current of [...time.children]) {
+            let filteredReservationArr = reservationsArr.filter(x => x != currentEvent.time);
+            if (filteredReservationArr.length > 0) {
+                let index = 0;
+                for (let current of [...time.children]) {
          
-      //              if (reservationsArr.includes(current.textContent)) {
+                    if (reservationsArr.includes(current.textContent)) {
                         // current.style.display = "none";
-       //                 current.disabled = true;
+                        current.disabled = true;
          
-      //                 let endIndex = index + 2;
-       //                 let startIndex = index - 2;
+                       let endIndex = index + 2;
+                        let startIndex = index - 2;
          
-       //                 if (startIndex < 0) {
-      //                      startIndex = 0;
-       //                 };
-       //                 if (endIndex > [...time.children].length) {
-        //                    endIndex = [...time.children].length;
-       //                 };
+                        if (startIndex < 0) {
+                            startIndex = 0;
+                        };
+                        if (endIndex > [...time.children].length) {
+                            endIndex = [...time.children].length;
+                        };
          
-       //                 for (let i = startIndex; i < endIndex; i++) {
+                        for (let i = startIndex; i < endIndex; i++) {
                             // [...time.children][i].style.display = 'none';
-      //                      [...time.children][i].disabled = true;
-      //                  };
-       //             };
-     //               index++;
-      //          };
-     //       };
+                            [...time.children][i].disabled = true;
+                       };
+                    };
+                    index++;
+                };
+            };
             newEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
 
