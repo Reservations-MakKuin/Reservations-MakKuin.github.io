@@ -780,7 +780,7 @@ load();
 //                 // current.style.display = "none";
 //                 current.disabled = true;
  
-//                 let endIndex = index + 5;
+//                 let endIndex = index + 6;
 //                 let startIndex = index - 4;
  
 //                 if (startIndex < 0) {
