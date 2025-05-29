@@ -78,7 +78,7 @@ function openModal(event, date, reservationsArr) {
  
             if (reservationsArr.includes(current.textContent)) {
                 // current.style.display = "none";
-                current.disabled = true;
+              //  current.disabled = true;
  
                 let endIndex = index + 0;
                 let startIndex = index - 0;
@@ -177,7 +177,7 @@ function openModal(event, date, reservationsArr) {
          
                 if (currentEvent.time == current.textContent) {
                     // current.style.display = "block";
-                    current.disabled = false;
+                 //   current.disabled = false;
          
                     let endEditIndex = editIndex + 0;
                     let startEditIndex = editIndex - 0;
@@ -204,7 +204,7 @@ function openModal(event, date, reservationsArr) {
          
                     if (reservationsArr.includes(current.textContent)) {
                         // current.style.display = "none";
-                        current.disabled = true;
+                     //   current.disabled = true;
          
                        let endIndex = index + 0;
                         let startIndex = index - 0;
