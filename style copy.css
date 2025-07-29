@@ -1,0 +1,663 @@
+body {
+    display: flex;
+    margin-top: 10px;
+    margin-right:  15%;
+
+    justify-content: center;
+    background-color: #FFFCFF;
+}
+
+button {
+    width: 90px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgb(132, 126, 126);
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(237, 229, 229);
+}
+
+#nextButton,
+#backButton,
+#kalendari {
+    width: 90px;
+    margin: 10px auto;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(170, 46, 46);
+}
+
+#header {
+    padding: 10px;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#monthDisplay {
+    padding: 0px;
+    color: #f7f7fb;
+    margin-right:  0%;
+    margin-top: 4%;
+    font-size: 32px;
+    text-decoration: double;
+    font: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    text-shadow: 2px 2px #969494;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#headerMovie {
+    width: 115%; 
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/Movie-baner.jpg") center;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerOut {
+    width: 113%;
+    margin-left: 2%;
+    border-radius: 17px;
+    padding: 10px;
+    background-color: #f7061268;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerDC {
+    width: 113%;
+    margin-left: 2%;
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/DC-baner.jpg") center;
+    background-color: #fece5e68;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerPB {
+    width: 113%;
+    margin-left: 2%;
+    padding: 10px;
+    border-radius: 17px;
+    background: url("/assets/paintball-baner.jpg") center;
+
+    background-color: #88ea576f;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerPS {
+    width: 113%;
+    margin-left: 2%;
+    padding: 10px;
+    border-radius: 17px;
+    background: url("/assets/puzzle-baner.jpg") center;
+    background-color: #57b2ea5b;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerDisco {
+    width: 113%;
+    margin-left: 2%; 
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/disco-puzzle-baner.jpg") center;
+    background-color: #9333f366;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerOut {
+    width: 113%;
+    margin-left: 2%; 
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/test.jpg") center;
+    background-color: #9333f366;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header button {
+    background-color: #efeff3a2;
+}
+
+#container {
+    width: 770px;
+}
+
+#weekdays {
+    width: 118%;
+    display: flex;
+    color: #247BA0;
+    text-align: center;
+}
+
+#tm {
+    width: 50%;
+    font-size: 8px;
+    display: flex;
+    color: #247BA0;
+    text-align: center;
+}
+
+#weekdays div {
+    /* background-color: #4242430e;
+    border-radius: 55%; */
+    width: 120px;
+    padding: 10px;
+}
+
+#calendar {
+    width: 120%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    width: 120px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: rgba(224, 237, 236, 0.352);
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    font: bold;
+    border-radius: 10px;
+
+}
+
+.day:hover {
+    background-color: #e8faed;
+}
+
+.day+#currentDay {
+    background-color: #c6e6f78b;
+}
+
+.event {
+    font-size: 10px;
+    padding: 2px;
+    background-color: #58bae4;
+    color: rgb(254, 252, 252);
+    border-radius: 3px;
+    max-height: 55px;
+    overflow: hidden;
+    margin: 1px;
+}
+.event2 {
+
+    
+    font-size: 9px;
+    padding: 0px;
+    background-color:  #58bae4;
+    color: rgb(254, 252, 252);
+    border-radius: 3px;
+    max-height: 55px;
+    overflow: hidden;
+    margin: 1px;
+}
+
+
+      
+.event2:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+  
+}
+
+.padding {
+    cursor: default !important;
+    background-color: #FFFCFF !important;
+    box-shadow: none !important;
+}
+
+#newEventModal,
+#deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 570px;
+    top: 10px;
+    left: calc(40% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+}
+
+#names,
+#phone {
+    padding: 4px;
+    width: 40%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    color: #d36c6c;
+}
+#komentar {
+    padding: 4px;
+    width: 40%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    color: #d36c6c;
+}
+
+#cakeCode,
+#age {
+    padding: 4px;
+    width: 20%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    color: #d36c6c;
+}
+
+#kidsNumber,
+#prise {
+    padding: 4px;
+    width: 11%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#quantity2,
+#quantity {
+    padding: 2px;
+    width: 10%;
+}
+
+/* #descript2,
+#descript {
+    padding: 2px;
+    width: 20%;
+} */
+
+#cakeTaste,
+#HBDName {
+    padding: 4px;
+    width: 60%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#kaparoNumber,
+#kaparo {
+    padding: 4px;
+    width: 20%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#form {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#names.error {
+    border: 2px solid red;
+}
+
+#kaparoTime.error {
+    border: 2px solid red;
+}
+
+#age.error {
+    border: 2px solid red;
+}
+
+#parti.error {
+    border: 2px solid red;
+}
+
+#time.error {
+    border: 2px solid red;
+}
+
+#phone.error {
+    border: 2px solid red;
+}
+
+#btnMenu2,
+#btnMenu {
+    background-color: #2f8bc0;
+}
+
+#closeButton,
+#cancelButton {
+    background-color: #40c02f;
+}
+
+#closeButton2 {
+    background-color: #40c02f;
+    margin: 0;
+    position: absolute;
+    right: 40%;
+}
+
+#blockEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 560px;
+    top: 270px;
+    left: calc(40% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+    
+}
+
+#deleteBtn2,
+#deleteButton,
+#deleteBtn {
+    background-color: #d36c6c;
+}
+
+#saveButton,
+#editButton,
+#editBtn {
+    background-color: #2e2bec;
+}
+
+
+/* #closeButton {
+    background-color: #92a1d1;
+} */
+
+#eventText {
+    font-size: 14px;
+}
+
+#modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.small {
+    float: left;
+    background-color: white;
+    width: 150px;
+    text-align: center;
+    border-radius: 0 16px 16px 0;
+}
+
+.small>img {
+    max-width: 150px;
+    max-height: 90px;
+    margin: 3px auto;
+    display: block;
+}
+
+.hedarLogo>img {
+    max-width: 150px;
+    max-height: 80px;
+    margin-top: 8px;
+    margin-left: 30px;
+    display:block;
+    
+    
+}
+.hedarLogo2>img {
+    max-width: 170px;
+    max-height: 100px;
+    margin-top: 8px;
+    margin-left: 15px;
+    display:block;
+    
+    
+}
+
+#shoDate {
+    color: rgb(255, 64, 0);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(59, 62, 228);
+    text-align: center;
+}
+
+h3 {
+    color: #d36c6c;
+    text-align: left;
+}
+
+hr.rounded {
+    border-top: 2px solid #bbb;
+    border-radius: 5px;
+}
+
+#име {
+    color: #d36c6c;
+}
+
+#години {
+    color: #d36c6c;
+}
+
+#час {
+    color: #d36c6c;
+}
+#Коментар {
+    color: #d36c6c;
+}
+
+#поръчана {
+    color: #d36c6c;
+    text-shadow: 1px 1px #1b0101;
+}
+
+#доставена {
+    color: #10d85d;
+    text-shadow: 1px 1px #1b0101;
+}
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+  #notification {
+    position: fixed;
+    right: 25%;
+    top: 150px;
+}
+
+.notification {
+    list-style: none;
+    background-color: rgb(255, 194, 194);
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 16px 32px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+#kaparoData {
+    display :none
+}
+
+.p0 {color:#059614;}
+.p1 {color:#ff0000;}
+.p2 {color:gray;}
+
+.day .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    height: auto;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    z-index: 1;
+    margin-left: 90px;
+  }
+
+  .day .tooltiptext2 {
+    visibility: hidden;
+    width: 120px;
+    height: auto;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    z-index: 1;
+  
+  }
+  .day:hover .tooltiptext {
+    visibility: visible;
+  }
+  .day:hover .tooltiptext2 {
+    visibility: visible;
+  }
+  #legend {
+    position:absolute;
+    left: 150px;
+    top: 850px;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 16px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+  }
+#legend2 {
+    position:absolute;
+    left: 350px;
+    top: 850px;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 16px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+  }
+#legend3 {
+    position:absolute;
+    left: 650px;
+    top: 850px;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 16px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+  }
