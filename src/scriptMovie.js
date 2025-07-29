@@ -72,32 +72,32 @@ function openModal(event, date, reservationsArr) {
      let reverseDate = `${curentDate[1]}.${curentDate[0]}.${curentDate[2]}`
          document.getElementById('shoDate').textContent = `За Дата: ${reverseDate}г.`;
 
-    if (reservationsArr.length > 0) {
-        let index = 0;
-        for (let current of [...time.children]) {
+//    if (reservationsArr.length > 0) {
+  //      let index = 0;
+ //       for (let current of [...time.children]) {
  
-            if (reservationsArr.includes(current.textContent)) {
+   //         if (reservationsArr.includes(current.textContent)) {
                 // current.style.display = "none";
-                current.disabled = true;
+              //  current.disabled = true;
  
-                let endIndex = index + 2;
-                let startIndex = index - 2;
+    //            let endIndex = index + 0;
+    //            let startIndex = index - 0;
  
-                if (startIndex < 0) {
-                    startIndex = 0;
-                };
-                if (endIndex > [...time.children].length) {
-                    endIndex = [...time.children].length;
-                };
+   //             if (startIndex < 0) {
+    //                startIndex = 0;
+    //            };
+    //            if (endIndex > [...time.children].length) {
+   //                 endIndex = [...time.children].length;
+    //            };
  
-                for (let i = startIndex; i < endIndex; i++) {
+  //             for (let i = startIndex; i < endIndex; i++) {
                     // [...time.children][i].style.display = 'none';
-                    [...time.children][i].disabled = true;
-                };
-            };
-            index++;
-        };
-    };
+   //                 [...time.children][i].disabled = true;
+  //              };
+  //          };
+   //         index++;
+   //     };
+ //   };
 
 
 
@@ -177,10 +177,10 @@ function openModal(event, date, reservationsArr) {
          
                 if (currentEvent.time == current.textContent) {
                     // current.style.display = "block";
-                    current.disabled = false;
+                 //   current.disabled = false;
          
-                    let endEditIndex = editIndex + 2;
-                    let startEditIndex = editIndex - 2;
+                    let endEditIndex = editIndex + 0;
+                    let startEditIndex = editIndex - 0;
          
                     if (startEditIndex < 0) {
                         startEditIndex = 0;
@@ -189,7 +189,7 @@ function openModal(event, date, reservationsArr) {
                         endEditIndex = [...time.children].length;
                     };
          
-                    for (let j = startEditIndex; j < endEditIndex; j++) {
+                   for (let j = startEditIndex; j < endEditIndex; j++) {
                         // [...time.children][j].style.display = 'block';
                         [...time.children][j].disabled = false;
                     };
@@ -204,10 +204,10 @@ function openModal(event, date, reservationsArr) {
          
                     if (reservationsArr.includes(current.textContent)) {
                         // current.style.display = "none";
-                        current.disabled = true;
+                     //   current.disabled = true;
          
-                        let endIndex = index + 2;
-                        let startIndex = index - 2;
+                       let endIndex = index + 0;
+                        let startIndex = index - 0;
          
                         if (startIndex < 0) {
                             startIndex = 0;
@@ -219,7 +219,7 @@ function openModal(event, date, reservationsArr) {
                         for (let i = startIndex; i < endIndex; i++) {
                             // [...time.children][i].style.display = 'none';
                             [...time.children][i].disabled = true;
-                        };
+                       };
                     };
                     index++;
                 };
@@ -780,7 +780,7 @@ load();
 //                 // current.style.display = "none";
 //                 current.disabled = true;
  
-//                 let endIndex = index + 5;
+//                 let endIndex = index + 6;
 //                 let startIndex = index - 4;
  
 //                 if (startIndex < 0) {
