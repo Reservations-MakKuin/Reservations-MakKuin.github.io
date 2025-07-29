@@ -1,9 +1,8 @@
-/* Вашият оригинален код, с МИНИМАЛНИ добавки само за мобилна отзивчивост */
-
 body {
     display: flex;
     margin-top: 10px;
-    margin-right: 15%;
+    margin-right:  15%;
+
     justify-content: center;
     background-color: #FFFCFF;
 }
@@ -44,7 +43,7 @@ button {
 #monthDisplay {
     padding: 0px;
     color: #f7f7fb;
-    margin-right: 0%;
+    margin-right:  0%;
     margin-top: 4%;
     font-size: 32px;
     text-decoration: double;
@@ -58,7 +57,7 @@ button {
 
 
 #headerMovie {
-    width: 115%;
+    width: 115%; 
     border-radius: 17px;
     padding: 10px;
     background: url("/assets/Movie-baner.jpg") center;
@@ -127,7 +126,7 @@ button {
 
 #headerDisco {
     width: 113%;
-    margin-left: 2%;
+    margin-left: 2%; 
     border-radius: 17px;
     padding: 10px;
     background: url("/assets/disco-puzzle-baner.jpg") center;
@@ -141,7 +140,7 @@ button {
 
 #headerOut {
     width: 113%;
-    margin-left: 2%;
+    margin-left: 2%; 
     border-radius: 17px;
     padding: 10px;
     background: url("/assets/test.jpg") center;
@@ -228,10 +227,10 @@ button {
 }
 .event2 {
 
-
+    
     font-size: 9px;
     padding: 0px;
-    background-color: #58bae4;
+    background-color:  #58bae4;
     color: rgb(254, 252, 252);
     border-radius: 3px;
     max-height: 55px;
@@ -240,10 +239,12 @@ button {
 }
 
 
+      
 .event2:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.5);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+  
 }
 
 .padding {
@@ -427,7 +428,7 @@ button {
     left: calc(40% - 175px);
     position: absolute;
     font-family: sans-serif;
-
+    
 }
 
 #deleteBtn2,
@@ -483,8 +484,8 @@ button {
     margin-top: 8px;
     margin-left: 30px;
     display:block;
-
-
+    
+    
 }
 .hedarLogo2>img {
     max-width: 170px;
@@ -492,8 +493,8 @@ button {
     margin-top: 8px;
     margin-left: 15px;
     display:block;
-
-
+    
+    
 }
 
 #shoDate {
@@ -556,13 +557,13 @@ hr.rounded {
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-}
-
-#myBtn:hover {
+  }
+  
+  #myBtn:hover {
     background-color: #555;
-}
+  }
 
-#notification {
+  #notification {
     position: fixed;
     right: 25%;
     top: 150px;
@@ -579,7 +580,7 @@ hr.rounded {
 }
 
 #kaparoData {
-    display: none
+    display :none
 }
 
 .p0 {color:#059614;}
@@ -600,9 +601,9 @@ hr.rounded {
     position: absolute;
     z-index: 1;
     margin-left: 90px;
-}
+  }
 
-.day .tooltiptext2 {
+  .day .tooltiptext2 {
     visibility: hidden;
     width: 120px;
     height: auto;
@@ -615,15 +616,15 @@ hr.rounded {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
     z-index: 1;
-
-}
-.day:hover .tooltiptext {
+  
+  }
+  .day:hover .tooltiptext {
     visibility: visible;
-}
-.day:hover .tooltiptext2 {
+  }
+  .day:hover .tooltiptext2 {
     visibility: visible;
-}
-#legend {
+  }
+  #legend {
     position:absolute;
     left: 150px;
     top: 850px;
@@ -635,7 +636,7 @@ hr.rounded {
     padding: 5px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
-}
+  }
 #legend2 {
     position:absolute;
     left: 350px;
@@ -647,7 +648,7 @@ hr.rounded {
     padding: 5px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
-}
+  }
 #legend3 {
     position:absolute;
     left: 650px;
@@ -659,263 +660,4 @@ hr.rounded {
     padding: 5px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
-}
-
-
-/* --- НАЧАЛО НА КОРЕКЦИИТЕ ЗА МОБИЛНА ОТЗИВЧИВОСТ --- */
-/* Уверете се, че имате <meta name="viewport" content="width=device-width, initial-scale=1.0"> в HTML <head> */
-
-/* Общ стил за отзивчивост на елементи с фиксирани размери и позициониране */
-@media (max-width: 768px) {
-    /* Корекции за основното тяло */
-    body {
-        margin-right: 0; /* Премахва фиксирания маргин, който може да причини хоризонтално превъртане */
-        padding: 5px; /* Намалява глобалния падинг за по-малки екрани */
-    }
-
-    /* Корекции за бутоните за по-добро докосване */
-    button,
-    #nextButton,
-    #backButton,
-    #kalendari {
-        width: auto; /* Позволява на ширината да се адаптира */
-        padding: 8px 15px; /* Увеличава падинга за по-лесно докосване */
-        font-size: 0.9rem; /* Намалява размера на шрифта */
-    }
-
-    /* Корекции за всички хедъри */
-    #header,
-    #headerMovie,
-    #headerOut,
-    #headerDC,
-    #headerPB,
-    #headerPS,
-    #headerDisco {
-        width: 95%; /* Прави ширината отзивчива */
-        margin-left: auto; /* Центриране */
-        margin-right: auto; /* Центриране */
-        flex-direction: column; /* Елементите се подреждат във вертикална колона */
-        flex-wrap: wrap; /* Позволява на съдържанието да се пренарежда */
-        font-size: 20px; /* Намалява размера на шрифта */
-        padding: 5px; /* Намалява падинга */
-    }
-
-    #monthDisplay {
-        font-size: 1.5em; /* Намалява размера на шрифта */
-        margin: 5px 0; /* Коригира маргините */
-        text-align: center; /* Центрира месеца */
-    }
-    /* Подреждане на бутоните в хедъра на DC календара */
-    #headerDC > div {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        margin-top: 10px;
-    }
-    #nextButton, #backButton, #kalendari {
-        width: 45%; /* Бутоните заемат почти половината ширина на мобилни */
-        margin: 5px 0;
-    }
-
-
-    /* Корекции за основния контейнер на календара */
-    #container {
-        width: 95%; /* Прави ширината отзивчива */
-        margin: 10px auto; /* Центрира контейнера */
-    }
-
-    /* Корекции за дните от седмицата */
-    #weekdays {
-        width: 100%; /* Прави ширината отзивчива */
-        display: grid; /* Използваме Grid за равномерно разпределение на колоните */
-        grid-template-columns: repeat(7, 1fr); /* 7 равни колони */
-        font-size: 0.8em; /* Намалява размера на шрифта */
-        padding: 5px 0; /* Намалява падинга */
-    }
-
-    #weekdays div {
-        width: auto; /* Премахва фиксираната ширина, за да се адаптира към Grid-а */
-        padding: 5px; /* Намалява падинга */
-    }
-
-    /* Корекции за календарната мрежа */
-    #calendar {
-        width: 100%; /* Прави ширината отзивчива */
-        display: grid; /* Използваме Grid за дните в календара */
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Адаптивни колони, мин. ширина 80px */
-        gap: 3px; /* Намалява разстоянието между дните */
-        padding: 3px; /* Намалява падинга */
-    }
-
-    /* Корекции за отделен ден в календара */
-    .day {
-        width: auto; /* Позволява на ширината да се адаптира към Grid-а */
-        height: auto; /* Позволява на височината да се адаптира */
-        min-height: 60px; /* Задава минимална височина */
-        padding: 5px; /* Намалява падинга */
-        font-size: 0.8em; /* Намалява размера на шрифта */
-        margin: 2px; /* Намалява маргина */
-    }
-    /* Корекции за събитията */
-    .event, .event2 {
-        font-size: 0.65em; /* Намалява размера на шрифта */
-        max-height: 30px; /* Намалява максималната височина */
-        overflow: hidden; /* Скрива излишния текст */
-        white-space: nowrap; /* Предотвратява пренасяне на текст */
-        text-overflow: ellipsis; /* Добавя многоточие */
-    }
-    .event2:hover {
-        transform: scale(1.05); /* Намалява ефекта на мащабиране */
-    }
-
-
-    /* Корекции за модалните прозорци */
-    #newEventModal,
-    #deleteEventModal,
-    #blockEventModal {
-        width: 95%; /* Отзивчива ширина */
-        max-width: 600px; /* Максимална ширина */
-        position: fixed; /* Фиксирана позиция спрямо екрана */
-        top: 50%; /* Центриране по вертикала */
-        left: 50%; /* Центриране по хоризонтала */
-        transform: translate(-50%, -50%); /* Точно центриране */
-        max-height: 90vh; /* Максимална височина, за да се побира на екрана */
-        overflow-y: auto; /* Добавя скрол, ако съдържанието е по-дълго */
-        padding: 15px; /* Намалява падинга */
-    }
-
-    /* Корекции за бутоните в модалните прозорци */
-    #closeButton2 {
-        position: static; /* Премахва абсолютното позициониране */
-        margin: 10px auto; /* Центрира и добавя маргин */
-        display: block; /* За да заеме целия ред */
-        width: 80%; /* Прави бутона по-широк */
-    }
-    #btnMenu2, #btnMenu, #closeButton, #cancelButton,
-    #deleteBtn2, #deleteButton, #deleteBtn, #saveButton, #editButton, #editBtn {
-        width: 100%; /* Бутоните във формите заемат 100% ширина */
-        margin-bottom: 5px; /* Отстъп между бутоните */
-        padding: 8px 15px; /* Увеличава падинга */
-    }
-
-    /* Корекции за входните полета */
-    #names, #phone, #komentar, #cakeCode, #age, #kidsNumber, #prise,
-    #cakeTaste, #HBDName, #kaparoNumber, #kaparo, #eventTitleInput, #form,
-    #time, #parti, #cake, #pices, #kaparoTime, #kidsMenu, #quantity2, #quantity {
-        width: 100%; /* Всички полета заемат 100% ширина */
-        margin-bottom: 8px; /* Добавя отстъп */
-        display: block; /* Уверява се, че са блок елементи */
-        padding: 8px; /* Увеличава падинга */
-    }
-
-
-    /* Корекции за логото в модалите */
-    .small {
-        float: none; /* Премахва float */
-        margin: 0 auto 10px auto; /* Центрира логото */
-        width: 100px; /* Намалява ширината */
-        border-radius: 0 0 16px 16px; /* Запазва border-radius */
-    }
-    .small > img {
-        max-width: 80px; /* Намалява максималната ширина на изображението */
-        max-height: 50px; /* Намалява максималната височина */
-        margin: 5px auto; /* Центрира изображението */
-    }
-
-    /* Корекции за логата в хедъра */
-    .hedarLogo > img,
-    .hedarLogo2 > img {
-        max-width: 100px; /* Намалява максималната ширина */
-        max-height: 60px; /* Намалява максималната височина */
-        margin: 5px auto; /* Центрира логото */
-    }
-
-    /* Корекции за "Нагоре" бутон */
-    #myBtn {
-        right: 10px; /* Премества бутона по-надясно */
-        bottom: 10px; /* Премества бутона по-нагоре */
-        padding: 8px 12px; /* Намалява падинга */
-        font-size: 14px; /* Намалява размера на шрифта */
-    }
-
-    /* Корекции за известията */
-    #notification {
-        right: 5px; /* Премества по-надясно */
-        top: 80px; /* Премества по-нагоре */
-        width: calc(100% - 10px); /* Прави го отзивчив */
-        max-width: 250px; /* Ограничава максималната ширина */
-    }
-    .notification {
-        padding: 10px 15px; /* Намалява падинга */
-        font-size: 0.85em; /* Намалява размера на шрифта */
-    }
-
-    /* Корекции за подсказките (tooltips) */
-    .day .tooltiptext, .day .tooltiptext2 {
-        width: 120px; /* Намалява ширината на подсказката */
-        font-size: 0.8em; /* Намалява размера на шрифта */
-        padding: 5px; /* Намалява падинга */
-        margin-left: 0; /* Премахва фиксирания маргин */
-        left: 50%; /* Центрира го */
-        transform: translateX(-50%); /* Коригира центрирането */
-        bottom: 100%; /* Позиционира го над деня */
-        margin-bottom: 2px; /* Малък отстъп отгоре */
-        white-space: normal; /* Позволява текста да се пренася на нов ред */
-    }
-
-    /* Корекции за легендите */
-    #legend, #legend2, #legend3 {
-        position: static; /* Премахва абсолютното позициониране */
-        margin: 10px auto; /* Центрира и добавя маргин */
-        width: 90%; /* Отзивчива ширина */
-        max-width: 250px; /* Максимална ширина */
-        font-size: 0.8em; /* Намалява размера на шрифта */
-        padding: 5px; /* Намалява падинга */
-    }
-}
-
-/* Допълнителни корекции за много малки екрани (смартфони) */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-
-    #header, #headerMovie, #headerOut, #headerDC, #headerPB, #headerPS, #headerDisco {
-        font-size: 16px;
-        padding: 3px;
-    }
-    #monthDisplay {
-        font-size: 1.2em;
-    }
-
-    #nextButton, #backButton, #kalendari {
-        width: 48%; /* Леко увеличава ширината на бутоните */
-        font-size: 0.8rem;
-        padding: 4px 6px;
-    }
-
-    #weekdays {
-        font-size: 0.7em;
-    }
-
-    .day {
-        min-height: 50px;
-        font-size: 0.7em;
-        padding: 3px;
-    }
-    .event, .event2 {
-        font-size: 0.6em;
-        max-height: 25px;
-    }
-
-    #newEventModal, #deleteEventModal, #blockEventModal {
-        padding: 10px;
-    }
-
-    .day .tooltiptext, .day .tooltiptext2 {
-        width: 100px;
-        font-size: 0.7em;
-        padding: 3px;
-    }
-}
-/* --- КРАЙ НА КОРИКЦИИТЕ ЗА МОБИЛНА ОТЗИВЧИВОСТ --- */
+  }
