@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -84,4 +84,155 @@ h6 {
 
 .button:hover {
   filter: brightness(110%);
+} */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #0084ff;
+  font-size: 16px; /* Базов размер на шрифта */
+  margin: 0; /* Премахване на дефолтни маргини */
+  padding: 0; /* Премахване на дефолтни падинги */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 98vw;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.login .container {
+  max-width: 460px; /* Максимална ширина за по-големи екрани */
+  width: 90%; /* Адаптивна ширина за мобилни */
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавяне на лека сянка за по-добър изглед */
+}
+
+.input {
+  appearance: none;
+  display: block;
+  width: 100%;
+  color: #333;
+  border: 1px solid rgb(180, 180, 180); /* Коригирах грешка в цвета: rbg -> rgb */
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem; /* Осигуряване на четлив размер на шрифта */
+  margin-bottom: 1rem; /* Добавяне на отстояние между полетата */
+}
+
+.input.input-error {
+  border: 1px solid red;
+}
+
+.input.input-error:focus {
+  border: 1px solid red;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #0084ff;
+  background-clip: padding-box;
+}
+
+.error-message {
+  font-size: 0.85rem;
+  color: red;
+  margin-top: -0.8rem; /* Наместване спрямо input полето */
+  margin-bottom: 1rem; /* Отстояние след съобщението за грешка */
+}
+
+.button {
+  background-color: #0084ff;
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.1rem; /* По-голям шрифт за по-лесно докосване */
+  border-radius: 0.25rem; /* Заобляне на бутона */
+  transition: background-color 0.3s ease; /* Плавен преход при hover/active */
+}
+
+.button:hover {
+  filter: brightness(110%);
+}
+
+.button:active { /* Добавяне на стил за активно състояние (при докосване) */
+  background-color: #0056b3;
+}
+
+/* Media Queries за мобилни устройства */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* Малко по-малък базов шрифт за по-малки екрани */
+  }
+
+  .login .container {
+    margin: 1.5rem auto; /* Намаляване на горния маргин на мобилни */
+    padding: 1.5rem; /* Намаляване на падинга на мобилни */
+    width: 95%; /* По-голяма ширина на контейнера */
+  }
+
+  .input {
+    padding: 0.8rem; /* Малко по-малък падинг за input полетата */
+    font-size: 0.95rem;
+  }
+
+  .button {
+    padding: 0.9rem; /* Малко по-малък падинг за бутона */
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Допълнително намаляване за много малки екрани */
+  }
+
+  .login .container {
+    margin: 1rem auto; /* Още по-малки маргини */
+    padding: 1rem; /* Още по-малък падинг */
+    width: 98%; /* Почти пълна ширина */
+  }
+
+  .input {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+
