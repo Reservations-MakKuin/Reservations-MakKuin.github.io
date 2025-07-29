@@ -1,101 +1,156 @@
+/* Вашият оригинален код, с МИНИМАЛНИ добавки само за мобилна отзивчивост */
+
 body {
     display: flex;
-    flex-direction: column; /* Променяме на колона за мобилни */
-    align-items: center; /* Центрираме съдържанието */
-    margin: 0; /* Премахваме излишните маргини */
-    padding: 10px; /* Добавяме лек падинг около тялото */
+    margin-top: 10px;
+    margin-right: 15%;
+    justify-content: center;
     background-color: #FFFCFF;
-    font-family: sans-serif; /* Добавяме font-family за тялото */
 }
 
 button {
-    width: auto; /* Автоматична ширина за бутони */
-    min-width: 90px; /* Минимална ширина за бутоните */
+    width: 90px;
     cursor: pointer;
     box-shadow: 0px 0px 2px rgb(132, 126, 126);
     border: none;
     outline: none;
-    padding: 8px 15px; /* Увеличаваме падинга за по-лесно докосване */
+    padding: 5px;
     border-radius: 5px;
     color: rgb(237, 229, 229);
-    font-size: 1rem; /* Оптимизиран размер на шрифта */
-    margin: 5px; /* Добавяме малко отстояние */
 }
 
 #nextButton,
 #backButton,
 #kalendari {
-    width: auto;
-    min-width: 90px;
-    margin: 10px auto; /* Центрираме бутоните */
+    width: 90px;
+    margin: 10px auto;
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 8px 15px;
+    padding: 5px;
     border-radius: 5px;
     color: rgb(170, 46, 46);
-    font-size: 1rem;
 }
 
-#header,
-#headerMovie,
-#headerOut,
-#headerDC,
-#headerPB,
-#headerPS,
-#headerDisco {
-    width: 95%; /* Променяме на проценти за отзивчивост */
-    max-width: 1200px; /* Максимална ширина за по-големи екрани */
-    margin-left: auto; /* Центрираме */
-    margin-right: auto; /* Центрираме */
-    border-radius: 17px;
+#header {
     padding: 10px;
     color: #d36c6c;
-    font-size: 26px; /* Ще го намалим с медия заявки */
+    font-size: 26px;
     font-family: sans-serif;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Центрираме по вертикала */
-    flex-wrap: wrap; /* Позволява елементите да се пренареждат */
-    background-position: center; /* Осигурява центриране на фоновото изображение */
-    background-size: cover; /* Покрива цялата площ */
-}
-
-/* Specific background images */
-#headerMovie { background-image: url("/assets/Movie-baner.jpg"); }
-#headerOut { 
-    background-image: url("/assets/test.jpg"); 
-    background-color: #f7061268; /* Запазваме цвета, ако изображението липсва */
-}
-#headerDC { 
-    background-image: url("/assets/DC-baner.jpg"); 
-    background-color: #fece5e68;
-}
-#headerPB { 
-    background-image: url("/assets/paintball-baner.jpg"); 
-    background-color: #88ea576f;
-}
-#headerPS { 
-    background-image: url("/assets/puzzle-baner.jpg"); 
-    background-color: #57b2ea5b;
-}
-#headerDisco { 
-    background-image: url("/assets/disco-puzzle-baner.jpg"); 
-    background-color: #9333f366;
 }
 
 #monthDisplay {
     padding: 0px;
     color: #f7f7fb;
-    margin: 10px 0; /* Коригиран маргин */
-    font-size: 2em; /* Относителен размер на шрифта */
+    margin-right: 0%;
+    margin-top: 4%;
+    font-size: 32px;
     text-decoration: double;
-    font-weight: bold; /* Използваме font-weight вместо font: bold */
+    font: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: capitalize;
     text-shadow: 2px 2px #969494;
-    text-align: center; /* Центриране на текста */
-    flex-grow: 1; /* Позволява му да заема наличното място */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#headerMovie {
+    width: 115%;
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/Movie-baner.jpg") center;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerOut {
+    width: 113%;
+    margin-left: 2%;
+    border-radius: 17px;
+    padding: 10px;
+    background-color: #f7061268;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerDC {
+    width: 113%;
+    margin-left: 2%;
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/DC-baner.jpg") center;
+    background-color: #fece5e68;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerPB {
+    width: 113%;
+    margin-left: 2%;
+    padding: 10px;
+    border-radius: 17px;
+    background: url("/assets/paintball-baner.jpg") center;
+
+    background-color: #88ea576f;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerPS {
+    width: 113%;
+    margin-left: 2%;
+    padding: 10px;
+    border-radius: 17px;
+    background: url("/assets/puzzle-baner.jpg") center;
+    background-color: #57b2ea5b;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerDisco {
+    width: 113%;
+    margin-left: 2%;
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/disco-puzzle-baner.jpg") center;
+    background-color: #9333f366;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerOut {
+    width: 113%;
+    margin-left: 2%;
+    border-radius: 17px;
+    padding: 10px;
+    background: url("/assets/test.jpg") center;
+    background-color: #9333f366;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
 }
 
 #header button {
@@ -103,85 +158,92 @@ button {
 }
 
 #container {
-    width: 95%; /* Отзивчива ширина */
-    max-width: 770px; /* Максимална ширина */
-    margin: 20px auto; /* Центриране */
-    padding: 10px; /* Добавяме падинг */
+    width: 770px;
 }
 
 #weekdays {
-    width: 100%; /* Отзивчива ширина */
-    display: grid; /* Използваме grid за колоните */
-    grid-template-columns: repeat(7, 1fr); /* 7 равни колони */
+    width: 118%;
+    display: flex;
     color: #247BA0;
     text-align: center;
-    font-weight: bold; /* Правим дните от седмицата по-плътни */
-    padding: 10px 0;
-    background-color: #e2e2e2;
-    border-radius: 5px;
+}
+
+#tm {
+    width: 50%;
+    font-size: 8px;
+    display: flex;
+    color: #247BA0;
+    text-align: center;
 }
 
 #weekdays div {
-    padding: 5px; /* Намаляваме падинга */
-    font-size: 0.9em; /* Относителен размер на шрифта */
+    /* background-color: #4242430e;
+    border-radius: 55%; */
+    width: 120px;
+    padding: 10px;
 }
 
 #calendar {
-    width: 100%; /* Отзивчива ширина */
+    width: 120%;
     margin: auto;
-    display: grid; /* Използваме grid за дните */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Адаптивни колони, мин 100px */
-    gap: 5px; /* Разстояние между дните */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .day {
-    /* width: 120px; Премахваме фиксираната ширина */
-    min-height: 80px; /* Минимална височина, може да се намали за мобилни */
-    padding: 8px; /* Намаляваме падинга */
+    width: 120px;
+    padding: 10px;
+    height: 100px;
     cursor: pointer;
     box-sizing: border-box;
     background-color: rgba(224, 237, 236, 0.352);
-    margin: 0; /* Премахваме маргините, gap в grid ги замества */
+    margin: 5px;
     box-shadow: 0px 0px 3px #CBD4C2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 1em; /* Относителен размер на шрифта */
-    font-weight: bold; /* Използваме font-weight вместо font: bold */
+    font-size: 10px;
+    font: bold;
     border-radius: 10px;
-    text-align: right; /* Подравняване на номера на деня */
-    position: relative;
+
 }
 
 .day:hover {
     background-color: #e8faed;
 }
 
-.day.currentDay { /* Използваме .day.currentDay вместо .day+#currentDay */
+.day+#currentDay {
     background-color: #c6e6f78b;
 }
 
-.event, .event2 { /* Обединяваме стиловете */
-    font-size: 0.75em; /* Относителен размер на шрифта, по-малък за събития */
-    padding: 2px 5px;
+.event {
+    font-size: 10px;
+    padding: 2px;
     background-color: #58bae4;
     color: rgb(254, 252, 252);
     border-radius: 3px;
-    max-height: 45px; /* Намаляваме височината */
+    max-height: 55px;
     overflow: hidden;
-    margin: 1px 0; /* Отстояние само горе/долу */
-    white-space: nowrap; /* Предотвратява пренасяне на текст */
-    text-overflow: ellipsis; /* Добавя многоточие */
-    text-align: left; /* Подравняване на събитията */
+    margin: 1px;
+}
+.event2 {
+
+
+    font-size: 9px;
+    padding: 0px;
+    background-color: #58bae4;
+    color: rgb(254, 252, 252);
+    border-radius: 3px;
+    max-height: 55px;
+    overflow: hidden;
+    margin: 1px;
 }
 
+
 .event2:hover {
-    -ms-transform: scale(1.05); /* IE 9, малко по-малко увеличение */
-    -webkit-transform: scale(1.05); /* Safari 3-8 */
-    transform: scale(1.05);
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
 }
 
 .padding {
@@ -191,90 +253,203 @@ button {
 }
 
 #newEventModal,
-#deleteEventModal,
-#blockEventModal { /* Обединяваме модалните прозорци */
+#deleteEventModal {
     display: none;
     z-index: 20;
     padding: 25px;
     background-color: #e8f4fa;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* По-изразена сянка */
-    border-radius: 8px; /* По-заоблени ъгли */
-    width: 90%; /* Отзивчива ширина */
-    max-width: 600px; /* Максимална ширина */
-    position: fixed; /* Фиксирана позиция спрямо viewport-а */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Центриране */
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 570px;
+    top: 10px;
+    left: calc(40% - 175px);
+    position: absolute;
     font-family: sans-serif;
-    max-height: 90vh; /* Ограничаваме височината */
-    overflow-y: auto; /* Добавяме скрол, ако съдържанието е твърде голямо */
+}
+
+#names,
+#phone {
+    padding: 4px;
+    width: 40%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    color: #d36c6c;
+}
+#komentar {
+    padding: 4px;
+    width: 40%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    color: #d36c6c;
+}
+
+#cakeCode,
+#age {
+    padding: 4px;
+    width: 20%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    color: #d36c6c;
+}
+
+#kidsNumber,
+#prise {
+    padding: 4px;
+    width: 11%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#quantity2,
+#quantity {
+    padding: 2px;
+    width: 10%;
+}
+
+/* #descript2,
+#descript {
+    padding: 2px;
+    width: 20%;
+} */
+
+#cakeTaste,
+#HBDName {
+    padding: 4px;
+    width: 60%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#kaparoNumber,
+#kaparo {
+    padding: 4px;
+    width: 20%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#form {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#names.error {
+    border: 2px solid red;
+}
+
+#kaparoTime.error {
+    border: 2px solid red;
+}
+
+#age.error {
+    border: 2px solid red;
+}
+
+#parti.error {
+    border: 2px solid red;
+}
+
+#time.error {
+    border: 2px solid red;
+}
+
+#phone.error {
+    border: 2px solid red;
+}
+
+#btnMenu2,
+#btnMenu {
+    background-color: #2f8bc0;
+}
+
+#closeButton,
+#cancelButton {
+    background-color: #40c02f;
 }
 
 #closeButton2 {
     background-color: #40c02f;
-    margin: 10px auto; /* Центриране на бутона */
-    display: block; /* За да заема собствен ред */
-    width: auto;
-    padding: 10px 20px;
+    margin: 0;
+    position: absolute;
+    right: 40%;
 }
 
-/* INPUTS and SELECTS */
-#names, #phone, #komentar, #cakeCode, #age, #kidsNumber, #prise,
-#cakeTaste, #HBDName, #kaparoNumber, #kaparo, #eventTitleInput, #form,
-#time, #parti, #cake, #pices, #kaparoTime, #kidsMenu {
-    padding: 8px; /* Увеличаваме падинга */
-    width: 100%; /* Всички на 100% ширина за мобилни */
-    box-sizing: border-box;
-    margin-bottom: 10px; /* Добавяме отстояние */
-    border-radius: 4px;
-    outline: none;
-    border: 1px solid #ccc; /* Добавяме лека рамка */
-    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1); /* Лека вътрешна сянка */
-    color: #333;
-    -webkit-appearance: none; /* Премахва стиловете по подразбиране на iOS Safari */
-    -moz-appearance: none; /* Премахва стиловете по подразбиране на Firefox */
-    appearance: none; /* Премахва стиловете по подразбиране */
-    background-color: white;
+#blockEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 560px;
+    top: 270px;
+    left: calc(40% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+
 }
 
-/* Специфични корекции за някои input полета, които могат да бъдат на един ред на десктоп */
-@media (min-width: 768px) {
-    #names, #phone, #komentar, #cakeTaste, #HBDName {
-        width: 48%; /* На десктоп може да са по-малки */
-        display: inline-block;
-        margin-right: 2%;
-    }
-    #age, #cakeCode, #kaparo, #kaparoNumber {
-        width: 23%;
-        display: inline-block;
-        margin-right: 2%;
-    }
-    #kidsNumber, #prise {
-        width: 10%;
-        display: inline-block;
-        margin-right: 2%;
-    }
-    #quantity, #quantity2 {
-        width: 15%; /* Коригираме ширината за quantity */
-        display: inline-block;
-        margin-right: 5px;
-    }
-    /* #descript, #descript2 {
-        width: 30%;
-        display: inline-block;
-        margin-right: 5px;
-    } */
+#deleteBtn2,
+#deleteButton,
+#deleteBtn {
+    background-color: #d36c6c;
+}
+
+#saveButton,
+#editButton,
+#editBtn {
+    background-color: #2e2bec;
 }
 
 
-#names.error, #kaparoTime.error, #age.error, #parti.error, #time.error, #phone.error {
-    border: 2px solid red;
-}
+/* #closeButton {
+    background-color: #92a1d1;
+} */
 
-#btnMenu2, #btnMenu { background-color: #2f8bc0; }
-#closeButton, #cancelButton { background-color: #40c02f; }
-#deleteBtn2, #deleteButton, #deleteBtn { background-color: #d36c6c; }
-#saveButton, #editButton, #editBtn { background-color: #2e2bec; }
+#eventText {
+    font-size: 14px;
+}
 
 #modalBackDrop {
     display: none;
@@ -283,93 +458,103 @@ button {
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    position: fixed; /* Фиксирана позиция */
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .small {
-    float: none; /* Премахваме float за мобилни */
-    margin: 0 auto 10px auto; /* Центриране */
+    float: left;
     background-color: white;
     width: 150px;
     text-align: center;
-    border-radius: 0 0 16px 16px; /* Коригираме радиуса */
-    display: block; /* За да заема собствен ред */
+    border-radius: 0 16px 16px 0;
 }
 
-.small > img {
-    max-width: 100px; /* Намаляваме размера на логото в модала */
-    max-height: 60px;
-    margin: 5px auto;
+.small>img {
+    max-width: 150px;
+    max-height: 90px;
+    margin: 3px auto;
     display: block;
 }
 
-.hedarLogo > img {
-    max-width: 120px; /* Намаляваме размера на логото в хедъра */
-    max-height: 60px;
-    margin: 5px; /* Коригиран маргин */
-    display: block;
-}
-.hedarLogo2 > img {
-    max-width: 140px;
+.hedarLogo>img {
+    max-width: 150px;
     max-height: 80px;
-    margin: 5px;
-    display: block;
+    margin-top: 8px;
+    margin-left: 30px;
+    display:block;
+
+
+}
+.hedarLogo2>img {
+    max-width: 170px;
+    max-height: 100px;
+    margin-top: 8px;
+    margin-left: 15px;
+    display:block;
+
+
 }
 
 #shoDate {
     color: rgb(255, 64, 0);
     text-align: center;
-    font-size: 1.2em; /* Относителен размер */
 }
 
 h2 {
     color: rgb(59, 62, 228);
     text-align: center;
-    font-size: 1.5em; /* Относителен размер */
-    margin-bottom: 10px;
 }
 
 h3 {
     color: #d36c6c;
     text-align: left;
-    font-size: 1.1em; /* Относителен размер */
-    margin-top: 15px;
-    margin-bottom: 5px;
 }
 
 hr.rounded {
     border-top: 2px solid #bbb;
     border-radius: 5px;
-    margin: 15px 0;
 }
 
-#име, #години, #час, #Коментар, #поръчана, #доставена {
+#име {
+    color: #d36c6c;
+}
+
+#години {
+    color: #d36c6c;
+}
+
+#час {
+    color: #d36c6c;
+}
+#Коментар {
+    color: #d36c6c;
+}
+
+#поръчана {
     color: #d36c6c;
     text-shadow: 1px 1px #1b0101;
-    display: inline; /* За да са на един ред */
 }
-#поръчана, #доставена {
-    text-shadow: none; /* Премахваме сянката за по-добра четливост */
-    font-weight: bold;
+
+#доставена {
+    color: #10d85d;
+    text-shadow: 1px 1px #1b0101;
 }
-#поръчана { color: #d36c6c; }
-#доставена { color: #10d85d; }
 
 
 #myBtn {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 30px;
     z-index: 99;
-    font-size: 16px; /* Намаляваме размера на шрифта */
+    font-size: 18px;
     border: none;
     outline: none;
     background-color: red;
     color: white;
     cursor: pointer;
-    padding: 10px 15px; /* Намаляваме падинга */
+    padding: 15px;
     border-radius: 4px;
 }
 
@@ -379,196 +564,348 @@ hr.rounded {
 
 #notification {
     position: fixed;
-    right: 10px; /* По-близо до десния край */
-    top: 100px; /* По-високо */
-    width: 90%; /* По-широко за мобилни */
-    max-width: 300px; /* Максимална ширина */
-    box-sizing: border-box;
+    right: 25%;
+    top: 150px;
 }
 
 .notification {
     list-style: none;
     background-color: rgb(255, 194, 194);
     box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 12px 20px; /* Намаляваме падинга */
+    padding: 16px 32px;
     border-radius: 8px;
-    margin-bottom: 10px; /* По-малко отстояние */
+    margin-bottom: 16px;
     cursor: pointer;
-    font-size: 0.9em; /* По-малък шрифт */
 }
 
 #kaparoData {
-    display: none;
+    display: none
 }
 
-.p0 { color: #059614; }
-.p1 { color: #ff0000; }
-.p2 { color: gray; }
+.p0 {color:#059614;}
+.p1 {color:#ff0000;}
+.p2 {color:gray;}
 
-.day .tooltiptext, .day .tooltiptext2 { /* Обединяваме подсказките */
+.day .tooltiptext {
     visibility: hidden;
-    width: 150px; /* По-голяма ширина за по-добра четливост */
+    width: 120px;
     height: auto;
     background-color: white;
     color: red;
     text-align: center;
-    font-size: 0.9em; /* По-малък шрифт */
+    font-size: 15px;
     border-radius: 6px;
-    padding: 10px; /* Намаляваме падинга */
+    padding: 20px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
-    z-index: 10; /* По-висок z-index */
-    left: 50%; /* Центрираме хоризонтално */
-    transform: translateX(-50%); /* Корекция за центриране */
-    bottom: 100%; /* Показва се над деня */
-    margin-bottom: 5px; /* Малко отстояние */
-    white-space: normal; /* Позволява пренасяне на текст */
+    z-index: 1;
+    margin-left: 90px;
 }
 
-.day:hover .tooltiptext, .day:hover .tooltiptext2 {
+.day .tooltiptext2 {
+    visibility: hidden;
+    width: 120px;
+    height: auto;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    z-index: 1;
+
+}
+.day:hover .tooltiptext {
     visibility: visible;
 }
-
-#legend, #legend2, #legend3 {
-    position: static; /* Премахваме абсолютното позициониране */
-    margin: 10px auto; /* Центрираме и добавяме отстояние */
+.day:hover .tooltiptext2 {
+    visibility: visible;
+}
+#legend {
+    position:absolute;
+    left: 150px;
+    top: 850px;
     background-color: white;
+    color: red;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 15px;
     border-radius: 16px;
-    padding: 5px 10px;
+    padding: 5px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
-    width: 90%; /* Отзивчива ширина */
-    max-width: 300px; /* Максимална ширина */
 }
-#legend { color: red; } /* Цветове за легендите */
-#legend2 { color: black; }
-#legend3 { color: green; }
+#legend2 {
+    position:absolute;
+    left: 350px;
+    top: 850px;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 16px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+}
+#legend3 {
+    position:absolute;
+    left: 650px;
+    top: 850px;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 16px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+}
 
-/* MEDIA QUERIES */
 
+/* --- НАЧАЛО НА КОРЕКЦИИТЕ ЗА МОБИЛНА ОТЗИВЧИВОСТ --- */
+/* Уверете се, че имате <meta name="viewport" content="width=device-width, initial-scale=1.0"> в HTML <head> */
+
+/* Общ стил за отзивчивост на елементи с фиксирани размери и позициониране */
 @media (max-width: 768px) {
+    /* Корекции за основното тяло */
     body {
-        font-size: 14px;
-        padding: 5px;
+        margin-right: 0; /* Премахва фиксирания маргин, който може да причини хоризонтално превъртане */
+        padding: 5px; /* Намалява глобалния падинг за по-малки екрани */
     }
 
-    #header, #headerMovie, #headerOut, #headerDC, #headerPB, #headerPS, #headerDisco {
-        flex-direction: column; /* Елементите в хедъра се подреждат вертикално */
-        font-size: 20px;
-        padding: 5px;
-        width: 100%; /* Заемат пълна ширина */
+    /* Корекции за бутоните за по-добро докосване */
+    button,
+    #nextButton,
+    #backButton,
+    #kalendari {
+        width: auto; /* Позволява на ширината да се адаптира */
+        padding: 8px 15px; /* Увеличава падинга за по-лесно докосване */
+        font-size: 0.9rem; /* Намалява размера на шрифта */
+    }
+
+    /* Корекции за всички хедъри */
+    #header,
+    #headerMovie,
+    #headerOut,
+    #headerDC,
+    #headerPB,
+    #headerPS,
+    #headerDisco {
+        width: 95%; /* Прави ширината отзивчива */
+        margin-left: auto; /* Центриране */
+        margin-right: auto; /* Центриране */
+        flex-direction: column; /* Елементите се подреждат във вертикална колона */
+        flex-wrap: wrap; /* Позволява на съдържанието да се пренарежда */
+        font-size: 20px; /* Намалява размера на шрифта */
+        padding: 5px; /* Намалява падинга */
     }
 
     #monthDisplay {
-        font-size: 1.5em;
-        margin: 5px 0;
+        font-size: 1.5em; /* Намалява размера на шрифта */
+        margin: 5px 0; /* Коригира маргините */
+        text-align: center; /* Центрира месеца */
     }
-
+    /* Подреждане на бутоните в хедъра на DC календара */
     #headerDC > div {
-        display: flex; /* За бутоните в хедъра */
+        display: flex;
         width: 100%;
         justify-content: space-around;
         margin-top: 10px;
     }
-
     #nextButton, #backButton, #kalendari {
-        width: 45%; /* Бутоните заемат почти половината ширина */
+        width: 45%; /* Бутоните заемат почти половината ширина на мобилни */
         margin: 5px 0;
-        font-size: 0.9rem;
-        padding: 6px 10px;
     }
 
+
+    /* Корекции за основния контейнер на календара */
     #container {
-        width: 100%;
-        padding: 5px;
-        margin: 10px auto;
+        width: 95%; /* Прави ширината отзивчива */
+        margin: 10px auto; /* Центрира контейнера */
     }
 
+    /* Корекции за дните от седмицата */
     #weekdays {
-        font-size: 0.8em;
-        padding: 5px 0;
+        width: 100%; /* Прави ширината отзивчива */
+        display: grid; /* Използваме Grid за равномерно разпределение на колоните */
+        grid-template-columns: repeat(7, 1fr); /* 7 равни колони */
+        font-size: 0.8em; /* Намалява размера на шрифта */
+        padding: 5px 0; /* Намалява падинга */
     }
 
+    #weekdays div {
+        width: auto; /* Премахва фиксираната ширина, за да се адаптира към Grid-а */
+        padding: 5px; /* Намалява падинга */
+    }
+
+    /* Корекции за календарната мрежа */
+    #calendar {
+        width: 100%; /* Прави ширината отзивчива */
+        display: grid; /* Използваме Grid за дните в календара */
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Адаптивни колони, мин. ширина 80px */
+        gap: 3px; /* Намалява разстоянието между дните */
+        padding: 3px; /* Намалява падинга */
+    }
+
+    /* Корекции за отделен ден в календара */
     .day {
-        min-height: 70px; /* По-малка височина за дни */
-        font-size: 0.9em;
-        padding: 5px;
+        width: auto; /* Позволява на ширината да се адаптира към Grid-а */
+        height: auto; /* Позволява на височината да се адаптира */
+        min-height: 60px; /* Задава минимална височина */
+        padding: 5px; /* Намалява падинга */
+        font-size: 0.8em; /* Намалява размера на шрифта */
+        margin: 2px; /* Намалява маргина */
     }
-
+    /* Корекции за събитията */
     .event, .event2 {
-        font-size: 0.7em;
-        padding: 1px 3px;
-        max-height: 35px;
+        font-size: 0.65em; /* Намалява размера на шрифта */
+        max-height: 30px; /* Намалява максималната височина */
+        overflow: hidden; /* Скрива излишния текст */
+        white-space: nowrap; /* Предотвратява пренасяне на текст */
+        text-overflow: ellipsis; /* Добавя многоточие */
+    }
+    .event2:hover {
+        transform: scale(1.05); /* Намалява ефекта на мащабиране */
     }
 
-    #newEventModal, #deleteEventModal, #blockEventModal {
-        padding: 15px;
-        width: 95%; /* По-голяма ширина на модалите */
+
+    /* Корекции за модалните прозорци */
+    #newEventModal,
+    #deleteEventModal,
+    #blockEventModal {
+        width: 95%; /* Отзивчива ширина */
+        max-width: 600px; /* Максимална ширина */
+        position: fixed; /* Фиксирана позиция спрямо екрана */
+        top: 50%; /* Центриране по вертикала */
+        left: 50%; /* Центриране по хоризонтала */
+        transform: translate(-50%, -50%); /* Точно центриране */
+        max-height: 90vh; /* Максимална височина, за да се побира на екрана */
+        overflow-y: auto; /* Добавя скрол, ако съдържанието е по-дълго */
+        padding: 15px; /* Намалява падинга */
     }
-    
-    /* INPUTS and SELECTS for smaller screens */
+
+    /* Корекции за бутоните в модалните прозорци */
+    #closeButton2 {
+        position: static; /* Премахва абсолютното позициониране */
+        margin: 10px auto; /* Центрира и добавя маргин */
+        display: block; /* За да заеме целия ред */
+        width: 80%; /* Прави бутона по-широк */
+    }
+    #btnMenu2, #btnMenu, #closeButton, #cancelButton,
+    #deleteBtn2, #deleteButton, #deleteBtn, #saveButton, #editButton, #editBtn {
+        width: 100%; /* Бутоните във формите заемат 100% ширина */
+        margin-bottom: 5px; /* Отстъп между бутоните */
+        padding: 8px 15px; /* Увеличава падинга */
+    }
+
+    /* Корекции за входните полета */
     #names, #phone, #komentar, #cakeCode, #age, #kidsNumber, #prise,
     #cakeTaste, #HBDName, #kaparoNumber, #kaparo, #eventTitleInput, #form,
-    #time, #parti, #cake, #pices, #kaparoTime, #kidsMenu {
-        width: 100%; /* Всички на 100% ширина */
-        margin-right: 0;
-        display: block;
+    #time, #parti, #cake, #pices, #kaparoTime, #kidsMenu, #quantity2, #quantity {
+        width: 100%; /* Всички полета заемат 100% ширина */
+        margin-bottom: 8px; /* Добавя отстъп */
+        display: block; /* Уверява се, че са блок елементи */
+        padding: 8px; /* Увеличава падинга */
     }
 
-    #btnMenu2, #btnMenu, #saveButton, #editButton, #editBtn,
-    #closeButton, #cancelButton, #deleteBtn2, #deleteButton, #deleteBtn {
-        width: 100%; /* Всички бутони на 100% ширина */
-        margin-right: 0;
-        margin-bottom: 10px; /* Отстояние между бутоните */
-        padding: 10px;
-    }
 
+    /* Корекции за логото в модалите */
     .small {
-        margin-bottom: 15px;
+        float: none; /* Премахва float */
+        margin: 0 auto 10px auto; /* Центрира логото */
+        width: 100px; /* Намалява ширината */
+        border-radius: 0 0 16px 16px; /* Запазва border-radius */
+    }
+    .small > img {
+        max-width: 80px; /* Намалява максималната ширина на изображението */
+        max-height: 50px; /* Намалява максималната височина */
+        margin: 5px auto; /* Центрира изображението */
     }
 
+    /* Корекции за логата в хедъра */
+    .hedarLogo > img,
+    .hedarLogo2 > img {
+        max-width: 100px; /* Намалява максималната ширина */
+        max-height: 60px; /* Намалява максималната височина */
+        margin: 5px auto; /* Центрира логото */
+    }
+
+    /* Корекции за "Нагоре" бутон */
+    #myBtn {
+        right: 10px; /* Премества бутона по-надясно */
+        bottom: 10px; /* Премества бутона по-нагоре */
+        padding: 8px 12px; /* Намалява падинга */
+        font-size: 14px; /* Намалява размера на шрифта */
+    }
+
+    /* Корекции за известията */
     #notification {
-        right: 5px;
-        width: calc(100% - 10px);
+        right: 5px; /* Премества по-надясно */
+        top: 80px; /* Премества по-нагоре */
+        width: calc(100% - 10px); /* Прави го отзивчив */
+        max-width: 250px; /* Ограничава максималната ширина */
     }
     .notification {
-        padding: 10px 15px;
+        padding: 10px 15px; /* Намалява падинга */
+        font-size: 0.85em; /* Намалява размера на шрифта */
     }
 
+    /* Корекции за подсказките (tooltips) */
     .day .tooltiptext, .day .tooltiptext2 {
-        width: 100px; /* Намаляваме ширината на подсказките */
-        font-size: 0.8em;
-        padding: 5px;
+        width: 120px; /* Намалява ширината на подсказката */
+        font-size: 0.8em; /* Намалява размера на шрифта */
+        padding: 5px; /* Намалява падинга */
+        margin-left: 0; /* Премахва фиксирания маргин */
+        left: 50%; /* Центрира го */
+        transform: translateX(-50%); /* Коригира центрирането */
+        bottom: 100%; /* Позиционира го над деня */
+        margin-bottom: 2px; /* Малък отстъп отгоре */
+        white-space: normal; /* Позволява текста да се пренася на нов ред */
+    }
+
+    /* Корекции за легендите */
+    #legend, #legend2, #legend3 {
+        position: static; /* Премахва абсолютното позициониране */
+        margin: 10px auto; /* Центрира и добавя маргин */
+        width: 90%; /* Отзивчива ширина */
+        max-width: 250px; /* Максимална ширина */
+        font-size: 0.8em; /* Намалява размера на шрифта */
+        padding: 5px; /* Намалява падинга */
     }
 }
 
+/* Допълнителни корекции за много малки екрани (смартфони) */
 @media (max-width: 480px) {
     body {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     #header, #headerMovie, #headerOut, #headerDC, #headerPB, #headerPS, #headerDisco {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 3px;
     }
     #monthDisplay {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
+
     #nextButton, #backButton, #kalendari {
+        width: 48%; /* Леко увеличава ширината на бутоните */
         font-size: 0.8rem;
-        padding: 5px 8px;
+        padding: 4px 6px;
     }
 
     #weekdays {
         font-size: 0.7em;
     }
+
     .day {
-        min-height: 60px;
-        font-size: 0.8em;
+        min-height: 50px;
+        font-size: 0.7em;
+        padding: 3px;
     }
     .event, .event2 {
-        font-size: 0.65em;
+        font-size: 0.6em;
+        max-height: 25px;
     }
 
     #newEventModal, #deleteEventModal, #blockEventModal {
@@ -576,8 +913,9 @@ hr.rounded {
     }
 
     .day .tooltiptext, .day .tooltiptext2 {
-        width: 80px;
+        width: 100px;
         font-size: 0.7em;
         padding: 3px;
     }
 }
+/* --- КРАЙ НА КОРИКЦИИТЕ ЗА МОБИЛНА ОТЗИВЧИВОСТ --- */
