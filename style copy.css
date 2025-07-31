@@ -1,4 +1,4 @@
- body {
+body {
     display: flex;
     margin-top: 10px;
     margin-right:  15%;
@@ -661,46 +661,3 @@ hr.rounded {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
   }
-
-  /* >>> МОБИЛНА ОПТИМИЗАЦИЯ <<< */
-@media screen and (max-width: 768px) {
-
-    body {
-        flex-direction: column;
-        margin-right: 0;
-        align-items: center;
-    }
-
-    #container {
-        width: 95%;
-    }
-
-    #weekdays {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #weekdays div {
-        width: 14.2%;
-        padding: 5px;
-        font-size: 10px;
-    }
-
-    #calendar {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .day {
-        width: 70px;
-        height: 80px;
-        font-size: 9px;
-        padding: 5px;
-    }
-
-    .event, .event2 {
-        font-size: 8px;
-        max-height: 35px;
-    }
-}
