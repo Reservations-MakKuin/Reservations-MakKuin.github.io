@@ -178,21 +178,23 @@ button {
 #weekdays div {
     /* background-color: #4242430e;
     border-radius: 55%; */
-    width: 120px;
-    padding: 10px;
+    width: 92px;
+    padding: 2px;
+    margin-left: 30px;
 }
 
 #calendar {
     width: 120%;
     margin: auto;
+    margin-left: 25px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .day {
-    width: 120px;
+    width: 115px;
     padding: 10px;
-    height: 100px;
+    height: 95px;
     cursor: pointer;
     box-sizing: border-box;
     background-color: rgba(224, 237, 236, 0.352);
