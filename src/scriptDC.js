@@ -248,6 +248,7 @@ function openModal(event, date, reservationsArr) {
                     let newMenu = document.createElement("kidsMenu");
                     newMenu.innerHTML = `<select class="kidsMenu">
                     <option value="${e[0]}" selected>${e[0]}</option>
+                   <option value="" selected></option>
                     <option value="Зеленчукови Пръчеци">Зеленчукови Пръчеци</option>
                     <option value="Солети">Солети</option>
                     <option value="Сладки и Соленки">Сладки и Соленки</option>
@@ -255,6 +256,27 @@ function openModal(event, date, reservationsArr) {
                     <option value="Пуканки">Пуканки</option>
                     <option value="Чипс">Чипс</option>
                     <option value="Детско Шампанско">Детско Шампанско</option>
+                    <option value="Ядки Асорти">Ядки Асорти</option>
+                    <option value="===================">================</option>
+            <option value="Плато Мини Пици">Плато Мини Пици</option>
+            <option value="Мини Кроасани">Мини Кроасани</option>
+            <option value="Хапки Дуо Микс">Хапки Дуо Микс</option>
+            <option value="Хапки Дуо Италиано">Хапки Дуо Италиано</option>
+            <option value="Хапки Трио Микс">Хапки Трио Микс</option>
+            <option value="Хапки Трио Италиано">Хапки Трио Италиано</option>
+            <option value="Хапки Трио Чийз">Хапки Трио Чийз</option>
+            <option value="Брускети с маслинова паста">Брускети с маслинова паста</option>
+            <option value="Плодово Плато">Плодово Плато</option>
+            <option value="Салата Сънсет">Салата Сънсет</option>
+            <option value="Салата Гръцка">Салата Гръцка</option>
+            <option value="Салата Мексиканска">Салата Мексиканса</option>
+            <option value="Пресни зеленчуци с млечен дип">Пресни зеленчуци с млечен дип</option>
+            <option value="Плато Деликатеси">Плато Деликатеси</option>
+            <option value="Пържени Картофи">Пържени Картофи</option>
+            <option value="Пикантни Картофи">Пикантни Картофи</option>
+            <option value="Плато Картофен Микс">Плато Картофен Микс</option>
+            <option value="Плато Месни Хапки">Плато Месни Хапки</option>
+            <option value="Плато Млечни Хапки">Плато Млечни Хапки</option>
                     <input type="number" id="quantity" placeholder="" value=${e[1]}> 
                     <input type="text" id="descript" placeholder="" value="${e[2]}">
                     </select>`;
