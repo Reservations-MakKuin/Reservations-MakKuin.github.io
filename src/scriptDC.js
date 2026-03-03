@@ -248,8 +248,7 @@ function openModal(event, date, reservationsArr) {
                     let newMenu = document.createElement("kidsMenu");
                     newMenu.innerHTML = `<select class="kidsMenu">
                     <option value="${e[0]}" selected>${e[0]}</option>
-                   <option value="" selected></option>
-                    <option value="Зеленчукови Пръчеци">Зеленчукови Пръчеци</option>
+                   <option value="Зеленчукови Пръчеци">Зеленчукови Пръчеци</option>
                     <option value="Солети">Солети</option>
                     <option value="Сладки и Соленки">Сладки и Соленки</option>
                     <option value="Снакс">Снакс</option>
