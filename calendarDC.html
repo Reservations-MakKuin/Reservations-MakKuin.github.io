@@ -286,14 +286,14 @@
         <label for="kidsMenu">Детско Меню:</label>
         <select id="kidsMenu">
             <option value="" selected></option>
-            <option value="Запечен Сандвич">Запечен Сандвич</option>
-            <option value="Тост Сандвич">Тост Сандвич</option>
-            <option value="Клуб Сандвич">Клуб Сандвич</option>
-            <option value="Пица">Пица</option>
-            <option value="Солена Палачинка">Солена Палачинка</option>
             <option value="Бургер с франзела">Бургер с франзела</option>
             <option value="Бургер с Питка">Бургер с Питка</option>
+            <option value="Запечен Сандвич">Запечен Сандвич</option>
+            <option value="Клуб Сандвич">Клуб Сандвич</option>
+            <option value="Пица">Пица</option>
             <option value="Пилешки Хапки">Пилешки Хапки</option>
+            <option value="Солена Палачинка">Солена Палачинка</option>
+            <option value="Тост Сандвич">Тост Сандвич</option>
         </select>
         <br>
         <br>
@@ -313,29 +313,22 @@
             function myFunction() {
                 let newMenu = document.createElement("kidsMenu");
                 newMenu.innerHTML = `<select class="kidsMenu">
-                    <option value="" selected></option>
-                    <option value="Зеленчукови Пръчеци">Зеленчукови Пръчеци</option>
-                    <option value="Солети">Солети</option>
-                    <option value="Сладки и Соленки">Сладки и Соленки</option>
-                    <option value="Снакс">Снакс</option>
-                    <option value="Пуканки">Пуканки</option>
-                    <option value="Чипс">Чипс</option>
-                    <option value="Детско Шампанско">Детско Шампанско</option>
-                    <option value="Ядки Асорти">Ядки Асорти</option>
-                    <option value="===================">================</option>
-            <option value="Плато Мини Пици">Плато Мини Пици</option>
-            <option value="Мини Кроасани">Мини Кроасани</option>
-            <option value="Хапки Дуо Микс">Хапки Дуо Микс</option>
-            <option value="Хапки Дуо Италиано">Хапки Дуо Италиано</option>
-            <option value="Хапки Трио Микс">Хапки Трио Микс</option>
-            <option value="Хапки Трио Италиано">Хапки Трио Италиано</option>
-            <option value="Хапки Трио Чийз">Хапки Трио Чийз</option>
+            <option value="" selected></option>
+            <option value="Детско Шампанско">Детско Шампанско</option>
+            <option value="Зеленчукови Пръчеци">Зеленчукови Пръчеци</option>
+            <option value="Пуканки">Пуканки</option>
+            <option value="Солети">Солети</option>
+            <option value="Сладки и Соленки">Сладки и Соленки</option>
+            <option value="Снакс">Снакс</option>
+            <option value="Солети">Солети</option>
+            <option value="Сладки и Соленки">Сладки и Соленки</option>
+            <option value="Снакс">Снакс</option>
+            <option value="Чипс">Чипс</option>
+            <option value="===================">================</option>
             <option value="Брускети с маслинова паста">Брускети с маслинова паста</option>
+            <option value="Мини Кроасани">Мини Кроасани</option>
+            <option value="Мини Пици">Мини Пици</option>
             <option value="Плодово Плато">Плодово Плато</option>
-            <option value="Салата Сънсет">Салата Сънсет</option>
-            <option value="Салата Гръцка">Салата Гръцка</option>
-            <option value="Салата Мексиканска">Салата Мексиканса</option>
-            <option value="Пресни зеленчуци с млечен дип">Пресни зеленчуци с млечен дип</option>
             <option value="Плато Деликатеси">Плато Деликатеси</option>
             <option value="Пържени Картофи">Пържени Картофи</option>
             <option value="Пикантни Картофи">Пикантни Картофи</option>
@@ -346,8 +339,18 @@
             <option value="Пица четири сирена">Пица четири сирена</option>
             <option value="Пица Пеперони">Пица Пеперони</option>
             <option value="Ппица Капричоза">Пица Капричоза</option>
+            <option value="Сладки и Соленки Микс">Сладки и Соленки Микс</option>
+            <option value="Салата Сънсет">Салата Сънсет</option>
+            <option value="Салата Гръцка">Салата Гръцка</option>
+            <option value="Салата Мексиканска">Салата Мексиканска</option>
+            <option value="Хапки Дуо Микс">Хапки Дуо Микс</option>
+            <option value="Хапки Дуо Италиано">Хапки Дуо Италиано</option>
+            <option value="Хапки Трио Микс">Хапки Трио Микс</option>
+            <option value="Хапки Трио Италиано">Хапки Трио Италиано</option>
+            <option value="Хапки Трио Чийз">Хапки Трио Чийз</option>
             <option value="Чабата с дърпано пилешко">Чабата с дърпано пилешко</option>
-            <option value="Чабата със свинско филе">Чабата със свинско филе</option>            
+            <option value="Чабата със свинско филе">Чабата със свинско филе</option>
+            <option value="Ядки Асорти">Ядки Асорти</option>         
                     <input type="number" id="quantity" placeholder=""/> 
                     <input type="text" id="descript" placeholder=""/>
                     </select>`
@@ -386,20 +389,10 @@
                 let newMenu = document.createElement("parentMenu");
                 newMenu.innerHTML = `<select class="parentMenu">
             <option value="" selected></option>
-            <option value="Сладки и Соленки Микс">Сладки и Соленки Микс</option>
-            <option value="Ядки Асорти">Ядки Асорти</option>
-            <option value="Плато Мини Пици">Плато Мини Пици</option>
-            <option value="Мини Кроасани">Мини Кроасани</option>
-            <option value="Хапки Дуо Микс">Хапки Дуо Микс</option>
-            <option value="Хапки Дуо Италиано">Хапки Дуо Италиано</option>
-            <option value="Хапки Трио Микс">Хапки Трио Микс</option>
-            <option value="Хапки Трио Италиано">Хапки Трио Италиано</option>
-            <option value="Хапки Трио Чийз">Хапки Трио Чийз</option>
             <option value="Брускети с маслинова паста">Брускети с маслинова паста</option>
+            <option value="Мини Кроасани">Мини Кроасани</option>
+            <option value="Мини Пици">Мини Пици</option>
             <option value="Плодово Плато">Плодово Плато</option>
-            <option value="Салата Сънсет">Салата Сънсет</option>
-            <option value="Салата Гръцка">Салата Гръцка</option>
-            <option value="Салата Мексиканска">Салата Мексиканса</option>
             <option value="Плато Деликатеси">Плато Деликатеси</option>
             <option value="Пържени Картофи">Пържени Картофи</option>
             <option value="Пикантни Картофи">Пикантни Картофи</option>
@@ -410,8 +403,18 @@
             <option value="Пица четири сирена">Пица четири сирена</option>
             <option value="Пица Пеперони">Пица Пеперони</option>
             <option value="Ппица Капричоза">Пица Капричоза</option>
+            <option value="Сладки и Соленки Микс">Сладки и Соленки Микс</option>
+            <option value="Салата Сънсет">Салата Сънсет</option>
+            <option value="Салата Гръцка">Салата Гръцка</option>
+            <option value="Салата Мексиканска">Салата Мексиканска</option>
+            <option value="Хапки Дуо Микс">Хапки Дуо Микс</option>
+            <option value="Хапки Дуо Италиано">Хапки Дуо Италиано</option>
+            <option value="Хапки Трио Микс">Хапки Трио Микс</option>
+            <option value="Хапки Трио Италиано">Хапки Трио Италиано</option>
+            <option value="Хапки Трио Чийз">Хапки Трио Чийз</option>
             <option value="Чабата с дърпано пилешко">Чабата с дърпано пилешко</option>
             <option value="Чабата със свинско филе">Чабата със свинско филе</option>
+            <option value="Ядки Асорти">Ядки Асорти</option>
             <input type="number" id="quantity2" placeholder=""/> 
             <input type="text" id="descript2" placeholder=""/>
             
