@@ -50,6 +50,23 @@ if (date === '5/11/2026') {
         alert('Временно недостъпно');
         return;
     }
+        if (date === '5/12/2026') {
+        alert('Временно недостъпно');
+        return;
+    }
+        if (date === '5/13/2026') {
+        alert('Временно недостъпно');
+        return;
+    }
+        if (date === '5/14/2026') {
+        alert('Временно недостъпно');
+        return;
+    }
+        if (date === '5/15/2026') {
+        alert('Временно недостъпно');
+        return;
+    }
+       
     // if(localStorage.getItem('1') != null){
     //     // login('Miro', '123456')
  
