@@ -44,6 +44,14 @@ const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 
 function openModal(event, date, reservationsArr) {
 
+    // ВАШАТА ПРОМЯНА ТУК:
+    if (localStorage.getItem('authV2') !== 'MakKuin6775-v2') {
+        window.location.href = 'https://reservations-makkuin.github.io/loginDC.html';
+        return;
+    }
+    
+   
+    
     // if(localStorage.getItem('1') != null){
     //     // login('Miro', '123456')
  
@@ -453,7 +461,8 @@ function openModal(event, date, reservationsArr) {
             };
         };
     } else {
-        if (event.target.children.length !== 4 && localStorage.getItem('1') != null) {
+        // Проверка дали ключът съществува И дали е правилната стойност
+        if (event.target.children.length !== 4 && localStorage.getItem('authV2') === 'MakKuin6775-v2') {
 
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
@@ -461,20 +470,20 @@ function openModal(event, date, reservationsArr) {
             document.getElementById('editButton').style.display = 'none';
             document.getElementById('saveButton').style.display = 'inline-block';
             document.getElementById('deleteButton').style.display = 'none';
-        } else if (event.target.children.length !== 4 && localStorage.getItem('1') == null){
-           // return alert('Достигнат Максимум на резервации за ден!');
+            
+        } else if (event.target.children.length !== 4 && localStorage.getItem('authV2') !== 'MakKuin6775-v2'){
+            // Само показваме съобщението, без автоматичен редирект тук
             document.querySelector('#blockEventModal h2').textContent = 'Не сте логнати!';
             blockEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
             document.getElementById('editButton').style.display = 'inline-block';
-            window.location.href = 'https://reservations-makkuin.github.io/loginDC.html';
+            // Премахнахме window.location.href оттук, за да спрем "зациклянето"
 
-        }else{
+        } else {
             document.querySelector('#blockEventModal h2').textContent = 'Достигнат е максимум на резервации за ден!';
             blockEventModal.style.display = 'block';
             deleteEventModal.style.display = 'none';
             document.getElementById('editButton').style.display = 'inline-block';
-
         }
     };
 };
@@ -669,6 +678,9 @@ async function saveEvent() {
 
         closeModal();
     } else {
+
+} else {
+                
         names.classList.add('error');
         age.classList.add('error');
         time.classList.add('error');
