@@ -12,7 +12,7 @@
     <div class="container">
         <h2 class="text-center">Login</h2>
         <br>
-        <form class="loginForm">
+        <form  action="https://reservations-makkuin.github.io/calendarDC.html" class="loginForm">
             <div class="input-group">
                 <label for="username" class="label">Username</label>
                 <input type="text" id="username" class="input">
@@ -25,31 +25,38 @@
                 <span class="error-message"></span>
             </div>
             <br>
-            <!-- Променен е type на "button" и е премахнат action от формата -->
-            <button class="button" onclick="myFunction()" type="button">Login</button>
+            <button class="button" onclick="myFunction()" type="submit">Login</button>
       
+
         </form>
     </div>
     <script>
   
         function myFunction() {
-            let loginPassword = document.getElementById("password").value;
-            let userName = document.getElementById("username").value;
+        let loginPassword = document.getElementById("password").value ;
+        let userName = document.getElementById("username").value ;
+        
+        if(loginPassword == '6775' && userName == "MakKuin"){
+         
             
-            if(loginPassword == 'MakKuin6775' && userName == "MakKuin"){
-                
-                localStorage.setItem('authV2','MakKuin6775-v2');
-                // Добавено е правилното пренасочване към календара
-                window.location.href = 'https://reservations-makkuin.github.io/calendarDC.html';
-                
-                console.log('Успешен логин');
+         localStorage.setItem('1','1')   
+       //  window.location.href = '/login.html';
+          
+                console.log('test1');
+        
+         
+        }else{
+            console.log('test2');
+            alert('Incorect User or Password')
+
             
-            } else {
-                console.log('Грешни данни');
-                alert('Incorrect User or Password');
-            }
         }
         
-    </script>
+        }
+
+        
+            </script>
+
+
 </body>
 </html>
