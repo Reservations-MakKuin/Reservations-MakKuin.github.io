@@ -60,7 +60,7 @@ if (date === '5/11/2026') {
         alert('Временно недостъпно');
         return;
     }
-    // if(localStorage.getItem('1') != null){
+    // if(localStorage.getItem('2') != null){
     //     // login('Miro', '123456')
  
     //  }else{
@@ -114,7 +114,7 @@ if (date === '5/11/2026') {
 
 
 
-    if (event.target.className == 'event2' && localStorage.getItem('1') != null) {
+    if (event.target.className == 'event2' && localStorage.getItem('2') != null) {
 
         newEventModal.style.display = 'none';
         deleteEventModal.style.display = 'block';
@@ -466,7 +466,7 @@ if (date === '5/11/2026') {
             };
         };
     } else {
-        if (event.target.children.length !== 7 && localStorage.getItem('1') != null) {
+        if (event.target.children.length !== 7 && localStorage.getItem('2') != null) {
 
             document.querySelector('#newEventModal h2').textContent = 'Нова Резервация';
             newEventModal.style.display = 'block';
@@ -474,7 +474,7 @@ if (date === '5/11/2026') {
             document.getElementById('editButton').style.display = 'none';
             document.getElementById('saveButton').style.display = 'inline-block';
             document.getElementById('deleteButton').style.display = 'none';
-        } else if (event.target.children.length !== 4 && localStorage.getItem('1') == null){
+        } else if (event.target.children.length !== 4 && localStorage.getItem('2') == null){
            // return alert('Достигнат Максимум на резервации за ден!');
             document.querySelector('#blockEventModal h2').textContent = 'Не сте логнати!';
             blockEventModal.style.display = 'block';
