@@ -59,7 +59,7 @@ if (date === '5/11/2026') {
         alert('Временно недостъпно');
         return;
     }
-    // if(localStorage.getItem('1') != null){
+    // if(localStorage.getItem('2') != null){
     //     // login('Miro', '123456')
  
     //  }else{
