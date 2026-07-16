@@ -67,7 +67,7 @@ if (date === '5/11/2026') {
         return;
     }
        
-    // if(localStorage.getItem('1') != null){
+    // if(localStorage.getItem('2') != null){
     //     // login('Miro', '123456')
  
     //  }else{
